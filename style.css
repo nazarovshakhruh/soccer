@@ -656,3 +656,22 @@
     font-size: 7px;
   }
 }
+@media (max-height: 770px) {
+  .section {
+    height: calc(200vh - 30px);
+  }
+  .overall {
+    height: calc(200vh - 30px);
+  }
+  .news {
+    flex-direction: column;
+    height: 60%;
+  }
+  .matches {
+    height: 40;
+  }
+  .new {
+    width: 100%;
+    height: 50%;
+  }
+}

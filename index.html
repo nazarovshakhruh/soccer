@@ -53,7 +53,7 @@
     </div>
     <img href="#" class="logo" width="100px" src="img.png" alt="logo">
     <ul>
-      <li><a href="#">Football</a></li>
+      <li><a href="#" onclick="move()">Football</a></li>
       <li><a href="#">Volleyball</a></li>
       <li><a href="#">Table Tennis</a></li>
       <li><a href="#">players</a></li>
@@ -275,7 +275,7 @@
     <div class="top-half">
       <h2>Top Half</h2>
     </div>
-    <div class="bottom-half">
+    <div id="bthlf" class="bottom-half">
       <div class="bottom-left">
         <p>Bottom Left</p>
       </div>
@@ -286,11 +286,35 @@
   </section>
 
   <script>
-  function updateDimensions() {
-    const physicalWidth = Math.round(window.innerWidth * window.devicePixelRatio);
-    const physicalHeight = Math.round(window.innerHeight * window.devicePixelRatio);
-    document.getElementById('dimensia').innerHTML = physicalWidth + 'x' + physicalHeight;
+    function updateDimensions() {
+      const physicalWidth = Math.round(window.innerWidth * window.devicePixelRatio);
+      const physicalHeight = Math.round(window.innerHeight * window.devicePixelRatio);
+      document.getElementById('dimensia').innerHTML = physicalWidth + 'x' + physicalHeight;
+    }
+    var amt = '375px';
+
+function updateAmount() {
+  const physicalWidth = Math.round(window.innerWidth * window.devicePixelRatio);
+  const physicalHeight = Math.round(window.innerHeight * window.devicePixelRatio);
+  console.log(physicalWidth)
+  if (window.innerWidth < 650) { // use <, not <<
+    amt = '175px + 50vw';
+    console.log('small screen');
+    document.getElementById('sideMenu').style.borderTopLeftRadius = '15px';
+    document.getElementById('sideMenu').style.borderBottomLeftRadius = '15px';
+  } else {
+    amt = '375px';
+    console.log('large screen');
+        document.getElementById('sideMenu').style.borderTopLeftRadius = '0px';
+    document.getElementById('sideMenu').style.borderBottomLeftRadius = '0px';
   }
+}
+
+// Call once at the start
+updateAmount();
+
+// Call on every resize
+window.addEventListener('resize', updateAmount);
 
   // Call once at start
   updateDimensions();
@@ -300,7 +324,7 @@
   function toggleMenu() {
     const menu = document.getElementById('sideMenu');
     const overl1 = document.getElementById('overl1');
-    menu.style.transform = 'translateX(calc(160px + 50vw))';
+    menu.style.transform = 'translateX(calc(' + amt + '))';
     overl1.style.background = 'rgba(0, 0, 0, 0.7)';
     overl1.style.pointerEvents = 'auto'; 
   }

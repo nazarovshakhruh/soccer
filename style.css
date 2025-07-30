@@ -1,13 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: 'PremierLeague';
+  src: url('./fonts/PremierLeagueW01-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --team1: url('1.jpg');
+  --team2: url('1.jpg');
+  --team3: url('1.jpg');
+  --team4: url('1.jpg');
+  --team5: url('1.jpg');
+  --font: 'PremierLeague', sans-serif;
+}
+
+@font-face {
+  font-family: 'PremierLeague';
+  src: url('./fonts/PremierLeagueW01-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-width: 0;
+      user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -ms-user-select: none;     /* For Internet Explorer/Edge */
   }
   
   body {
     overflow-x: hidden;
-    background-color: #002453;
+    background-color: red;
+    background: linear-gradient(90deg, #006572, #00262f);
+    color: #fff;
+    font-family: var(--font);
   }
 .overl1 {
   width: 100%;
@@ -24,13 +53,14 @@
   align-items: center;
   text-align: center;
   height: 33px;
+  background: #00441680;
+  backdrop-filter: blur(20px);
   font-size: 20px;
-  background-color: #000453;
 }
 .inner {
   height: 33px;
   width: 95%;
-  border-bottom: 2px solid #00367e;
+  border-bottom: 2px solid #00944f80;
   display: flex;
   justify-content: right;
   align-items: center;
@@ -38,15 +68,16 @@
  .inner span  {
   color: #fff;
   font-size: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.1mm;
+  font-family: 'PremierLeague', sans-serif;
+  font-weight: normal;
  }
 .navbar {
   display: flex;
   align-items: center;
   position: sticky;
   top: 0; /* sticks to the top of the viewport when reached */
-  background: rgba(0, 4, 83, 0.5);
+  background: #00441680;
   backdrop-filter: blur(20px);
   z-index: 1000;
   height: 70px;
@@ -61,6 +92,8 @@
   list-style: none;
   display: flex;
   justify-content: center;
+  font-family: 'PremierLeague', sans-serif;
+
 }
 
 .navbar li {
@@ -71,15 +104,19 @@
   padding: 15px 15px;
   border-radius: 40px;
   transition: background-color 0.2s ease;
+  font-family: 'PremierLeague', sans-serif;
+
 }
 .navbar li a {
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
   letter-spacing: 0.5px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-decoration: none;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 15px;
+  font-family: 'PremierLeague', sans-serif;
+  font-weight: normal;
 }
 .navbar li:hover {
     background-color: rgba(255, 255, 255, 0.1);
@@ -143,26 +180,27 @@
     left: -350px;
     width: 350px;
     height: 94%;
-    background: linear-gradient(#00056a, #000453);
+    background: linear-gradient(#003434, #002727);
     color: white;
     padding: 15px;
     transition: transform 0.3s ease;
     z-index: 2000;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
   .sdmenu {
     margin-top: 10px;
-    width: 120px;
+    width: 150px;
   }
   .side-menu h1 {
     height: 60px;
     display: flex;
     align-items: center;
-    font-family: "Roboto", sans-serif;
     margin-left: 10px;
     font-weight: 300;
+    font-family: 'PremierLeague', sans-serif;
+    font-weight: normal;
   }
   .side-menu ul {
     list-style: none;
@@ -178,25 +216,37 @@
   
   .side-menu li a {
     color: #fff;
-    font-family: "Roboto", sans-serif;
+    /* font-family: "Roboto", sans-serif; */
+    font-family: 'PremierLeague', sans-serif;
+    font-weight: normal;
     letter-spacing: 0.5px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 17px;
+    font-weight: normal;
+    font-size: 18px;
   }
   .side-menu li:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
 
   .section {
-    height: calc(100vh - 30px - 70px);
+    height: calc(100vh - 100px);
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-top: 60px;
-    background: linear-gradient(0deg, #6a00ff, #001f48);
+    background: linear-gradient(0deg, rgba(0, 34, 5, 0.8), rgba(0, 44, 19, 0.8));
+    backdrop-filter: blur(15px);
+
+  }
+    .overall {
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: url(bg.webp) center no-repeat;
+    background-size: cover;
   }
   
   .second-section {
@@ -240,4 +290,339 @@
       flex-direction: row;
     }
   }
+  @media (max-width: 710px) {
+  .side-menu {
+    width: 80vw;
+    max-width: 350px;
+    left: -80vw;
+    height: 100%;
+  }
+} .navbar,
+.section,
+.overall,
+.second-section {
+  width: 100%;
+  max-width: 100%;
+}
+.navbar ul {
+  flex-wrap: wrap;
+}
+#datetime {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.power {
+  margin-left: 10px;
+}
+#dimensia {
+  margin-right: 10px;
+}
+.innerbody {
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  border-radius: 20px;
+  background: #004d3a78;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 15px;
+  gap: 15px;
+}
+.half {
+  border-radius: 20px;
+  height: 100%;
+  width: 50%;
+}
+.fhalf {
+  background: linear-gradient(0deg, #001f0b, #002d1b 30%);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.img {
+  width: 100%;
+  height: 60%;
+  border-radius: 20px;
+}
+.mg1 {
+  background: url(news.jpg) no-repeat;
+  background-size: cover;
+}
+.fhalf h1{
+  font-family: 'PremierLeague', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  padding: 20px;
+  font-size: 2em;
+}
+.fhalf:hover h1 {
+  text-decoration: underline;
+}
+.fhalf h4 {
+  font-family: 'PremierLeague', sans-serif;
+  font-weight: 300;
+  color: #ffffff7b;
+  padding: 0px 20px;
+}
+.shalf {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.new {
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  background: linear-gradient(0deg, #001f0b, #002d1b 30%);
+  cursor: pointer;
+}
+.new:hover h4 {
+  text-decoration: underline;
+}
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  gap: 15px;
+}
+.matches {
+  background: linear-gradient(0deg, #001f0b, #002d1b 30%);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  color: #fff;
+  font-family: var(--font);
+  overflow-y: scroll;
+   scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+.matches::-webkit-scrollbar {
+  display: none;
+}
+.matches h3 {
+  padding: 15px;
+}
+.matches h3:first-child {
+  font-size: 25px;
+}
+.matches h4 {
+  font-size: 0.8em;
+  font-weight: 200;
+}
+.match h2 {
+  font-family: var(--font);
+  padding: 7px;
+  background: #0000005a;
+  border-radius: 5px;
+}
+.match {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: #ffffff00;
+  cursor: pointer;
+}
+.match:hover {
+  background: #ffffff10;
+}
+.new h4 {
+    font-family: 'PremierLeague', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  padding: 0px 15px;
+  padding-top: 15px;
+}
+.new h5 {
+  font-family: 'PremierLeague', sans-serif;
+  font-weight: 300;
+  color: #ffffff7b;
+  padding: 10px 20px;
+  font-size: 0.8em;
+}
+.mg2 {
+
+  background: url(news2.jpg) no-repeat;
+    background-size: cover;
+  background-position: top;
+}
+.mg3 {
+  background: url(news3.avif) no-repeat;
+    background-size: cover;
+  background-position: top;
+}
+.club {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  background: #00000017;
+}
+.match h2.tim {
+  font-size: 1em;
+  background: none;
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.part {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.part1 {
+  justify-content: right;
+}
+  .heading span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .heading span:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .heading span img {
+    filter: invert(100%);
+    width: 25px;
+  }
+  @media (max-width: 1260px) {
+    .new h4{
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 710px) {
+  .second-section {
+    flex-direction: column;
+  }
   
+  .bottom-half {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 290px) {
+  .inner span{
+    font-size: 7px;
+  }
+}
+@media (max-width: 1460px) {
+  .innerbody {
+    flex-direction: column;
+  }
+  .half {
+    width: 100%;
+    height: 50%;
+  }
+  .fhalf {
+    flex-direction: row;
+  }
+  .matches h3 {
+    padding: 20px;
+  }
+  .mg1 {
+    width: 100%;
+    height: 100%;
+  }
+  .news {
+    flex-direction: row;
+  }
+  .new {
+    width: 50%;
+    height: 100%;
+  }
+  .new h5 {
+    padding: 15px;
+  }
+}
+@media (max-width: 780px) {
+  .navbar ul {
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .section {
+    height: calc(200vh - 100px);
+  }
+  .overall {
+    height: calc(200vh - 100px);
+  }
+  .fhalf {
+    width: 100%;
+    height: 33.3%;
+    flex-direction: column;
+  }
+  .fhalf h1 {
+    font-size: 1.5em;
+  }
+  .mg1 {
+    width: 100%;
+    height: 70%;
+  }
+  .shalf {
+    height: 66.6%;
+    flex-direction: column;
+  }
+  .news {
+    width: 100%;
+    height: 50%;
+  }
+  .matches {
+    width: 100%;
+    height: 50%;
+  }
+  .new h4 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .inner {
+    justify-content: center;
+  }
+  .logo {
+    display: none;
+  }
+  .navbar {
+    background: none;
+    height: 0;
+  }
+  .menu-btn {
+    background-color: #005343;
+    transform: translate(-10px, 30px);
+  }
+  .section {
+    height: calc(150vh - 30px);
+  }
+  .overall {
+    height: calc(150vh - 30px);
+  }
+  .news {
+    height: 40%;
+  }
+  .matches {
+    height: 60%;
+  }
+  .news h4 {
+    font-size: 1em;
+  }
+}

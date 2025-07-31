@@ -45,11 +45,21 @@
     font-family: var(--font);
     scroll-behavior: smooth;
     background-attachment: fixed;
-    backdrop-filter: blur(20px);
+    /* backdrop-filter: blur(20px); */
   }
   html {
     scroll-behavior: smooth;
   }
+#blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(20px);
+  z-index: -1; /* Behind your side menu */
+  pointer-events: none; /* So it doesn't block clicks */
+}
 .overl1 {
   width: 100%;
   height: 100vh;
@@ -192,7 +202,7 @@
     top: 25px;
     left: -350px;
     width: 350px;
-    height: 94%;
+    height: 94vh;
     background: linear-gradient( var(--color1), var(--color2));
     color: white;
     padding: 15px;
@@ -266,6 +276,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  z-index: 5;
 }
 
 .top-half,

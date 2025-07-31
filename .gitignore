@@ -1,0 +1,19 @@
+# Ignore large video files
+*.mp4
+*.webm
+*.mov
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore VS Code settings and other editors
+.vscode/
+.idea/
+
+# Node.js-related (if you ever use npm)
+node_modules/
+
+# Output folders (optional)
+dist/
+build/

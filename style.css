@@ -13,6 +13,8 @@
   --team4: url('1.jpg');
   --team5: url('1.jpg');
   --font: 'PremierLeague', sans-serif;
+  --color1: #007b63;
+  --color2: #003523;
 }
 
 @font-face {
@@ -38,11 +40,12 @@
   
   body {
     overflow-x: hidden;
-    background-color: red;
-    background: linear-gradient(90deg, #005544, #003523);
+    background: url(prob.png) no-repeat center center / 100%, linear-gradient(90deg, var(--color1), var(--color2));
     color: #fff;
     font-family: var(--font);
     scroll-behavior: smooth;
+    background-attachment: fixed;
+    backdrop-filter: blur(20px);
   }
   html {
     scroll-behavior: smooth;
@@ -62,7 +65,7 @@
   align-items: center;
   text-align: center;
   height: 33px;
-  background: linear-gradient(90deg, rgba(0, 85, 68, 0.5), rgba(0, 53, 35, 0.5));
+  background: linear-gradient(90deg, #00554480, #00352380);
   backdrop-filter: blur(20px);
   font-size: 20px;
 }
@@ -86,7 +89,7 @@
   align-items: center;
   position: sticky;
   top: 0; /* sticks to the top of the viewport when reached */
-  background: linear-gradient(90deg, rgba(0, 85, 68, 0.5), rgba(0, 53, 35, 0.5));
+  background: linear-gradient(90deg, #00554480, #00352380);
   backdrop-filter: blur(20px);
   z-index: 1000;
   height: 70px;
@@ -190,7 +193,7 @@
     left: -350px;
     width: 350px;
     height: 94%;
-    background: linear-gradient(#005544, #003523);
+    background: linear-gradient( var(--color1), var(--color2));
     color: white;
     padding: 15px;
     transition: transform 0.3s ease;
@@ -283,11 +286,6 @@
   flex-direction: column;
 }
 
-@media (min-width: 600px) {
-  .bottom-half {
-    flex-direction: row;
-  }
-}
 
 .bg-video {
   position: absolute;
@@ -430,7 +428,7 @@
   color: #fff;
   font-family: var(--font);
   overflow-y: scroll;
-   scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;
 }
 .matches::-webkit-scrollbar {
@@ -465,7 +463,7 @@
   background: #ffffff10;
 }
 .new h4 {
-    font-family: 'PremierLeague', sans-serif;
+  font-family: 'PremierLeague', sans-serif;
   font-weight: 600;
   color: #fff;
   padding: 0px 15px;
@@ -480,14 +478,14 @@
   font-size: 0.8em;
 }
 .mg2 {
-
+  
   background: url(news2.jpg) no-repeat;
-    background-size: cover;
+  background-size: cover;
   background-position: top;
 }
 .mg3 {
   background: url(news3.avif) no-repeat;
-    background-size: cover;
+  background-size: cover;
   background-position: top;
 }
 .club {
@@ -517,27 +515,48 @@
 .part1 {
   justify-content: right;
 }
-  .heading span {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-right: 20px;
+.heading span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.heading span:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.heading span img {
+  filter: invert(100%);
+  width: 25px;
+}
+.feedback {
+  width: 100%;
+  height: 50vh;
+  background-color: #0000006c;
+}
+.white {
+  width: 100%;
+  height: 10vh;
+  background: #fff;
+}
+
+
+/* MEDIA SECTION */
+@media (max-width: 1500px) {
+  body {
+    background: url(img.png) no-repeat center 75% / 70%, linear-gradient(90deg, var(--color1), var(--color2));
+    background-attachment: fixed;
   }
-  .heading span:hover {
-    background: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 1000px) {
+  body {
+    background: linear-gradient(90deg, var(--color1), var(--color2));
+    background-attachment: fixed;
   }
-  .heading span img {
-    filter: invert(100%);
-    width: 25px;
-  }
-
-
-
-
+}
 
 @media (max-width: 1460px) {
   .innerbody {
@@ -568,18 +587,18 @@
     padding: 15px;
   }
 }
-  @media (max-width: 1260px) {
-    .new h4{
-      font-size: 14px;
-    }
+@media (max-width: 1260px) {
+  .new h4{
+    font-size: 14px;
   }
+}
 @media (max-width: 780px) {
   .navbar ul {
     display: none;
     pointer-events: none;
     visibility: hidden;
   }
-    .inner {
+  .inner {
     justify-content: center;
   }
   .section {
@@ -619,7 +638,7 @@
     font-size: 20px;
   }
 }
-  @media (max-width: 710px) {
+@media (max-width: 710px) {
   .second-section {
     flex-direction: column;
   }
@@ -629,7 +648,11 @@
   }
 }
 @media (max-width: 500px) {
-  .logo {
+  .navlogo {
+    display: none;
+  }
+  .sdmenu {
+    display: auto;
     width: 300px;
   }
   .side-menu h1 {
@@ -674,6 +697,26 @@
     padding: 5px 15px;
     padding-bottom: 10px;
   }
+    .section {
+    height: calc(200vh - 30px);
+  }
+  .overall {
+    height: calc(200vh - 30px);
+  }
+  .news {
+    flex-direction: column;
+    height: 60%;
+  }
+  .matches {
+    height: 40;
+  }
+  .new {
+    width: 100%;
+    height: 50%;
+  }
+  .new .img {
+    height: 60%;
+  }
 }
 @media (max-width: 440px) {
   .fhalf h1 {
@@ -688,7 +731,7 @@
     font-size: 7px;
   }
 }
-@media (max-height: 770px) {
+@media (max-height: 770px) and (max-width: 500px) {
   .section {
     height: calc(200vh - 30px);
   }
@@ -706,35 +749,10 @@
     width: 100%;
     height: 50%;
   }
-
+  
 }
-.feedback {
-  width: 100%;
-  height: 50vh;
-}
-.overlay {
-  background: linear-gradient(90deg, #005443, #003523);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(20px);
-  width: 100%;
-  height: 100%;
-  /* animation: anim 5s infinite; */
-}
-@keyframes anim {
-  0% {
-    background: #00441680;
+@media (min-width: 600px) {
+  .bottom-half {
+    flex-direction: row;
   }
-  50% {
-    background: linear-gradient(90deg, #005443, #003523);
-  }
-  100% {
-    background: #00441680;
-  }
-}
-.white {
-  width: 100%;
-  height: 10vh;
-  background: #fff;
 }

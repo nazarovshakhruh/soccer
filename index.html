@@ -51,7 +51,7 @@
       <span></span>
       <span class="btt"></span>
     </div>
-    <img href="#" class="logo" width="100px" src="img.png" alt="logo">
+    <img href="#" class="logo navlogo" width="100px" src="img.png" alt="logo">
     <ul>
       <li><a href="#" onclick="move()">Football</a></li>
       <li><a href="#">Volleyball</a></li>
@@ -294,17 +294,16 @@
   </div>
 </section>
 <section class="feedback">
-  <div class="overlay">
-
-  </div>
 </section>
 <section class="white">
 </section>
-  <script>
+<script>
+    const pxl = Math.round(window.devicePixelRatio);
     function updateDimensions() {
       const physicalWidth = Math.round(window.innerWidth * window.devicePixelRatio);
       const physicalHeight = Math.round(window.innerHeight * window.devicePixelRatio);
-      document.getElementById('dimensia').innerHTML = physicalWidth + 'x' + physicalHeight;
+      const pxl = Math.round(window.devicePixelRatio);
+      document.getElementById('dimensia').innerHTML = physicalWidth + 'x' + physicalHeight + '   Pixel Ratio: ' + pxl;
     }
     var amt = '375px';
 

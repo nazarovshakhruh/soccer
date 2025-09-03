@@ -1,82 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Player Profile</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Player Profile</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="card">
-  <div class="header">
-    <div class="crest"><img id="club-crest" src="" alt="Club crest"></div>
-    <div>
-      <h1 id="player-name">Player Name</h1>
-      <div class="meta"><img src="https://flagcdn.com/w20/uz.png" class="flag" alt="Flag"> <span id="player-nationality"></span>, Age <span id="player-age"></span></div>
-      <div class="meta">Position: <span id="player-position"></span> | Preferred foot: <span id="player-foot"></span></div>
-      <div class="meta">Club: <span id="player-club"></span></div>
-    </div>
+  <div id="player-container" class="player-page">
+    <!-- Filled by JS -->
   </div>
-
-  <div class="stats">
-    <div class="stat"><strong>Goals</strong><br><span id="player-goals">0</span></div>
-    <div class="stat"><strong>Assists</strong><br><span id="player-assists">0</span></div>
-  </div>
-
-  <div class="teammates">
-    <h2>Teammates</h2>
-    <div class="teammates-list" id="teammates-list"></div>
-  </div>
-</div>
-
-<script>
-async function loadDB(){
-  const res = await fetch('/assets/db.json',{cache:"no-store"});
-  return res.json();
-}
-
-// helper for slugify (same as standings)
-function slugify(s){return String(s).toLowerCase().replace(/\s+/g,'-').replace(/[^\w\-]/g,'');}
-
-// find player id from URL (/players/slug)
-function getPlayerSlug(){
-  const parts = window.location.pathname.split('/');
-  return parts[parts.length-1] || parts[parts.length-2];
-}
-
-(async function(){
-  const db = await loadDB();
-  const slug = getPlayerSlug();
-  const player = db.players.find(p => slugify(p.name) === slug);
-  if(!player){
-    document.body.innerHTML = "<p style='color:red'>Player not found</p>";
-    return;
-  }
-
-  const club = db.clubs.find(c=>c.id===player.club_id);
-
-  document.getElementById('player-name').textContent = player.name;
-  document.getElementById('player-age').textContent = player.age;
-  document.getElementById('player-nationality').textContent = player.nationality;
-  document.getElementById('player-position').textContent = player.position;
-  document.getElementById('player-foot').textContent = player.preferred_foot;
-  document.getElementById('player-club').textContent = club ? club.name : "Unknown";
-  document.getElementById('player-goals').textContent = player.goals;
-  document.getElementById('player-assists').textContent = player.assists;
-  document.getElementById('club-crest').src = club ? club.crest : '';
-
-  // teammates (exclude this player)
-  const teammates = club ? (club.players || []).filter(pid=>pid!==player.id).map(pid=>db.players.find(p=>p.id===pid)) : [];
-  const list = document.getElementById('teammates-list');
-  teammates.forEach(tm=>{
-    if(!tm) return;
-    const a = document.createElement('a');
-    a.className = 'mate';
-    a.href = '/players/'+slugify(tm.name);
-    a.textContent = tm.name;
-    list.appendChild(a);
-  });
-})();
-</script>
+  <script src="script.js"></script>
 </body>
 </html>

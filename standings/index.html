@@ -211,7 +211,7 @@ function renderLeader(containerId, players, statField, labelFormatter){
       <div class="player-rank">${i+1}</div>
       <div class="player-name">
         <div style="font-weight:600">${p.name}</div>
-        <div class="player-meta">${p.club ? p.club : ''} — ${p.position || ''}</div>
+        <div class="player-meta">${p.clubName || ''} — ${p.position || ''}</div>
       </div>
       <div style="min-width:40px;font-weight:700">${labelFormatter ? labelFormatter(p[statField]) : p[statField]}</div>
     `;
@@ -221,13 +221,24 @@ function renderLeader(containerId, players, statField, labelFormatter){
 
 function buildLeaders(db){
   const players = (db.players || []).map(p=>Object.assign({},p));
-  // ensure numeric fields exist
+  const clubsById = {};
+  (db.clubs || []).forEach(c => { clubsById[c.id] = c; });
+
+  // attach club name/logo from club_id
   players.forEach(p=>{
     p.goals = Number(p.goals||0);
     p.assists = Number(p.assists||0);
     p.long_shots = Number(p.long_shots||0);
     p.clean_sheets = Number(p.clean_sheets||0);
     p.own_goals = Number(p.own_goals||0);
+
+    if(p.club_id && clubsById[p.club_id]){
+      p.clubName = clubsById[p.club_id].name;
+      p.clubCrest = clubsById[p.club_id].crest;
+    } else {
+      p.clubName = '';
+      p.clubCrest = '';
+    }
   });
 
   const topGoals = players.slice().sort((a,b)=>b.goals - a.goals || a.name.localeCompare(b.name)).slice(0,50);
@@ -242,6 +253,7 @@ function buildLeaders(db){
   renderLeader('top-cleansheets', topCS, 'clean_sheets', v=>v);
   renderLeader('top-owngoals', topOG, 'own_goals', v=>v);
 }
+
 
 (async function init(){
   try{

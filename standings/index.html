@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KPS Sports — Standings</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span class="btt"></span>
+    </div>
+    <div class="side-menu" id="sideMenu">
+      <div class="shit">
+        <img href="#" class="logo sdmenu" src="img.png" alt="logo">
+        <div class="closebtn">
+          <span onclick="closeMenu()">
+            <img src="close.png">
+          </span>
+        </div>
+    </div>
+    <h1>KPS Sports</h1>
+    <ul>
+      <li onclick="open1()"><a href="#">home</a></li>
+      <li onclick="open2()"><a href="https://kps-sports.netlify.app/standings">Tables</a></li>
+      <li onclick="open3()"><a href="#">Volleyball</a></li>
+      <li onclick="open4()"><a href="#">Table Tennis</a></li>
+      <li onclick="open5()"><a href="#">players</a></li>
+      <li onclick="open6()"><a href="#">Teams</a></li>
+      <li onclick="open7()"><a href="#contactbar">contact</a></li>
+    </ul>
+  </div>
+  <div class="page">
+    <div class="standings-wrap">
+      <div class="topbar">
+        <div>
+          <div class="title2">Khiva Presidential School Sports</div>
+          <div class="subtitle2">The data may be inaccurate or may contain error. Please contact the developers if encountered any.</div>
+        </div>
+        <div class="small-muted">Last updated: <span id="data-timestamp">—</span></div>
+      </div>
+      <div class="goof">
+        <div class="title">Standings</div>
+
+      </div>
+      <div class="main-grid">
+        <!-- LEFT: Standings -->
+        <section class="standings" aria-labelledby="standings-heading">
+          <div class="standings-head">
+            <div class="col-rank">No.</div>
+            <div class="col-club">Club</div>
+            <div class="col-n">GF</div>
+            <div class="col-n">GA</div>
+            <div class="col-n">GD</div>
+            <div class="col-p">Pts</div>
+          </div>
+
+          <div class="standings-list" id="standings-list" role="list"></div>
+        </section>
+    </div>
+  </div>
+  </div>
+  <div class="page2">
+        <aside class="leaders" aria-labelledby="leaders-heading">
+          <div class="leader-row">
+            <div class="leader" id="leader-goals">
+              <div class="head"><span>Top Goals</span><span class="small-muted">Goals</span></div>
+              <div class="leader-list" id="top-goals"></div>
+            </div>
+
+            <div class="leader" id="leader-assists">
+              <div class="head"><span>Top Assists</span><span class="small-muted">Assists</span></div>
+              <div class="leader-list" id="top-assists"></div>
+            </div>
+          </div>
+
+          <div class="leader-row">
+            <div class="leader" id="leader-longshots">
+              <div class="head"><span>Top Long Shots</span><span class="small-muted">Long Shots</span></div>
+              <div class="leader-list" id="top-longshots"></div>
+            </div>
+
+            <div class="leader" id="leader-split">
+              <div class="split">
+                <div class="half">
+                  <div class="head"><span>Clean Sheets (Goalkeepers)</span><span class="small-muted">CS</span></div>
+                  <div class="leader-list" id="top-cleansheets"></div>
+                </div>
+                <div class="half">
+                  <div class="head"><span>Own Goals</span><span class="small-muted">OG</span></div>
+                  <div class="leader-list" id="top-owngoals"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div class="nbox">
+        <div class="note">© 2025 Khiva Presidential School Sports. All rights reserved.</div>
+      </div>
+<script>
+/*
+  Fetches /assets/db.json and builds:
+   - Standings (from matches)
+   - Player leaderboards (from players list)
+  Database format is in /assets/db.json (see provided sample).
+*/
+
+async function loadDB(){
+  const resp = await fetch('/assets/db.json', {cache: "no-store"});
+  if(!resp.ok) throw new Error('Failed to load db.json');
+  const db = await resp.json();
+  return db;
+}
+
+function slugify(s){
+  return String(s).trim().toLowerCase().replace(/\s+/g,'-').replace(/[^\w\-]/g,'');
+}
+
+function computeStandings(db){
+  const teams = {};
+  // initialize from clubs list (so teams with no matches still show)
+  for(const c of db.clubs){
+    teams[c.id] = {
+      id: c.id,
+      name: c.name,
+      crest: c.crest,
+      played:0,
+      wins:0,
+      draws:0,
+      losses:0,
+      gf:0, ga:0, gd:0, points:0
+    };
+  }
+
+  // process matches: expected fields: home_team (club id), away_team, home_goals, away_goals
+  for(const m of (db.matches||[])){
+    const h = teams[m.home_team];
+    const a = teams[m.away_team];
+    if(!h || !a) continue;
+    h.played++; a.played++;
+    h.gf += m.home_goals; h.ga += m.away_goals;
+    a.gf += m.away_goals; a.ga += m.home_goals;
+    if(m.home_goals > m.away_goals){
+      h.wins++; a.losses++;
+      h.points += 3;
+    } else if(m.home_goals < m.away_goals){
+      a.wins++; h.losses++;
+      a.points += 3;
+    } else {
+      h.draws++; a.draws++;
+      h.points += 1; a.points += 1;
+    }
+  }
+
+  // finalize gd
+  for(const id in teams){
+    teams[id].gd = teams[id].gf - teams[id].ga;
+  }
+
+  // produce sorted array
+  const arr = Object.values(teams).sort((x,y)=>{
+    if(y.points !== x.points) return y.points - x.points;
+    if(y.gd !== x.gd) return y.gd - x.gd;
+    if(y.gf !== x.gf) return y.gf - x.gf;
+    return x.name.localeCompare(y.name);
+  });
+
+  return arr;
+}
+
+function renderStandings(list){
+  const container = document.getElementById('standings-list');
+  container.innerHTML = '';
+  list.forEach((t, idx) => {
+    const a = document.createElement('a');
+    a.className = 'team-row';
+    a.href = `/clubs/${slugify(t.name)}`;
+    a.setAttribute('role','listitem');
+
+    a.innerHTML = `
+      <div class="team-left">
+        <div class="col-rank" style="width:36px;text-align:center;font-weight:700">${idx+1}</div>
+        <div class="crest"><img src="${t.crest}" alt="${t.name} crest" onerror="this.src='https://placehold.co/80x80?text=Club'"></div>
+        <div style="min-width:0">
+          <div class="team-name">${t.name}</div>
+          <div class="small-muted">P:${t.played} W:${t.wins} D:${t.draws} L:${t.losses}</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="col-n" style="width:80px;text-align:right">${t.gf}</div>
+        <div class="col-n" style="width:80px;text-align:right">${t.ga}</div>
+        <div class="col-n" style="width:80px;text-align:right">${t.gd}</div>
+        <div class="col-p" style="width:60px;text-align:center;font-weight:700">${t.points}</div>
+      </div>
+    `;
+    container.appendChild(a);
+  });
+}
+
+function renderLeader(containerId, players, statField, labelFormatter){
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+  players.forEach((p, i) => {
+    const a = document.createElement('a');
+    a.className = 'player-row';
+    a.href = `/players/${slugify(p.name)}`;
+    a.innerHTML = `
+      <div class="player-rank">${i+1}</div>
+      <div class="player-name">
+        <div style="font-weight:600">${p.name}</div>
+        <div class="player-meta">${p.club ? p.club : ''} — ${p.position || ''}</div>
+      </div>
+      <div style="min-width:40px;font-weight:700">${labelFormatter ? labelFormatter(p[statField]) : p[statField]}</div>
+    `;
+    container.appendChild(a);
+  });
+}
+
+function buildLeaders(db){
+  const players = (db.players || []).map(p=>Object.assign({},p));
+  // ensure numeric fields exist
+  players.forEach(p=>{
+    p.goals = Number(p.goals||0);
+    p.assists = Number(p.assists||0);
+    p.long_shots = Number(p.long_shots||0);
+    p.clean_sheets = Number(p.clean_sheets||0);
+    p.own_goals = Number(p.own_goals||0);
+  });
+
+  const topGoals = players.slice().sort((a,b)=>b.goals - a.goals || a.name.localeCompare(b.name)).slice(0,50);
+  const topAssists = players.slice().sort((a,b)=>b.assists - a.assists || a.name.localeCompare(b.name)).slice(0,50);
+  const topLong = players.slice().sort((a,b)=>b.long_shots - a.long_shots || a.name.localeCompare(b.name)).slice(0,50);
+  const topCS = players.filter(p=> (p.position || '').toLowerCase().includes('gk') || (p.isGoalkeeper)).slice().sort((a,b)=>b.clean_sheets - a.clean_sheets || a.name.localeCompare(b.name)).slice(0,50);
+  const topOG = players.slice().sort((a,b)=>b.own_goals - a.own_goals || a.name.localeCompare(b.name)).slice(0,50);
+
+  renderLeader('top-goals', topGoals, 'goals', v=>v);
+  renderLeader('top-assists', topAssists, 'assists', v=>v);
+  renderLeader('top-longshots', topLong, 'long_shots', v=>v);
+  renderLeader('top-cleansheets', topCS, 'clean_sheets', v=>v);
+  renderLeader('top-owngoals', topOG, 'own_goals', v=>v);
+}
+
+(async function init(){
+  try{
+    const db = await loadDB();
+    const ts = db.last_updated || new Date().toISOString();
+  const d = new Date(ts);
+  const formatted = d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+  document.getElementById('data-timestamp').textContent = formatted;
+
+
+    const standings = computeStandings(db);
+    renderStandings(standings);
+    buildLeaders(db);
+
+  }catch(err){
+    console.error(err);
+    document.body.innerHTML = '<pre style="color:#ffb4b4">Error loading data. Check /assets/db.json in your deploy.\\n'+err.message+'</pre>';
+  }
+})();
+function closeMenu() {
+  const menu = document.getElementById('sideMenu');
+  const overl1 = document.getElementById('overl1');
+  menu.style.transform = 'translateX(0vw)';
+  overl1.style.background = 'rgba(0, 0, 0, 0)';
+    // document.querySelector('body').style.overflowY = 'scroll';
+  overl1.style.pointerEvents = 'none'; 
+}
+    var amt = '375px';
+  function toggleMenu() {
+    const menu = document.getElementById('sideMenu');
+    const overl1 = document.getElementById('overl1');
+    menu.style.transform = 'translateX(calc(' + amt + '))';
+    overl1.style.background = 'rgba(0, 0, 0, 0.7)';
+    overl1.style.pointerEvents = 'auto'; 
+    // document.querySelector('body').style.overflowY = 'hidden';
+  }
+</script>
+</body>
+</html>

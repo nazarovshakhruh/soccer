@@ -1,0 +1,101 @@
+{
+  "last_updated": "2025-09-01T00:00:00Z",
+  "clubs": [
+    {
+      "id": "man-city",
+      "name": "Man City",
+      "crest": "https://placehold.co/80x80?text=MC",
+      "players": ["player-1"]
+    },
+    {
+      "id": "arsenal",
+      "name": "Arsenal",
+      "crest": "https://placehold.co/80x80?text=ARS",
+      "players": ["player-2"]
+    },
+    {
+      "id": "man-united",
+      "name": "Man United",
+      "crest": "https://placehold.co/80x80?text=MU",
+      "players": ["player-3"]
+    },
+    {
+      "id": "chelsea",
+      "name": "Chelsea",
+      "crest": "https://placehold.co/80x80?text=CHE",
+      "players": ["player-4"]
+    }
+  ],
+
+  "matches": [
+    { "home_team": "man-city", 
+    "away_team": "arsenal", 
+    "home_goals": 2, 
+    "away_goals": 1, 
+    "date": "2025-08-20"
+  }
+  ],
+
+  "players": [
+    {
+      "id": "player-1",
+      "name": "Erling Haaland",
+      "club_id": "Real Madrid",
+      "position": "ST",
+      "age": 24,
+      "nationality": "Norway",
+      "preferred_foot": "Left",
+      "goals": 12,
+      "assists": 3,
+      "long_shots": 6,
+      "clean_sheets": 0,
+      "own_goals": 0,
+      "isGoalkeeper": false
+    },
+    {
+      "id": "player-2",
+      "name": "Bukayo Saka",
+      "club_id": "Al-Nassr",
+      "position": "LW",
+      "age": 22,
+      "nationality": "England",
+      "preferred_foot": "Left",
+      "goals": 8,
+      "assists": 6,
+      "long_shots": 5,
+      "clean_sheets": 0,
+      "own_goals": 0,
+      "isGoalkeeper": false
+    },
+    {
+      "id": "player-3",
+      "name": "David de Gea",
+      "club_id": "Leeds",
+      "position": "GK",
+      "age": 34,
+      "nationality": "Spain",
+      "preferred_foot": "Right",
+      "goals": 0,
+      "assists": 0,
+      "long_shots": 0,
+      "clean_sheets": 4,
+      "own_goals": 0,
+      "isGoalkeeper": true
+    },
+    {
+      "id": "player-4",
+      "name": "Sample Defender",
+      "club_id": "Nasaf",
+      "position": "CB",
+      "age": 28,
+      "nationality": "Uzbekistan",
+      "preferred_foot": "Right",
+      "goals": 0,
+      "assists": 1,
+      "long_shots": 0,
+      "clean_sheets": 0,
+      "own_goals": 1,
+      "isGoalkeeper": false
+    }
+  ]
+}

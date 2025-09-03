@@ -1,11 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background: url(prob.png) no-repeat center / 100%, linear-gradient(90deg, var(--color1), var(--color2));
-  background-size: 100%;
+  background-size: cover;
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   padding: 0;
+  justify-content: space-between;
 }
 :root {
     --color1: #007b63;
@@ -13,9 +21,11 @@ body {
     --gg: #00000075;
 }
 .player-page {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+  max-width: 100%;
+  /* margin: auto; */
+  width: 100%;
+  padding: 100px;
+  height: 93;
 }
 .player-header {
   display: flex;
@@ -107,4 +117,14 @@ a {
   width: 80px;
   border-radius: 10px;
   margin-bottom: 8px;
+}
+.note {
+    font-size:12px;
+    color:var(--muted);
+    margin-top:6px;
+    color: #fff;
+    padding: 10px;
+    backdrop-filter: blur(20px);
+    background-color: #000000b2;
+    text-align: center;
 }

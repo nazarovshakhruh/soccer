@@ -4,77 +4,47 @@
     {
       "id": "man-city",
       "name": "Man City",
-      "crest": "https://placehold.co/80x80?text=MC"
-    },
-    {
-      "id": "man-united",
-      "name": "Man United",
-      "crest": "https://placehold.co/80x80?text=MU"
+      "crest": "https://placehold.co/80x80?text=MC",
+      "players": ["player-1"]
     },
     {
       "id": "arsenal",
       "name": "Arsenal",
-      "crest": "https://placehold.co/80x80?text=ARS"
+      "crest": "https://placehold.co/80x80?text=ARS",
+      "players": ["player-2"]
     },
+    {
+      "id": "man-united",
+      "name": "Man United",
+      "crest": "https://placehold.co/80x80?text=MU",
+      "players": ["player-3"]
+    },
+    {
+      "id": "chelsea",
+      "name": "Chelsea",
+      "crest": "https://placehold.co/80x80?text=CHE",
+      "players": ["player-4"]
+    }
+  ],
 
-    {
-      "id": "ali",
-      "name": "Ali",
-      "crest": "ali.jpg"
-    },
-        {
-      "id": "tottenham",
-      "name": "Tottenham",
-      "crest": "https://placehold.co/80x80?text=CHE"
-    },
-        {
-      "id": "real-madrid",
-      "name": "Real Madrid",
-      "crest": "https://placehold.co/80x80?text=CHE"
-    },
-            {
-      "id": "barcelona",
-      "name": "Barcelona",
-      "crest": "https://placehold.co/80x80?text=CHE"
-    },
-                {
-      "id": "arachnids",
-      "name": "Arachnids",
-      "crest": "https://placehold.co/80x80?text=CHE"
-    },
-                {
-      "id": "benfica",
-      "name": "Benfica",
-      "crest": "https://placehold.co/80x80?text=CHE"
-    },
-                {
-      "id": "newcastle",
-      "name": "Newcastle",
-      "crest": "https://placehold.co/80x80?text=CHE"
-    }
-  ],
   "matches": [
-    {
-      "home_team": "man-city",
-      "away_team": "arsenal",
-      "home_goals": 2,
-      "away_goals": 1,
-      "date": "2025-08-20"
-    },
-        {
-      "home_team": "ali",
-      "away_team": "arachnids",
-      "home_goals": 5,
-      "away_goals": 1,
-      "date": "2025-08-20"
-    }
+    { "home_team": "man-city", 
+    "away_team": "arsenal", 
+    "home_goals": 2, 
+    "away_goals": 1, 
+    "date": "2025-08-20"
+  }
   ],
+
   "players": [
     {
       "id": "player-1",
       "name": "Erling Haaland",
-      "club": "Man City",
+      "club_id": "Real Madrid",
       "position": "ST",
+      "age": 24,
+      "nationality": "Norway",
+      "preferred_foot": "Left",
       "goals": 12,
       "assists": 3,
       "long_shots": 6,
@@ -85,8 +55,11 @@
     {
       "id": "player-2",
       "name": "Bukayo Saka",
-      "club": "Arsenal",
+      "club_id": "Al-Nassr",
       "position": "LW",
+      "age": 22,
+      "nationality": "England",
+      "preferred_foot": "Left",
       "goals": 8,
       "assists": 6,
       "long_shots": 5,
@@ -97,8 +70,11 @@
     {
       "id": "player-3",
       "name": "David de Gea",
-      "club": "Man United",
+      "club_id": "Leeds",
       "position": "GK",
+      "age": 34,
+      "nationality": "Spain",
+      "preferred_foot": "Right",
       "goals": 0,
       "assists": 0,
       "long_shots": 0,
@@ -109,37 +85,16 @@
     {
       "id": "player-4",
       "name": "Sample Defender",
-      "club": "Chelsea",
+      "club_id": "Nasaf",
       "position": "CB",
+      "age": 28,
+      "nationality": "Uzbekistan",
+      "preferred_foot": "Right",
       "goals": 0,
       "assists": 1,
       "long_shots": 0,
       "clean_sheets": 0,
       "own_goals": 1,
-      "isGoalkeeper": false
-    },
-        {
-      "id": "player-5",
-      "name": "Shohruhbek Nazarov",
-      "club": "Arsenal",
-      "position": "ST",
-      "goals": 36,
-      "assists": 22,
-      "long_shots": 26,
-      "clean_sheets": 0,
-      "own_goals": 0,
-      "isGoalkeeper": false
-    },
-        {
-      "id": "player-6",
-      "name": "Muhammad Maxsudbekov",
-      "club": "Barcelona",
-      "position": "ST",
-      "goals": 35,
-      "assists": 21,
-      "long_shots": 7,
-      "clean_sheets": 0,
-      "own_goals": 16,
       "isGoalkeeper": false
     }
   ]

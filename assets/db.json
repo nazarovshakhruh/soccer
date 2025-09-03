@@ -3,7 +3,7 @@
   "clubs": [
     {
       "id": "man-city",
-      "name": "Man City",
+      "name": "Manchester City",
       "crest": "https://placehold.co/80x80?text=MC",
       "players": ["player-1"]
     },
@@ -15,7 +15,7 @@
     },
     {
       "id": "man-united",
-      "name": "Man United",
+      "name": "Manchester United",
       "crest": "https://placehold.co/80x80?text=MU",
       "players": ["player-3"]
     },
@@ -38,64 +38,45 @@
 
   "players": [
     {
-      "id": "player-1",
-      "name": "Erling Haaland",
-      "club_id": "Real Madrid",
-      "position": "ST",
-      "age": 24,
-      "nationality": "Norway",
-      "preferred_foot": "Left",
-      "goals": 12,
-      "assists": 3,
-      "long_shots": 6,
-      "clean_sheets": 0,
-      "own_goals": 0,
-      "isGoalkeeper": false
-    },
+  "id": "shohruh",
+  "name": "Shohruh Nazarov",
+  "club_id": "man-city",
+  "age": 11,
+  "dob": "22/10/2000",
+  "nationality": "United States",
+  "position": "Midfielder",
+  "preferred_foot": "Right",
+  "goals": 1,
+  "assists": 3,
+  "appearances": 39,
+  "image": "user.webp"
+},
     {
-      "id": "player-2",
-      "name": "Bukayo Saka",
-      "club_id": "Al-Nassr",
-      "position": "LW",
-      "age": 22,
-      "nationality": "England",
-      "preferred_foot": "Left",
-      "goals": 8,
-      "assists": 6,
-      "long_shots": 5,
-      "clean_sheets": 0,
-      "own_goals": 0,
-      "isGoalkeeper": false
-    },
-    {
-      "id": "player-3",
-      "name": "David de Gea",
-      "club_id": "Leeds",
-      "position": "GK",
-      "age": 34,
-      "nationality": "Spain",
-      "preferred_foot": "Right",
-      "goals": 0,
-      "assists": 0,
-      "long_shots": 0,
-      "clean_sheets": 4,
-      "own_goals": 0,
-      "isGoalkeeper": true
-    },
-    {
-      "id": "player-4",
-      "name": "Sample Defender",
-      "club_id": "Nasaf",
-      "position": "CB",
-      "age": 28,
-      "nationality": "Uzbekistan",
-      "preferred_foot": "Right",
-      "goals": 0,
-      "assists": 1,
-      "long_shots": 0,
-      "clean_sheets": 0,
-      "own_goals": 1,
-      "isGoalkeeper": false
-    }
+  "id": "aaronson",
+  "name": "Brenden Aaronson",
+  "club_id": "man-city",
+  "age": 9,
+  "dob": "22/10/2000",
+  "nationality": "United States",
+  "position": "CF",
+  "preferred_foot": "Right",
+  "goals": 1,
+  "assists": 3,
+  "appearances": 39,
+  "image": "user.webp"
+},    {
+  "id": "alisher",
+  "name": "Alisher Rahmanov",
+  "club_id": "man-city",
+  "age": 11,
+  "dob": "22/10/2000",
+  "nationality": "United States",
+  "position": "CF",
+  "preferred_foot": "Right",
+  "goals": 1,
+  "assists": 3,
+  "appearances": 39,
+  "image": "user.webp"
+}
   ]
 }

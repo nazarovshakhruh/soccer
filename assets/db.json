@@ -24,44 +24,44 @@
   ],
 
   "matches": [
-    { "home_team": "man-city", 
+    { "home_team": "manchester-city", 
     "away_team": "arsenal", 
     "home_goals": 2, 
     "away_goals": 1, 
     "date": "2025-08-26"
   },
-      { "home_team": "man-united", 
+      { "home_team": "manchester-united", 
     "away_team": "chelsea", 
     "home_goals": 5, 
     "away_goals": 2, 
     "date": "2025-08-21"
   },
       { "home_team": "chelsea", 
-    "away_team": "man-city", 
+    "away_team": "manchester-city", 
     "home_goals": 3, 
     "away_goals": 2, 
     "date": "2025-08-22"
   },
         { "home_team": "chelsea", 
-    "away_team": "man-city", 
+    "away_team": "manchester-city", 
     "home_goals": null, 
     "away_goals": null, 
     "date": "2025-09-11T12:25:00Z"
   },
           { "home_team": "arsenal", 
-    "away_team": "man-city", 
+    "away_team": "manchester-city", 
     "home_goals": null, 
     "away_goals": null, 
     "date": "2025-09-30T15:30:00Z"
   },
             { "home_team": "arsenal", 
-    "away_team": "man-city", 
+    "away_team": "manchester-city", 
     "home_goals": 5, 
     "away_goals": 2, 
     "date": "2025-07-30T15:30:00Z"
   },
               { "home_team": "arsenal", 
-    "away_team": "man-city", 
+    "away_team": "manchester-city", 
     "home_goals": null, 
     "away_goals": null, 
     "date": "2025-02-30T15:30:00Z"
@@ -72,7 +72,7 @@
     {
   "id": "shohruh",
   "name": "Shohruh Nazarov",
-  "club_id": "man-city",
+  "club_id": "manchester-city",
   "age": 11,
   "dob": "22/10/2000",
   "nationality": "United States",
@@ -90,7 +90,7 @@
     {
   "id": "aaronson",
   "name": "Brenden Aaronson",
-  "club_id": "man-city",
+  "club_id": "manchester-city",
   "age": 9,
   "dob": "22/10/2000",
   "nationality": "United States",
@@ -107,7 +107,7 @@
 },    {
   "id": "alisher",
   "name": "Alisher Rahmanov",
-  "club_id": "man-city",
+  "club_id": "manchester-city",
   "age": 11,
   "dob": "22/10/2000",
   "nationality": "Uzbekistan",

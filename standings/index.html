@@ -157,7 +157,7 @@ function renderStandings(list){
   list.forEach((t, idx) => {
     const a = document.createElement('a');
     a.className = 'team-row';
-    a.href = `/clubs/${slugify(t.name)}`;
+    a.href = `/teams/${slugify(t.name)}`;
     a.setAttribute('role','listitem');
 
     a.innerHTML = `

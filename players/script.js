@@ -64,7 +64,7 @@ function calculateAppearances(players, matches) {
       </div>
     </div>
     <div class="player-header knd">
-      <a href="/clubs/${club?.id}">
+      <a href="/teams/${club?.id}">
         <h2>Club</h2>
         <img class="shyt" src="${club?.crest || 'https://placehold.co/150x200?text=Club'}" alt="${club?.name}">
       </a>

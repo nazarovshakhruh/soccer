@@ -4,26 +4,22 @@
     {
       "id": "man-city",
       "name": "Manchester City",
-      "crest": "https://placehold.co/80x80?text=MC",
-      "players": ["player-1"]
+      "crest": "https://placehold.co/80x80?text=MC"
     },
     {
       "id": "arsenal",
       "name": "Arsenal",
-      "crest": "https://placehold.co/80x80?text=ARS",
-      "players": ["player-2"]
+      "crest": "https://placehold.co/80x80?text=ARS"
     },
     {
       "id": "man-united",
       "name": "Manchester United",
-      "crest": "https://placehold.co/80x80?text=MU",
-      "players": ["player-3"]
+      "crest": "https://placehold.co/80x80?text=MU"
     },
     {
       "id": "chelsea",
       "name": "Chelsea",
-      "crest": "https://placehold.co/80x80?text=CHE",
-      "players": ["player-4"]
+      "crest": "https://placehold.co/80x80?text=CHE"
     }
   ],
 
@@ -32,7 +28,43 @@
     "away_team": "arsenal", 
     "home_goals": 2, 
     "away_goals": 1, 
-    "date": "2025-08-20"
+    "date": "2025-08-26"
+  },
+      { "home_team": "man-united", 
+    "away_team": "chelsea", 
+    "home_goals": 5, 
+    "away_goals": 2, 
+    "date": "2025-08-21"
+  },
+      { "home_team": "chelsea", 
+    "away_team": "man-city", 
+    "home_goals": 3, 
+    "away_goals": 2, 
+    "date": "2025-08-22"
+  },
+        { "home_team": "chelsea", 
+    "away_team": "man-city", 
+    "home_goals": null, 
+    "away_goals": null, 
+    "date": "2025-09-11T12:25:00Z"
+  },
+          { "home_team": "arsenal", 
+    "away_team": "man-city", 
+    "home_goals": null, 
+    "away_goals": null, 
+    "date": "2025-09-30T15:30:00Z"
+  },
+            { "home_team": "arsenal", 
+    "away_team": "man-city", 
+    "home_goals": 5, 
+    "away_goals": 2, 
+    "date": "2025-07-30T15:30:00Z"
+  },
+              { "home_team": "arsenal", 
+    "away_team": "man-city", 
+    "home_goals": null, 
+    "away_goals": null, 
+    "date": "2025-02-30T15:30:00Z"
   }
   ],
 
@@ -44,12 +76,16 @@
   "age": 11,
   "dob": "22/10/2000",
   "nationality": "United States",
-  "position": "Midfielder",
+  "position": "CM",
   "preferred_foot": "Right",
   "goals": 1,
   "assists": 3,
   "appearances": 39,
-  "image": "user.webp"
+  "image": "/assets/user.webp",
+  "long_shots": 7,
+  "own_goals": 1,
+  "clean_sheets": null,
+  "isGoalkeeper": false
 },
     {
   "id": "aaronson",
@@ -63,20 +99,28 @@
   "goals": 1,
   "assists": 3,
   "appearances": 39,
-  "image": "user.webp"
+  "image": "/assets/user.webp",
+  "long_shots": 6,
+  "own_goals": 0,
+  "clean_sheets": null,
+  "isGoalkeeper": false
 },    {
   "id": "alisher",
   "name": "Alisher Rahmanov",
   "club_id": "man-city",
   "age": 11,
   "dob": "22/10/2000",
-  "nationality": "United States",
-  "position": "CF",
-  "preferred_foot": "Right",
-  "goals": 1,
-  "assists": 3,
-  "appearances": 39,
-  "image": "user.webp"
+  "nationality": "Uzbekistan",
+  "position": "SB",
+  "preferred_foot": "Left",
+  "goals": 3,
+  "assists": 0,
+  "appearances": 40,
+  "image": "/assets/user.webp",
+  "long_shots": 2,
+  "own_goals": 0,
+  "clean_sheets": 2,
+  "isGoalkeeper": true
 }
   ]
 }

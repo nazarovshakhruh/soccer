@@ -17,37 +17,69 @@ body {
 }
 :root {
     --color1: #007b63;
-    --color2: #003523;
+    /* --color2: #003523; */
+    --color2: #180030;
     --gg: #00000075;
 }
 .player-page {
   max-width: 100%;
   /* margin: auto; */
-  width: 100%;
-  padding: 100px;
-  height: 93;
+  width: 60%;
+  padding: 20px;
 }
 .player-header {
   display: flex;
-      backdrop-filter: blur(20px);
-    background: linear-gradient( 90deg, #00000091, transparent);
-        box-shadow: 0 6px 20px rgba(2,6,23,0.6);
-    border: 1px solid rgba(255,255,255,0.03);
-  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background: linear-gradient( 90deg, #00000091, transparent);
+  box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  /* border-radius: 20px; */
   padding: 20px;
   align-items: center;
   margin-bottom: 20px;
+  width: fit-content;
 }
-
+.fnm {
+  padding-right: 100px;
+}
+.knd {
+  flex-direction: column;
+  gap: 10px;
+  background: transparent;
+  align-items: center;
+  padding: 15px;
+  gap: 5px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+.hdrs {
+  display: flex;
+  height: 220px;
+  flex-direction: row;
+  gap: 20px;
+}
 .shyt {
   width: 150px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   margin-right: 20px;
 }
 .shit {
-    width: 50px;
-  border-radius: 12px;
+  width: 50px;
+  /* border-radius: 12px; */
   margin-right: 20px;
+}
+.knd img {
+  width: 140px;
+  margin-right: 0px;
+}
+.knd h2{
+  font-size: 20px;
+}
+.knd a{
+  text-align: center;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
 }
 .player-header h1 {
   margin: 0;
@@ -73,8 +105,11 @@ body {
         box-shadow: 0 6px 20px rgba(2,6,23,0.6);
     border: 1px solid rgba(255,255,255,0.03);
   padding: 15px;
-  border-radius: 12px;
-  text-align: center;
+  /* border-radius: 12px; */
+  /* text-align: center; */
+}
+.out img {
+  width: 50px;
 }
 
 .teammates {
@@ -105,7 +140,7 @@ a {
         box-shadow: 0 6px 20px rgba(2,6,23,0.6);
     border: 1px solid rgba(255,255,255,0.03);
   padding: 10px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   text-align: center;
   height: 170px;
   display: flex;
@@ -115,7 +150,7 @@ a {
 
 .teammate-card img {
   width: 80px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   margin-bottom: 8px;
 }
 .note {

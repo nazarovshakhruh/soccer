@@ -4,34 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>KPS Sports — Standings</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="menu-btn" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span class="btt"></span>
-    </div>
-    <div class="side-menu" id="sideMenu">
-      <div class="shit">
-        <img href="#" class="logo sdmenu" src="img.png" alt="logo">
-        <div class="closebtn">
-          <span onclick="closeMenu()">
-            <img src="close.png">
-          </span>
-        </div>
-    </div>
-    <h1>KPS Sports</h1>
-    <ul>
-      <li onclick="open1()"><a href="#">home</a></li>
-      <li onclick="open2()"><a href="https://kps-sports.netlify.app/standings">Tables</a></li>
-      <li onclick="open3()"><a href="#">Volleyball</a></li>
-      <li onclick="open4()"><a href="#">Table Tennis</a></li>
-      <li onclick="open5()"><a href="#">players</a></li>
-      <li onclick="open6()"><a href="#">Teams</a></li>
-      <li onclick="open7()"><a href="#contactbar">contact</a></li>
-    </ul>
-  </div>
+    
   <div class="page">
     <div class="standings-wrap">
       <div class="topbar">
@@ -118,7 +98,7 @@ async function loadDB(){
 function slugify(s){
   return String(s).trim().toLowerCase().replace(/\s+/g,'-').replace(/[^\w\-]/g,'');
 }
-
+  document.getElementById("data-timestamp").textContent = new Date().toLocaleString();
 function computeStandings(db){
   const teams = {};
   // initialize from clubs list (so teams with no matches still show)
@@ -200,24 +180,29 @@ function renderStandings(list){
   });
 }
 
-function renderLeader(containerId, players, statField, labelFormatter){
+function renderLeader(containerId, players, statField, labelFormatter, db){
   const container = document.getElementById(containerId);
   container.innerHTML = '';
   players.forEach((p, i) => {
+    const club = db.clubs.find(c => c.id === p.club_id); // get club
     const a = document.createElement('a');
     a.className = 'player-row';
     a.href = `/players/${slugify(p.name)}`;
     a.innerHTML = `
       <div class="player-rank">${i+1}</div>
+      <img src="${club ? club.crest : ''}" alt="${club ? club.name : ''} logo">
       <div class="player-name">
         <div style="font-weight:600">${p.name}</div>
-        <div class="player-meta">${p.clubName || ''} — ${p.position || ''}</div>
+        <div class="player-meta">${club ? club.name : ''} — ${p.position || ''}</div>
       </div>
-      <div style="min-width:40px;font-weight:700">${labelFormatter ? labelFormatter(p[statField]) : p[statField]}</div>
+      <div style="min-width:40px;font-weight:700">
+        ${labelFormatter ? labelFormatter(p[statField]) : p[statField]}
+      </div>
     `;
     container.appendChild(a);
   });
 }
+
 
 function buildLeaders(db){
   const players = (db.players || []).map(p=>Object.assign({},p));
@@ -247,11 +232,12 @@ function buildLeaders(db){
   const topCS = players.filter(p=> (p.position || '').toLowerCase().includes('gk') || (p.isGoalkeeper)).slice().sort((a,b)=>b.clean_sheets - a.clean_sheets || a.name.localeCompare(b.name)).slice(0,50);
   const topOG = players.slice().sort((a,b)=>b.own_goals - a.own_goals || a.name.localeCompare(b.name)).slice(0,50);
 
-  renderLeader('top-goals', topGoals, 'goals', v=>v);
-  renderLeader('top-assists', topAssists, 'assists', v=>v);
-  renderLeader('top-longshots', topLong, 'long_shots', v=>v);
-  renderLeader('top-cleansheets', topCS, 'clean_sheets', v=>v);
-  renderLeader('top-owngoals', topOG, 'own_goals', v=>v);
+renderLeader('top-goals', topGoals, 'goals', v=>v, db);
+renderLeader('top-assists', topAssists, 'assists', v=>v, db);
+renderLeader('top-longshots', topLong, 'long_shots', v=>v, db);
+renderLeader('top-cleansheets', topCS, 'clean_sheets', v=>v, db);
+renderLeader('top-owngoals', topOG, 'own_goals', v=>v, db);
+
 }
 
 
@@ -261,7 +247,6 @@ function buildLeaders(db){
     const ts = db.last_updated || new Date().toISOString();
   const d = new Date(ts);
   const formatted = d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
-  document.getElementById('data-timestamp').textContent = formatted;
 
 
     const standings = computeStandings(db);

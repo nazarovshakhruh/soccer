@@ -2,7 +2,7 @@
   "last_updated": "2025-09-01T00:00:00Z",
   "clubs": [
     {
-      "id": "man-city",
+      "id": "manchester-city",
       "name": "Manchester City",
       "crest": "https://placehold.co/80x80?text=MC"
     },
@@ -12,7 +12,7 @@
       "crest": "https://placehold.co/80x80?text=ARS"
     },
     {
-      "id": "man-united",
+      "id": "manchester-united",
       "name": "Manchester United",
       "crest": "https://placehold.co/80x80?text=MU"
     },

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="club-container">
+  </div>
+  <div class="fist">
+  <div class="standings-wrap">
+      <div class="topbar">
+        <div>
+          <div id="titul" class="title2">Khiva Presidential School Sports</div>
+          <div class="subtitle2">The data may be inaccurate or may contain errors. Please contact the developers if encountered any.</div>
+        </div>
+        <div class="small-muted">Last updated: <span id="data-timestamp">—</span></div>
+      </div>
+      <div class="main-grid">
+        <!-- LEFT: Standings -->
+        <section class="standings" aria-labelledby="standings-heading">
+          <div class="standings-head">
+            <div class="col-rank">No.</div>
+            <div class="col-club">Club</div>
+            <div class="col-n">GF</div>
+            <div class="col-n">GA</div>
+            <div class="col-n">GD</div>
+            <div class="col-p">Pts</div>
+          </div>
+
+          <div class="standings-list" id="standings-list" role="list"></div>
+        </section>
+    </div>
+  </div>
+  </div>
+    <div class="note">© 2025 Khiva Presidential School Sports. All rights reserved.</div>
+  <script>
+  async function loadDB() {
+    const res = await fetch('/assets/db.json', { cache: "no-store" });
+    return res.json();
+  }
+
+  function slugify(s) {
+    return String(s).toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]/g, '');
+  }
+
+  function getClubSlug() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('slug')) return urlParams.get('slug');
+    return window.location.pathname.split('/').pop();
+  }
+
+  (async function () {
+    const db = await loadDB();
+    const slug = getClubSlug();
+    const club = db.clubs.find(c => slugify(c.name) === slug);
+
+    if (!club) {
+      document.body.innerHTML = "<p style='color:red'>Club not found</p>";
+      return;
+    }
+
+    const players = db.players.filter(p => p.club_id === club.id);
+
+const topScorer = players.filter(p => p.goals > 0)
+                         .sort((a,b) => b.goals - a.goals)[0];
+
+const topAssister = players.filter(p => p.assists > 0)
+                           .sort((a,b) => b.assists - a.assists)[0];
+
+    const matches = db.matches.filter(m => m.home_team === club.id || m.away_team === club.id);
+
+    const pastMatches = matches.filter(m => m.home_goals !== null && m.away_goals !== null)
+                               .sort((a,b) => new Date(b.date) - new Date(a.date));
+    const futureMatches = matches.filter(m => m.home_goals === null || m.away_goals === null)
+                                 .sort((a,b) => new Date(a.date) - new Date(b.date));
+
+    const lastMatch = pastMatches[0];
+    const nextMatch = futureMatches[0];
+
+    const teamName = id => db.clubs.find(c => c.id === id)?.name || "Unknown";
+    const teamCrest = id => db.clubs.find(c => c.id === id)?.crest || "";
+    function ordinal(n) {
+  const s = ["th","st","nd","rd"],
+        v = n % 100;
+  return n + (s[(v-20)%10] || s[v] || s[0]);
+}function ordinal(n) {
+  const s = ["th","st","nd","rd"],
+        v = n % 100;
+  return n + (s[(v-20)%10] || s[v] || s[0]);
+}
+const standings = computeStandings(db);
+renderStandings(standings);
+
+const clubRank = standings.findIndex(t => t.id === club.id) + 1;
+
+
+    const container = document.getElementById("club-container");
+    container.innerHTML = `
+          <div class="club-grid fst">
+      <div class="club-header">
+        <img src="${club.crest}" class="club-crest">
+        <div class="just">
+          <h1>${club.name}</h1>
+            <p><b>${clubRank ? ordinal(clubRank) + ' </b>position' : '—'}</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Next Match</h2>
+        ${nextMatch ? `
+          <div class="match-card">
+            <div class="mtch">
+            <h3 class="bih ih1">${teamName(nextMatch.home_team)}<img src="${teamCrest(nextMatch.home_team)}" class="mini-crest"></h3>
+            <span class="vs">vs</span>
+            <h3 class="bih ih2"><img src="${teamCrest(nextMatch.away_team)}" class="mini-crest">${teamName(nextMatch.away_team)}</h3>
+            </div>
+            <p class="match-date">${new Date(nextMatch.date).toLocaleString()}</p>
+            </div>` : `<p>No upcoming match</p>`}
+            </div>
+            <div class="card gf">
+              <h2>Last Match</h2>
+              ${lastMatch ? `
+                <div class="match-card">
+                <div class="mtch">
+                  <h3 class="bih ih1">${teamName(lastMatch.home_team)}<img src="${teamCrest(lastMatch.home_team)}" class="mini-crest"></h3>
+                  <span class="score">${lastMatch.home_goals} - ${lastMatch.away_goals}</span>
+                  <h3 class="bih ih2"><img src="${teamCrest(lastMatch.away_team)}" class="mini-crest">${teamName(lastMatch.away_team)} </h3>
+                </div>
+                  <p class="match-date">${new Date(lastMatch.date).toLocaleDateString()}</p>
+                </div>` : `<p>No past matches</p>`}
+            </div>
+        </div>
+      <div class="club-grid snd">
+      
+        
+        
+        <div class="card bss  ">
+            <h2>Top Scorer</h2>
+            ${topScorer ? `
+            <a href="/players/${slugify(topScorer.name)}" class="player-card">
+                <img src="${topScorer.image}" class="player-img">
+                <div class="name"><strong>${topScorer.name}</strong><br><b>${topScorer.goals}</b> goals</div>
+                </a>
+                ` : `<p>No goals yet</p>`}
+                </div>
+                
+                <div class="card ass">
+                    <h2>Top Assister</h2>
+                    ${topAssister ? `
+                    <a href="/players/${slugify(topAssister.name)}" class="player-card">
+                        <img src="${topAssister.image}" class="player-img">
+                        <div class="name"><strong>${topAssister.name}</strong><br><b>${topAssister.assists}</b> assists</div>
+                        </a>
+                        ` : `<p>No assists yet</p>`}
+                        </div>
+<div class="card qss">
+  <h2>Players</h2>
+  ${players.length > 0 ? `
+    <div class="player-list">
+      ${players.map(p => `
+        <a href="/players/${slugify(p.name)}" class="player-card">
+          <img src="${p.image}" class="player-img">
+          <h3>${p.name}</h3>
+        </a>
+      `).join('')}
+    </div>
+  ` : `<p>No players yet</p>`}
+</div>
+      </div>
+    `;
+  const titul = document.getElementById("titul");
+  titul.innerHTML=`<b>${clubRank ? ordinal(clubRank) + ' </b>position' : '—'}`;
+      // 🟢 FIX: now compute and render the standings
+  const standing = computeStandings(db);
+  renderStandings(standing);
+
+  // update timestamp
+  document.getElementById("data-timestamp").textContent = new Date().toLocaleString();
+  })();
+  function computeStandings(db){
+  const teams = {};
+  // initialize from clubs list (so teams with no matches still show)
+  for(const c of db.clubs){
+    teams[c.id] = {
+      id: c.id,
+      name: c.name,
+      crest: c.crest,
+      played:0,
+      wins:0,
+      draws:0,
+      losses:0,
+      gf:0, ga:0, gd:0, points:0
+    };
+  }
+  
+
+  // process matches: expected fields: home_team (club id), away_team, home_goals, away_goals
+  for(const m of (db.matches||[])){
+    const h = teams[m.home_team];
+    const a = teams[m.away_team];
+    if(!h || !a) continue;
+    h.played++; a.played++;
+    h.gf += m.home_goals; h.ga += m.away_goals;
+    a.gf += m.away_goals; a.ga += m.home_goals;
+    if(m.home_goals > m.away_goals){
+      h.wins++; a.losses++;
+      h.points += 3;
+    } else if(m.home_goals < m.away_goals){
+      a.wins++; h.losses++;
+      a.points += 3;
+    } else {
+      h.draws++; a.draws++;
+      h.points += 1; a.points += 1;
+    }
+  }
+
+  // finalize gd
+  for(const id in teams){
+    teams[id].gd = teams[id].gf - teams[id].ga;
+  }
+
+  // produce sorted array
+  const arr = Object.values(teams).sort((x,y)=>{
+    if(y.points !== x.points) return y.points - x.points;
+    if(y.gd !== x.gd) return y.gd - x.gd;
+    if(y.gf !== x.gf) return y.gf - x.gf;
+    return x.name.localeCompare(y.name);
+  });
+
+  return arr;
+}
+
+function renderStandings(list){
+  const container = document.getElementById('standings-list');
+  container.innerHTML = '';
+  list.forEach((t, idx) => {
+    const a = document.createElement('a');
+    a.className = 'team-row';
+    a.href = `/clubs/${slugify(t.name)}`;
+    a.setAttribute('role','listitem');
+
+    a.innerHTML = `
+      <div class="team-left">
+        <div class="col-rank" style="width:36px;text-align:center;font-weight:700">${idx+1}</div>
+        <div class="crest"><img src="${t.crest}" alt="${t.name} crest" onerror="this.src='https://placehold.co/80x80?text=Club'"></div>
+        <div style="min-width:0">
+          <div class="team-name">${t.name}</div>
+          <div class="small-muted">P:${t.played} W:${t.wins} D:${t.draws} L:${t.losses}</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="col-n" style="width:80px;text-align:right">${t.gf}</div>
+        <div class="col-n" style="width:80px;text-align:right">${t.ga}</div>
+        <div class="col-n" style="width:80px;text-align:right">${t.gd}</div>
+        <div class="col-p" style="width:60px;text-align:center;font-weight:700">${t.points}</div>
+      </div>
+    `;
+    container.appendChild(a);
+  });
+}
+  </script>
+</body>
+</html>

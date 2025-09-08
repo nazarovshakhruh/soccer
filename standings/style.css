@@ -311,7 +311,7 @@ html,body {
     height:36px;
     /* border-radius:6px; */
     flex-shrink:0;
-    background:#0b2330;
+    /* background:#0b2330; */
     display:inline-flex;
     align-items:center;
     justify-content:center;

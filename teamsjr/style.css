@@ -52,9 +52,6 @@ a:hover {
   /* margin-bottom: 20px; */
   /* width: 30%; */
 }
-.club-header img{
-  background: #ffffff;
-}
 .just h1 {
   padding: 0;
   font-size: 25px;
@@ -374,7 +371,7 @@ a:hover {
     height:36px;
     /* border-radius:6px; */
     flex-shrink:0;
-    background: #fff;
+    /* background: #fff; */
     display:inline-flex;
     align-items:center;
     justify-content:center;

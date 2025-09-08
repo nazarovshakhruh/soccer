@@ -9,7 +9,7 @@
         {
       "id": "casio-fc",
       "name": "Casio FC",
-      "crest": "/assets/casio.png"
+      "crest": "/assets/casio.jpg"
     },
         {
       "id": "royals-fc",
@@ -20,6 +20,11 @@
       "id": "blitz-fc",
       "name": "Blitz FC",
       "crest": "/assets/blitz.png"
+    },
+            {
+      "id": "proton-fc",
+      "name": "Proton FC",
+      "crest": "/assets/proton.png"
     }
   ],
 

@@ -311,14 +311,11 @@ html,body {
     height:36px;
     /* border-radius:6px; */
     flex-shrink:0;
-    background:#fff;
+    /* background:#fff; */
     display:inline-flex;
     align-items:center;
     justify-content:center;
     overflow:hidden;
-}
-.bang {
-  background: #fff;
 }
 .crest img {
     width:100%;

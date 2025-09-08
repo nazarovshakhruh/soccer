@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixtures</title>
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="page-container">
+    <h1>Fixtures</h1>
+    <div id="fixtures"></div>
+  </div>
+
+  <script>
+  async function loadFixtures() {
+    const res = await fetch("/assets/db.json");
+    const db = await res.json();
+
+    const teams = db.clubs || [];
+    const teamName = id => teams.find(t => t.id === id)?.name || "Unknown";
+    const teamCrest = id => teams.find(t => t.id === id)?.crest || "";
+
+    const container = document.getElementById("fixtures");
+
+    // Remove everything after the heading
+    while (container.children.length > 0) {
+      container.removeChild(container.lastChild);
+    }
+
+    // sort matches by date
+    const matches = (db.matches || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    let currentDate = "";
+    matches.forEach(match => {
+      const matchDate = new Date(match.date);
+
+      // Format like "Sat 26 Jul"
+      const dateHeading = matchDate.toLocaleDateString("en-GB", {
+        weekday: "short",
+        day: "numeric",
+        month: "short"
+      });
+
+      if (dateHeading !== currentDate) {
+        currentDate = dateHeading;
+        const h3 = document.createElement("h3");
+        h3.textContent = dateHeading;
+        h3.className = "fixture-date";
+        container.appendChild(h3);
+      }
+
+      const home = teamName(match.home_team);
+      const away = teamName(match.away_team);
+      const homeCrest = teamCrest(match.home_team);
+      const awayCrest = teamCrest(match.away_team);
+
+      let score;
+      if (match.home_goals != null && match.away_goals != null) {
+        score = `<div class="score">${match.home_goals} - ${match.away_goals}</div>`;
+      } else {
+        score = `<div class="time">${matchDate.toLocaleTimeString("en-GB", {
+          hour: "2-digit",
+          minute: "2-digit"
+        })}</div>`;
+      }
+
+      const div = document.createElement("div");
+      div.className = "match";
+      div.innerHTML = `
+        <div class="part part1">
+          <h4>${home}</h4>
+          <img class="club" src="${homeCrest}" alt="${home} crest">
+        </div>
+        ${score}
+        <div class="part part2">
+          <img class="club" src="${awayCrest}" alt="${away} crest">
+          <h4>${away}</h4>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+  }
+
+  loadFixtures();
+  </script>
+</body>
+</html>

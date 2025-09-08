@@ -41,6 +41,7 @@
 }
   
   body {
+    /* transform: scale(0.5); */
     overflow-x: hidden;
     background: url(/assets/prob.png) no-repeat center center / 100%, linear-gradient(90deg, var(--color1), var(--color2));
     color: #fff;
@@ -314,6 +315,7 @@
   filter: grayscale(1);
   pointer-events: none;
   transition: filter 0.3s ease;
+  background-color: #000000;
 }
 
 .second-section h2, .second-section p {

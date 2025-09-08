@@ -1,0 +1,72 @@
+body {
+  font-family: "Inter", sans-serif;
+  background: #1a0b2e;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.page-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+}
+
+.fixture-date {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ccc;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+}
+
+.match {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2a1450;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.part {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 45%;
+}
+.part img {
+    width: 60px;
+    height: 60px;
+}
+.part2 {
+  justify-content: flex-start;
+}
+
+.part1 {
+  justify-content: flex-end;
+}
+
+.club {
+  width: 32px;
+  height: 32px;
+}
+
+.score {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 16px;
+  color: #bbb;
+}

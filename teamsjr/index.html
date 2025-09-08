@@ -42,7 +42,7 @@
     <div class="note">© 2025 Khiva Presidential School Sports. All rights reserved.</div>
   <script>
   async function loadDB() {
-    const res = await fetch('/assets/db.json', { cache: "no-store" });
+    const res = await fetch('/assets/dbjr.json', { cache: "no-store" });
     return res.json();
   }
 
@@ -133,7 +133,7 @@ const clubRank = standings.findIndex(t => t.id === club.id) + 1;
                   <span class="score">${lastMatch.home_goals} - ${lastMatch.away_goals}</span>
                   <h3 class="bih ih2"><img src="${teamCrest(lastMatch.away_team)}" class="mini-crest">${teamName(lastMatch.away_team)} </h3>
                 </div>
-                  <p class="match-date">${new Date(lastMatch.date).toLocaleDateString()}</p>
+                  <p class="match-date">${new Date(lastMatch.date).toLocaleString()}</p>
                 </div>` : `<p>No past matches</p>`}
             </div>
         </div>
@@ -144,7 +144,7 @@ const clubRank = standings.findIndex(t => t.id === club.id) + 1;
         <div class="card bss  ">
             <h2>Top Scorer</h2>
             ${topScorer ? `
-            <a href="/players/${slugify(topScorer.name)}" class="player-card">
+            <a href="/playersjr/${slugify(topScorer.name)}" class="player-card">
                 <img src="${topScorer.image}" class="player-img">
                 <div class="name"><strong>${topScorer.name}</strong><br><b>${topScorer.goals}</b> goals</div>
                 </a>
@@ -154,7 +154,7 @@ const clubRank = standings.findIndex(t => t.id === club.id) + 1;
                 <div class="card ass">
                     <h2>Top Assister</h2>
                     ${topAssister ? `
-                    <a href="/players/${slugify(topAssister.name)}" class="player-card">
+                    <a href="/playersjr/${slugify(topAssister.name)}" class="player-card">
                         <img src="${topAssister.image}" class="player-img">
                         <div class="name"><strong>${topAssister.name}</strong><br><b>${topAssister.assists}</b> assists</div>
                         </a>
@@ -165,7 +165,7 @@ const clubRank = standings.findIndex(t => t.id === club.id) + 1;
   ${players.length > 0 ? `
     <div class="player-list">
       ${players.map(p => `
-        <a href="/players/${slugify(p.name)}" class="player-card">
+        <a href="/playersjr/${slugify(p.name)}" class="player-card">
           <img src="${p.image}" class="player-img">
           <h3>${p.name}</h3>
         </a>
@@ -243,7 +243,7 @@ function renderStandings(list){
   list.forEach((t, idx) => {
     const a = document.createElement('a');
     a.className = 'team-row';
-    a.href = `/teams/${slugify(t.name)}`;
+    a.href = `/teamsjr/${slugify(t.name)}`;
     a.setAttribute('role','listitem');
 
     a.innerHTML = `

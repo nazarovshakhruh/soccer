@@ -20,6 +20,11 @@
       "id": "chelsea",
       "name": "Chelsea",
       "crest": "https://placehold.co/80x80?text=CHE"
+    },
+        {
+      "id": "benfica",
+      "name": "Benfica",
+      "crest": "https://placehold.co/80x80?text=CHE"
     }
   ],
 
@@ -64,7 +69,13 @@
     "away_team": "manchester-city", 
     "home_goals": null, 
     "away_goals": null, 
-    "date": "2025-02-30T15:30:00Z"
+    "date": "2025-11-30T15:30:00Z"
+  },
+                { "home_team": "benfica", 
+    "away_team": "arsenal", 
+    "home_goals": 12, 
+    "away_goals": 0, 
+    "date": "2025-08-30T13:30:00Z"
   }
   ],
 
@@ -72,7 +83,7 @@
     {
   "id": "shohruh",
   "name": "Shohruh Nazarov",
-  "club_id": "manchester-city",
+  "club_id": "arsenal",
   "age": 11,
   "dob": "22/10/2000",
   "nationality": "United States",
@@ -107,7 +118,7 @@
 },    {
   "id": "alisher",
   "name": "Alisher Rahmanov",
-  "club_id": "manchester-city",
+  "club_id": "benfica",
   "age": 11,
   "dob": "22/10/2000",
   "nationality": "Uzbekistan",
@@ -121,6 +132,24 @@
   "own_goals": 0,
   "clean_sheets": 2,
   "isGoalkeeper": true
+},
+{
+  "id": "diyorbek",
+  "name": "Diyorbek Rahimberganov",
+  "club_id": "benfica",
+  "age": 11,
+  "dob": "22/10/2000",
+  "nationality": "Uzbekistan",
+  "position": "ST",
+  "preferred_foot": "Right",
+  "goals": 67,
+  "assists": 12,
+  "appearances": 40,
+  "image": "/assets/user.webp",
+  "long_shots": 66,
+  "own_goals": 0,
+  "clean_sheets": 0,
+  "isGoalkeeper": false
 }
   ]
 }

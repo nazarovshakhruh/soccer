@@ -1,0 +1,55 @@
+{
+  "last_updated": "2025-09-01T00:00:00Z",
+  "clubs": [
+    {
+      "id": "crimson-fc",
+      "name": "Crimson FC",
+      "crest": "/assets/crimson.png"
+    },
+        {
+      "id": "casio-fc",
+      "name": "Casio FC",
+      "crest": "/assets/casio.png"
+    },
+        {
+      "id": "royals-fc",
+      "name": "Royals FC",
+      "crest": "/assets/royals.png"
+    },
+        {
+      "id": "blitz-fc",
+      "name": "Blitz FC",
+      "crest": "/assets/blitz.png"
+    }
+  ],
+
+  "matches": [
+    { "home_team": "royals-fc", 
+    "away_team": "blitz-fc", 
+    "home_goals": 2, 
+    "away_goals": 4, 
+    "date": "2025-09-11T12:25:00Z"
+  }
+  ],
+
+  "players": [
+    {
+  "id": "aziz",
+  "name": "Azizbek Niyozmetov",
+  "club_id": "blitz-fc",
+  "age": 7,
+  "dob": "22/10/2000",
+  "nationality": "Uzbekistan",
+  "position": "CF",
+  "preferred_foot": "Right",
+  "goals": 1,
+  "assists": 3,
+  "appearances": 2,
+  "image": "/assets/user.webp",
+  "long_shots": 7,
+  "own_goals": 0,
+  "clean_sheets": null,
+  "isGoalkeeper": false
+}
+  ]
+}

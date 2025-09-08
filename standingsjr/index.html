@@ -82,15 +82,15 @@
       </div>
 <script>
 /*
-  Fetches /assets/db.json and builds:
+  Fetches /assets/dbjr.json and builds:
    - Standings (from matches)
    - Player leaderboards (from players list)
-  Database format is in /assets/db.json (see provided sample).
+  Database format is in /assets/dbjr.json (see provided sample).
 */
 
 async function loadDB(){
-  const resp = await fetch('/assets/db.json', {cache: "no-store"});
-  if(!resp.ok) throw new Error('Failed to load db.json');
+  const resp = await fetch('/assets/dbjr.json', {cache: "no-store"});
+  if(!resp.ok) throw new Error('Failed to load dbjr.json');
   const db = await resp.json();
   return db;
 }
@@ -157,7 +157,7 @@ function renderStandings(list){
   list.forEach((t, idx) => {
     const a = document.createElement('a');
     a.className = 'team-row';
-    a.href = `/teams/${slugify(t.name)}`;
+    a.href = `/teamsjr/${slugify(t.name)}`;
     a.setAttribute('role','listitem');
 
     a.innerHTML = `
@@ -187,10 +187,10 @@ function renderLeader(containerId, players, statField, labelFormatter, db){
     const club = db.clubs.find(c => c.id === p.club_id); // get club
     const a = document.createElement('a');
     a.className = 'player-row';
-    a.href = `/players/${slugify(p.name)}`;
+    a.href = `/playersjr/${slugify(p.name)}`;
     a.innerHTML = `
       <div class="player-rank">${i+1}</div>
-      <img src="${club ? club.crest : ''}" alt="${club ? club.name : ''} logo">
+      <img class="bang" src="${club ? club.crest : ''}" alt="${club ? club.name : ''} logo">
       <div class="player-name">
         <div style="font-weight:600">${p.name}</div>
         <div class="player-meta">${club ? club.name : ''} — ${p.position || ''}</div>
@@ -255,7 +255,7 @@ renderLeader('top-owngoals', topOG, 'own_goals', v=>v, db);
 
   }catch(err){
     console.error(err);
-    document.body.innerHTML = '<pre style="color:#ffb4b4">Error loading data. Check /assets/db.json in your deploy.\\n'+err.message+'</pre>';
+    document.body.innerHTML = '<pre style="color:#ffb4b4">Error loading data. Check /assets/dbjr.json in your deploy.\\n'+err.message+'</pre>';
   }
 })();
 function closeMenu() {

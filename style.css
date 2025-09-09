@@ -17,6 +17,8 @@
   --color2: #180030;
   --clr4: #002d1b;
   --clr3: #001f0b;
+  --man: #000000be;
+  --man2: #00000063;
 }
 
 @font-face {
@@ -59,7 +61,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px);  */
   z-index: -1; /* Behind your side menu */
   pointer-events: none; /* So it doesn't block clicks */
 }
@@ -85,7 +87,7 @@
 .inner {
   height: 33px;
   width: 95%;
-  border-bottom: 2px solid #00944f80;
+  border-bottom: 2px solid #ffffff29;
   display: flex;
   justify-content: right;
   align-items: center;
@@ -129,7 +131,7 @@
   padding: 15px 15px;
   border-radius: 40px;
   font-family: 'PremierLeague', sans-serif;
-  transition: background-color 0.2s ease-out, transform 0.2s ease-out;
+  transition: background-color 0.1s ease-in, transform 0.2s ease-out;
 
 }
 .navbar li a {
@@ -145,7 +147,7 @@
 }
 .navbar li:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
 }
   
   .menu-btn {
@@ -206,7 +208,8 @@
     left: -350px;
     width: 350px;
     height: 94vh;
-    background: linear-gradient( var(--color1), #003e32);
+    background: url(/assets/prob.png) no-repeat center center / 100%,  linear-gradient( var(--color1), #003e32);
+    background-size: cover;
     color: white;
     padding: 15px;
     transition: transform 0.3s ease;
@@ -235,7 +238,7 @@
   
   .side-menu li {
     padding: 17px 15px;
-    border-radius: 10px;
+    /* border-radius: 10px;.b */
     transition: background-color 0.2s ease;
     cursor: pointer;
   }
@@ -262,7 +265,7 @@
     justify-content: center;
     width: 100%;
     background: linear-gradient(0deg, rgba(0, 34, 5, 0.2), rgba(0, 44, 19, 0.2));
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
 
   }
     .overall {
@@ -271,7 +274,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    background: url(/assets/bg.jpg) center no-repeat;
+    background: url(/assets/g.jpg) center no-repeat;
     background-size: cover;
   }
   
@@ -317,7 +320,18 @@
   transition: filter 0.3s ease;
   background-color: #000000;
 }
-
+#bir {
+  background: url(/assets/bgmin.jpg) no-repeat center center;
+  background-size: cover;
+}
+#ikki {
+  background: url(/assets/bgmin2.jpg) no-repeat center center;
+  background-size: cover;
+}
+#uch {
+  background: url(/assets/bgmin3.jpg) no-repeat center center;
+  background-size: cover;
+}
 .second-section h2, .second-section p {
   color: white;
   font-size: 2rem;
@@ -361,13 +375,16 @@
   width: calc(100% - 30px);
   height: calc(100% - 30px);
   /* border-radius: 20px; */
-  background: #0000008c;
+  /* background: #0000008c; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   padding: 15px;
   gap: 15px;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
 }
 .half {
   /* border-radius: 20px; */
@@ -375,7 +392,10 @@
   width: 50%;
 }
 .fhalf {
-  background: linear-gradient(0deg, var(--clr3), var(--clr4) 30%);
+  background: linear-gradient(0deg, var(--man), var(--man2) 30%);
+    box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -387,7 +407,7 @@
   background-position: center;
 }
 .mg1 {
-  background: url(/assets/news.jpg) no-repeat;
+  background: url(/assets/news.png) no-repeat center center;
   background-size: cover;
 }
 .fhalf h1{
@@ -417,7 +437,10 @@
   width: 100%;
   height: 50%;
   /* border-radius: 20px; */
-  background: linear-gradient(0deg, var(--clr3), var(--clr4) 30%);
+    background: linear-gradient(0deg, var(--man), var(--man2) 30%);
+    box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
   cursor: pointer;
 }
 .new:hover h4 {
@@ -434,7 +457,10 @@
   gap: 15px;
 }
 .matches {
-  background: linear-gradient(0deg, var(--clr3), var(--clr4) 30%);
+    background: linear-gradient(0deg, var(--man), var(--man2) 30%);
+    box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -445,6 +471,7 @@
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;
+  padding-bottom: 40px;
 }
 .matches::-webkit-scrollbar {
   display: none;
@@ -494,12 +521,12 @@
 }
 .mg2 {
   
-  background: url(/assets/news2.jpg) no-repeat;
+  background: url(/assets/news.png) no-repeat;
   background-size: cover;
   background-position: top;
 }
 .mg3 {
-  background: url(/assets/news3.avif) no-repeat;
+  background: url(/assets/news.png) no-repeat;
   background-size: cover;
   background-position: top;
 }
@@ -523,7 +550,8 @@
   position: sticky;
   z-index: 0;
   top: 0;
-  background: var(--clr4);
+  background: #00000095;
+      background: url(/assets/prob.png) no-repeat center center / 100%, linear-gradient( #0000008a, #000);
 }
 .part {
   width: 40%;
@@ -565,7 +593,7 @@
 .feedback {
   width: 100%;
   height: 50vh;
-  background-color: #0000006c;
+  /* background-color: #0000006c; */
   padding: 20px;
 }
 .white {
@@ -581,7 +609,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: row;    box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
+
 }
 .trd {
   width: 33.3%;

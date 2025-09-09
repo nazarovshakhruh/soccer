@@ -25,7 +25,13 @@
       "id": "proton-fc",
       "name": "Proton FC",
       "crest": "/assets/proton.png"
+    },
+                {
+      "id": "giallorossi-fc",
+      "name": "Giallorossi FC",
+      "crest": "/assets/giallorossi.jpg"
     }
+    
   ],
 
   "matches": [

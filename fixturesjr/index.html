@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixtures</title>
+    <title>Fixtures Junior League</title>
       <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
@@ -12,13 +12,13 @@
 </head>
 <body>
   <div class="page-container">
-    <h1>Fixtures — Senior League</h1>
+    <h1>Fixtures — Junior League</h1>
     <div id="fixtures"></div>
   </div>
 
   <script>
 async function loadFixtures() {
-  const res = await fetch("/assets/db.json");
+  const res = await fetch("/assets/dbjr.json");
   const db = await res.json();
 
   const teams = db.clubs || [];
@@ -87,7 +87,7 @@ async function loadFixtures() {
     div.querySelectorAll(".part").forEach(part => {
       part.addEventListener("click", () => {
         const teamId = part.getAttribute("data-team");
-        window.location.href = `/teams/${teamId}`; // adjust path if needed
+        window.location.href = `/teamsjr/${teamId}`; // adjust path if needed
       });
     });
 

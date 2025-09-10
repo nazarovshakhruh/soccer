@@ -25,12 +25,17 @@
         {
       "id": "vip",
       "name": "VIP",
-      "crest": "/assets/vip.jpg"
+      "crest": "/assets/vip.png"
     },
         {
       "id": "tiki-taka",
       "name": "Tiki-Taka",
       "crest": "/assets/tiki-taka.jpg"
+    },
+        {
+      "id": "nushpiyoz-fc",
+      "name": "Nushpiyoz FC",
+      "crest": "/assets/nushpiyoz.png"
     }
   ],
 

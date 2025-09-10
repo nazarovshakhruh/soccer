@@ -25,7 +25,12 @@
         {
       "id": "vip",
       "name": "VIP",
-      "crest": "/assets/vip.png"
+      "crest": "/assets/vip.jpg"
+    },
+        {
+      "id": "tiki-taka",
+      "name": "Tiki-Taka",
+      "crest": "/assets/tiki-taka.jpg"
     }
   ],
 

@@ -164,3 +164,6 @@ a {
     background-color: #000000b2;
     text-align: center;
 }
+.out h1 {
+  white-space: nowrap;
+}

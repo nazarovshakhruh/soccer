@@ -9,9 +9,14 @@ function slugify(text) {
     .replace(/\-\-+/g, "-");
 }
 
+function getMatchSlug() {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has("slug")) return urlParams.get("slug");
+  return window.location.pathname.split("/").pop();
+}
+
 async function loadMatchFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  const slug = params.get("slug"); // e.g. "royals-vs-blitz-2025-09-11"
+  const slug = getMatchSlug();
 
   if (!slug) {
     document.getElementById("match-info").textContent = "No match selected.";

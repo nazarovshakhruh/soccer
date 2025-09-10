@@ -40,6 +40,17 @@
       "preferred_foot": "Right",
       "image": "/assets/user.webp",
       "isGoalkeeper": false
+    },
+        {
+      "id": "aslombek",
+      "name": "Aslombek Fayzullayev",
+      "club_id": "gooners-fc",
+      "age": 11,
+      "nationality": "Uzbekistan",
+      "position": "CB",
+      "preferred_foot": "Right",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false
     }
   ],
 

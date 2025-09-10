@@ -1,5 +1,6 @@
 {
   "last_updated": "2025-09-01T00:00:00Z",
+
   "clubs": [
     {
       "id": "crimson-fc",
@@ -30,37 +31,63 @@
       "id": "giallorossi-fc",
       "name": "Giallorossi FC",
       "crest": "/assets/giallorossi.jpg"
+    },
+                {
+      "id": "falcons",
+      "name": "Falcons",
+      "crest": "/assets/falcons.jpg"
+    },
+                {
+      "id": "arton-fc",
+      "name": "Arton FC",
+      "crest": "/assets/arton.png"
     }
     
-  ],
-
-  "matches": [
-    { "home_team": "royals-fc", 
-    "away_team": "blitz-fc", 
-    "home_goals": 2, 
-    "away_goals": 4, 
-    "date": "2025-09-11T12:25:00Z"
-  }
+    
   ],
 
   "players": [
     {
-  "id": "aziz",
-  "name": "Azizbek Niyozmetov",
-  "club_id": "blitz-fc",
-  "age": 7,
-  "dob": "22/10/2000",
-  "nationality": "Uzbekistan",
-  "position": "CF",
-  "preferred_foot": "Right",
-  "goals": 1,
-  "assists": 3,
-  "appearances": 2,
-  "image": "/assets/user.webp",
-  "long_shots": 7,
-  "own_goals": 0,
-  "clean_sheets": null,
-  "isGoalkeeper": false
-}
+      "id": "aziz",
+      "name": "Azizbek Niyozmetov",
+      "club_id": "blitz-fc",
+      "age": 7,
+      "nationality": "Uzbekistan",
+      "position": "CF",
+      "preferred_foot": "Right",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false
+    },
+    {
+      "id": "umrbek",
+      "name": "Umrbek Baxtiyorov",
+      "club_id": "proton-fc",
+      "age": 7,
+      "nationality": "Uzbekistan",
+      "position": "LW",
+      "preferred_foot": "Left",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false
+    }
+  ],
+
+  "matches": [
+    {
+      "id": "m1",
+      "home_team": "royals-fc",
+      "away_team": "blitz-fc",
+      "home_goals": null,
+      "away_goals": null,
+      "date": "2025-10-11T12:25:00Z",
+      "events": [
+        {
+          "minute": 12,
+          "type": "goal",
+          "player_id": "aziz",
+          "assist_id": null,
+          "club_id": "blitz-fc"
+        }
+      ]
+    }
   ]
 }

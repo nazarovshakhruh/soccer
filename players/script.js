@@ -33,11 +33,43 @@ function calculateAppearances(players, matches) {
   return players;
 }
 
+// 🟢 Calculate goals and assists dynamically from events
+function calculateGoalsAssists(players, matches) {
+  const stats = {};
+  players.forEach(p => { stats[p.id] = { goals: 0, assists: 0 }; });
+
+  matches.forEach(m => {
+    if (m.home_goals !== null && m.away_goals !== null && m.events) {
+      m.events.forEach(ev => {
+        // Count goals from normal + penalties
+        if (ev.type === "goal" || ev.type === "penalty") {
+          if (ev.player_id && stats[ev.player_id]) {
+            stats[ev.player_id].goals++;
+          }
+          if (ev.assist_id && stats[ev.assist_id] && ev.type === "goal") {
+            // assists only from open play goals
+            stats[ev.assist_id].assists++;
+          }
+        }
+        // own_goal gives no credit to scorer
+      });
+    }
+  });
+
+  players.forEach(p => {
+    p.goals = stats[p.id]?.goals || 0;
+    p.assists = stats[p.id]?.assists || 0;
+  });
+
+  return players;
+}
+
 (async function () {
   const db = await loadDB();
 
-  // 🟢 recalc appearances before using players
+  // 🟢 recalc appearances, goals, and assists before using players
   calculateAppearances(db.players, db.matches);
+  calculateGoalsAssists(db.players, db.matches);
 
   const slug = getPlayerSlug();
   const player = db.players.find(p => slugify(p.name) === slug);
@@ -72,10 +104,10 @@ function calculateAppearances(players, matches) {
   </div>
 
   <div class="stats-grid">
-    <div class="stat-card"><strong>Grade</strong><br>${player.age || 'Unknown'}</div>
     <div class="stat-card"><strong>Nationality</strong><br>${player.nationality || 'Unknown'}</div>
-    <div class="stat-card"><strong>Preferred Foot</strong><br>${player.preferred_foot || 'Unknown'}</div>
+    <div class="stat-card"><strong>Grade</strong><br>${player.age || 'Unknown'}</div>
     <div class="stat-card"><strong>Appearances</strong><br>${player.appearances}</div>
+    <div class="stat-card"><strong>Preferred Foot</strong><br>${player.preferred_foot || 'Unknown'}</div>
     <div class="stat-card"><strong>Goals</strong><br>${player.goals}</div>
     <div class="stat-card"><strong>Assists</strong><br>${player.assists}</div>
   </div>

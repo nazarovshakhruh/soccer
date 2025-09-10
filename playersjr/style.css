@@ -59,7 +59,8 @@ body {
   gap: 20px;
 }
 .shyt {
-  width: 150px;
+  height: 150px;
+  /* width: 150px; */
   /* border-radius: 12px; */
   margin-right: 20px;
 }

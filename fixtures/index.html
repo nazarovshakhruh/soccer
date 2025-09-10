@@ -11,10 +11,13 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+    <div class="yum">
   <div class="page-container">
     <h1>Fixtures — Senior League</h1>
     <div id="fixtures"></div>
   </div>
+</div>
+        <div class="note">© 2025 Khiva Presidential School Sports. All rights reserved.</div>
 
   <script>
 async function loadFixtures() {
@@ -83,13 +86,10 @@ async function loadFixtures() {
       </div>
     `;
 
-    // make parts clickable
-    div.querySelectorAll(".part").forEach(part => {
-      part.addEventListener("click", () => {
-        const teamId = part.getAttribute("data-team");
-        window.location.href = `/teams/${teamId}`; // adjust path if needed
-      });
-    });
+// make the whole match clickable → goes to match page
+div.addEventListener("click", () => {
+  window.location.href = `/matches/${match.id}`;
+});
 
     container.appendChild(div);
   });

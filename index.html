@@ -249,7 +249,7 @@ document.querySelectorAll('.top-half, .bottom-left, .bottom-right').forEach(sect
         
 
 async function loadFixtures() {
-  const res = await fetch("/assets/db.json");
+  const res = await fetch("/assets/dbjr.json");
   const db = await res.json();
 
   const teams = db.clubs || [];
@@ -301,7 +301,10 @@ async function loadFixtures() {
 
     const div = document.createElement("div");
     div.className = "match";
-    div.onclick = opengoof;
+    div.onclick = () => {
+  window.location.href = `/matches/${match.id}`;
+};
+
     div.innerHTML = `
       <div class="part part1">
         <h4>${home}</h4>

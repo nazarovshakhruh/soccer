@@ -66,13 +66,39 @@
       return;
     }
 
-    const players = db.players.filter(p => p.club_id === club.id);
+// First, copy players of this club
+const players = db.players.filter(p => p.club_id === club.id).map(p => ({
+  ...p,
+  goals: 0,
+  assists: 0,
+  own_goals: 0
+}));
 
+// Count stats from matches
+for (const m of db.matches || []) {
+  for (const ev of m.events || []) {
+    const scorer = players.find(pl => pl.id === ev.player_id);
+    const assister = players.find(pl => pl.id === ev.assist_id);
+
+    if (ev.type === "goal" || ev.type === "penalty") {
+      if (scorer) scorer.goals++;
+    }
+    if (ev.type === "own_goal") {
+      if (scorer) scorer.own_goals++;
+    }
+    if (assister) {
+      assister.assists++;
+    }
+  }
+}
+
+// Find top scorer & assister
 const topScorer = players.filter(p => p.goals > 0)
-                         .sort((a,b) => b.goals - a.goals)[0];
+                         .sort((a,b) => b.goals - a.goals || a.name.localeCompare(b.name))[0];
 
 const topAssister = players.filter(p => p.assists > 0)
-                           .sort((a,b) => b.assists - a.assists)[0];
+                           .sort((a,b) => b.assists - a.assists || a.name.localeCompare(b.name))[0];
+
 
     const matches = db.matches.filter(m => m.home_team === club.id || m.away_team === club.id);
 
@@ -116,11 +142,11 @@ const clubRank = standings.findIndex(t => t.id === club.id) + 1;
         <h2>Next Match</h2>
         ${nextMatch ? `
           <div class="match-card">
-            <div class="mtch">
-            <h3 class="bih ih1">${teamName(nextMatch.home_team)}<img src="${teamCrest(nextMatch.home_team)}" class="mini-crest"></h3>
-            <span class="vs">vs</span>
-            <h3 class="bih ih2"><img src="${teamCrest(nextMatch.away_team)}" class="mini-crest">${teamName(nextMatch.away_team)}</h3>
-            </div>
+<a class="mtch" href="/matches/${nextMatch.id}">
+  <h3 class="bih ih1">${teamName(nextMatch.home_team)}<img src="${teamCrest(nextMatch.home_team)}" class="mini-crest"></h3>
+  <span class="vs">vs</span>
+  <h3 class="bih ih2"><img src="${teamCrest(nextMatch.away_team)}" class="mini-crest">${teamName(nextMatch.away_team)}</h3>
+</a>
             <p class="match-date">${new Date(nextMatch.date).toLocaleString()}</p>
             </div>` : `<p>No upcoming match</p>`}
             </div>
@@ -128,12 +154,13 @@ const clubRank = standings.findIndex(t => t.id === club.id) + 1;
               <h2>Last Match</h2>
               ${lastMatch ? `
                 <div class="match-card">
-                <div class="mtch">
-                  <h3 class="bih ih1">${teamName(lastMatch.home_team)}<img src="${teamCrest(lastMatch.home_team)}" class="mini-crest"></h3>
-                  <span class="score">${lastMatch.home_goals} - ${lastMatch.away_goals}</span>
-                  <h3 class="bih ih2"><img src="${teamCrest(lastMatch.away_team)}" class="mini-crest">${teamName(lastMatch.away_team)} </h3>
-                </div>
-                  <p class="match-date">${new Date(lastMatch.date).toLocaleDateString()}</p>
+<a class="mtch" href="/matches/${lastMatch.id}">
+  <h3 class="bih ih1">${teamName(lastMatch.home_team)}<img src="${teamCrest(lastMatch.home_team)}" class="mini-crest"></h3>
+  <span class="score">${lastMatch.home_goals} - ${lastMatch.away_goals}</span>
+  <h3 class="bih ih2"><img src="${teamCrest(lastMatch.away_team)}" class="mini-crest">${teamName(lastMatch.away_team)} </h3>
+</a>
+
+                  <p class="match-date">${new Date(lastMatch.date).toLocaleString()}</p>
                 </div>` : `<p>No past matches</p>`}
             </div>
         </div>

@@ -1,0 +1,67 @@
+
+{
+"name": "Diyorbek Rakhimberganov",
+"age": "11-green",
+"club_id": "fc-winchester",
+"id": "diyorbek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CF/LM/CM",
+"preferred_foot": "Right"
+},
+{
+"name": "Xudoybergan Allabergonov",
+"age": "10-green",
+"club_id": "fc-winchester",
+"id": "xudoybergan",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CF/CM/CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Hajiboy Hajiyev",
+"age": "10-blue",
+"club_id": "fc-winchester",
+"id": "hajiboy",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CM/RM/CF",
+"preferred_foot": "Left"
+},
+{
+"name": "Javohir Kuryazov",
+"age": "8-green",
+"club_id": "fc-winchester",
+"id": "javohirku",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position":  "CDM/CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Deniz Tuxtabayev",
+"age": "8-blue",
+"club_id": "fc-winchester",
+"id": "deniz",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "RM/CM/CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Oybek Baxtiyorov", 
+"age": "9-green",
+"club_id": "fc-winchester",
+"id": "oybek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CF/CM/CB",
+"preferred_foot": "Right"
+}

@@ -48,24 +48,24 @@
 
   "players": [
     {
-      "id": "aziz",
       "name": "Azizbek Niyozmetov",
+      "age": "7-green",
       "club_id": "blitz-fc",
-      "age": 7,
-      "nationality": "Uzbekistan",
+      "id": "aziz",
       "position": "CF",
       "preferred_foot": "Right",
+      "nationality": "Uzbek",
       "image": "/assets/user.webp",
       "isGoalkeeper": false
     },
     {
-      "id": "umrbek",
       "name": "Umrbek Baxtiyorov",
+      "age": "7-blue",
       "club_id": "proton-fc",
-      "age": 7,
-      "nationality": "Uzbekistan",
+      "id": "umrbek",
       "position": "LW",
       "preferred_foot": "Left",
+      "nationality": "Uzbek",
       "image": "/assets/user.webp",
       "isGoalkeeper": false
     }

@@ -23,8 +23,8 @@
       "crest": "/assets/cyclone.jpg"
     },
         {
-      "id": "vip",
-      "name": "VIP",
+      "id": "vip-fc",
+      "name": "VIP FC",
       "crest": "/assets/vip.png"
     },
         {
@@ -36,51 +36,186 @@
       "id": "nushpiyoz-fc",
       "name": "Nushpiyoz FC",
       "crest": "/assets/nushpiyoz.png"
+    },
+      {
+      "id": "nushpiyoz-fc",
+      "name": "Nushpiyoz FC",
+      "crest": "/assets/nushpiyoz.png"
     }
   ],
 
   "players": [
     {
-      "id": "muhammad",
       "name": "Muhammad Maxsudbekov",
+      "age": "11-green",
       "club_id": "gooners-fc",
-      "age": 11,
-      "nationality": "Uzbekistan",
       "position": "CF",
       "preferred_foot": "Right",
+      "id": "muhammad",
+      "nationality": "Uzbek",
       "image": "/assets/user.webp",
       "isGoalkeeper": false
     },
         {
-      "id": "aslombek",
       "name": "Aslombek Fayzullayev",
+      "age": "11-blue",
       "club_id": "gooners-fc",
-      "age": 11,
-      "nationality": "Uzbekistan",
       "position": "CB",
       "preferred_foot": "Right",
+      "id": "aslombek",
+      "nationality": "Uzbek",
       "image": "/assets/user.webp",
       "isGoalkeeper": false
+    },
+    {
+      "name": "Alibek Norimatov",
+"age": "11-blue",
+      "id": "alibek",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+"club_id": "cyclone-fc",
+"position": "LWF",
+"preferred_foot": "Right"
+    },
+    {
+      "name": "Islombek Otaboyev",
+"age": "9-blue",
+      "id": "islombek",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": true,
+"club_id": "cyclone-fc",
+"position": "GK",
+"preferred_foot": "Right"
+    },
+    {
+      "name": "Jasurbek Sadullayev",
+"age": "10-blue",
+      "id": "jasurbek",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+"club_id": "cyclone-fc",
+"position": "ST",
+"preferred_foot": "Right"
+    },
+    {
+      "name": "Ulug'bek Dushamov",
+"age": "8-green",
+      "id": "u'lugbek",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+"club_id": "cyclone-fc",
+"position": "CB",
+"preferred_foot": "Right"
+    },
+    {
+      "name": "Munisbek Ozodov",
+"age": "10-blue",
+      "id": "munisbek",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+"club_id": "cyclone-fc",
+"position": "CB",
+"preferred_foot": "Right"
+    },
+    {
+      "name": "Sanjar Azadov",
+"age": "10-green",
+      "id": "sanjar",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+"club_id": "vip-fc",
+"position": "CM",
+"preferred_foot": "Left"
+    },
+    {
+      "name": "Javohir Komilov",
+"age": "10-green",
+      "id": "javohir",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+"club_id": "vip-fc",
+"position": "CF",
+"preferred_foot": "Right"
+    },
+    {
+      "name": "Olloshukur Karimboyev",
+"age": "9-blue",
+      "id": "olloshukur",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+"club_id": "gooners-fc",
+"position": "CM",
+"preferred_foot": "Right"
+    },
+    {
+      "name": "Bekzod Masharipov",
+"age": "8-green",
+      "id": "bekzod",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+"club_id": "gooners-fc",
+"position": "LB",
+"preferred_foot": "Right"
+    },
+    {
+      "name": "Ne'matjon Rahimov",
+"age": "8-blue",
+      "id": "ne'matjon",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": true,
+"club_id": "gooners-fc",
+"position": "GK",
+"preferred_foot": "Right"
+    },
+    {
+      "name": "Isojon Sherjonov",
+"age": "11-green",
+      "id": "isojon",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+"club_id": "nushpiyoz-fc",
+"position": "LWF",
+"preferred_foot": "Right"
+    },
+    {
+      "name": "Samadjon ",
+"age": "9-blue",
+      "id": "samadjon",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+"club_id": "nushpiyoz-fc",
+"position": "RWF",
+"preferred_foot": "Left"
+    },
+    {
+      "name": "Kamronbek Abdusharifov",
+"age": "11-green",
+      "id": "kamronbek",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+"club_id": "nushpiyoz-fc",
+"position": "CM",
+"preferred_foot": "Right"
     }
+
+    
+    
+    
   ],
 
   "matches": [
-    {
-      "id": "m1",
-      "home_team": "gooners-fc",
-      "away_team": "cyclone-fc",
-      "home_goals": null,
-      "away_goals": null,
-      "date": "2025-09-10T12:25:00Z",
-      "events": [
-        {
-          "minute": 23,
-          "type": "goal",
-          "player_id": "muhammad",
-          "assist_id": null,
-          "club_id": "gooners-fc"
-        }
-      ]
-    }
   ]
 }

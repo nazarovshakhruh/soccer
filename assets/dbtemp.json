@@ -1,0 +1,86 @@
+{
+  "last_updated": "2025-09-01T00:00:00Z",
+
+  "clubs": [
+    {
+      "id": "fc-winchester",
+      "name": "FC Winchester",
+      "crest": "/assets/winchester.png"
+    },
+        {
+      "id": "apex-fc",
+      "name": "Apex FC",
+      "crest": "/assets/apex.jpg"
+    },
+        {
+      "id": "gooners-fc",
+      "name": "Gooners FC",
+      "crest": "/assets/gooners.jpg"
+    },
+        {
+      "id": "cyclone-fc",
+      "name": "Cyclone FC",
+      "crest": "/assets/cyclone.jpg"
+    },
+        {
+      "id": "vip",
+      "name": "VIP",
+      "crest": "/assets/vip.png"
+    },
+        {
+      "id": "tiki-taka",
+      "name": "Tiki-Taka",
+      "crest": "/assets/tiki-taka.jpg"
+    },
+        {
+      "id": "nushpiyoz-fc",
+      "name": "Nushpiyoz FC",
+      "crest": "/assets/nushpiyoz.png"
+    }
+  ],
+
+  "players": [
+    {
+      "name": "Muhammad Maxsudbekov",
+      "age": 11,
+      "club_id": "gooners-fc",
+      "position": "CF",
+      "preferred_foot": "Right",
+      "id": "muhammad",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false
+    },
+        {
+          "name": "Aslombek Fayzullayev",
+          "age": 11,
+          "club_id": "gooners-fc",
+          "position": "CB/CF",
+          "preferred_foot": "Right",
+      "id": "aslombek",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false
+    }
+  ],
+
+  "matches": [
+    {
+      "id": "m1",
+      "home_team": "gooners-fc",
+      "away_team": "cyclone-fc",
+      "home_goals": null,
+      "away_goals": null,
+      "date": "2025-09-10T12:25:00Z",
+      "events": [
+        {
+          "minute": 23,
+          "type": "goal",
+          "player_id": "muhammad",
+          "assist_id": null,
+          "club_id": "gooners-fc"
+        }
+      ]
+    }
+  ]
+}

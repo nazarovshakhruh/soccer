@@ -24,7 +24,7 @@ body {
 .player-page {
   max-width: 100%;
   /* margin: auto; */
-  width: 60%;
+  width: 100%;
   padding: 20px;
 }
 .player-header {
@@ -97,6 +97,7 @@ body {
   grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
   gap: 16px;
   margin-bottom: 20px;
+  width: 60%;
 }
 
 .stat-card {
@@ -126,8 +127,9 @@ a {
 
 .teammate-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   gap: 15px;
+  width: 80%;
 }
 .out {
   display: flex;
@@ -147,6 +149,7 @@ a {
   /* border-radius: 12px; */
   text-align: center;
   height: 170px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,4 +169,7 @@ a {
     backdrop-filter: blur(20px);
     background-color: #000000b2;
     text-align: center;
+}
+div strong {
+  white-space: nowrap;
 }

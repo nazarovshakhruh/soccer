@@ -215,7 +215,7 @@
 "name": "Abdulaziz Baxtiyorov",
 "age": "6 • Blue",
 "club_id": "falcons",
-"id": "abdulaziz",
+"id": "abdulazizblue",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,
@@ -377,7 +377,7 @@
 "preferred_foot": "Right"
 },
 {
-"name": "Baxtiyor Jumaniyozov",
+"name": "Baxtiyor Jumaboyev",
 "age": "7 • Green",
 "club_id": "royals-fc",
 "id": "baxtiyorjuman",
@@ -538,6 +538,28 @@
 "age": "6 • Blue",
 "club_id": "proton-fc",
 "id": "bobur",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Bilolbek Kuchkarov",
+"age": "6 • Blue",
+"club_id": "royals-fc",
+"id": "bilolbek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": true,
+"position": "GK",
+"preferred_foot": "Right"
+},
+{
+"name": "Abdulaziz Baxtiyorov",
+"age": "6 • Green",
+"club_id": "royals-fc",
+"id": "abdulazizgreen",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,

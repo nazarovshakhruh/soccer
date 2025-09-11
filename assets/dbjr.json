@@ -49,7 +49,7 @@
   "players": [
 {
 "name": "Azizbek Niyozmetov",
-"age": "7-green",
+"age": "7 • Green", 
 "club_id": "blitz-fc",
 "id": "azizbekn",
 "nationality": "Uzbek",
@@ -60,7 +60,7 @@
 },
 {
 "name": "Umrbek Baxtiyorov",
-"age": "7-blue",
+"age": "7 • Blue",
 "club_id": "proton-fc",
 "id": "umrbek",
 "nationality": "Uzbek",
@@ -71,7 +71,7 @@
 },
 {
 "name": "Elyorbek Baxtiyorov",
-"age": "6-green",
+"age": "6 • Green",
 "club_id": "crimson-fc",
 "id": "elyorbek",
 "nationality": "Uzbek",
@@ -82,7 +82,7 @@
 },
 {
 "name": "Behruzbek Shonazarov",
-"age": "6-blue",
+"age": "6 • Blue",
 "club_id": "crimson-fc",
 "id": "behruzbeks",
 "nationality": "Uzbek",
@@ -93,7 +93,7 @@
 },
 {
 "name": "Nurali Jumaboyev",
-"age": "6-green",
+"age": "6 • Green",
 "club_id": "crimson-fc",
 "id": "nurali",
 "nationality": "Uzbek",
@@ -104,7 +104,7 @@
 },
 {
 "name": "Madamin Odilbekov",
-"age": "7-green",
+"age": "7 • Green",
 "club_id": "crimson-fc",
 "id": "madamin",
 "nationality": "Uzbek",
@@ -115,7 +115,7 @@
 },
 {
 "name": "Behruz Rustamov",
-"age": "7-blue",
+"age": "7 • Blue",
 "club_id": "crimson-fc",
 "id": "behruz",
 "nationality": "Uzbek",
@@ -126,7 +126,7 @@
 },
 {
 "name": "Asilbek Qurbonboyev",
-"age": "5-blue",
+"age": "5 • Blue",
 "club_id": "crimson-fc",
 "id": "asilbekq",
 "nationality": "Uzbek",
@@ -136,7 +136,7 @@
 "preferred_foot": "Right"
 },
 {"name": "Feruzbek Xursandov",
-"age": "6-blue",
+"age": "6 • Blue",
 "club_id": "arton-fc",
 "id": "feruzbek",
 "nationality": "Uzbek",
@@ -147,7 +147,7 @@
 },
 {
 "name": "Azizbek Abdullayev",
-"age": "6-blue",
+"age": "6 • Blue",
 "club_id": "arton-fc",
 "id": "azizbeka",
 "nationality": "Uzbek",
@@ -158,7 +158,7 @@
 },
 {
 "name" : "Akbar Sultannazarov",
-"age" : "7-blue",
+"age" : "7 • Blue",
 "club_id": "arton-fc",
 "id": "akbars",
 "nationality": "Uzbek",
@@ -169,7 +169,7 @@
 },
 {
 "name": "Nodirbek Mirzakarimov",
-"age": "7-green",
+"age": "7 • Green",
 "club_id": "arton-fc",
 "id": "nodirbek",
 "nationality": "Uzbek",
@@ -180,7 +180,7 @@
 },
 {
 "name": "Dovudbek Umarjanov",
-"age": "5-blue",
+"age": "5 • Blue",
 "club_id": "arton-fc",
 "id": "dovudbek",
 "nationality": "Uzbek",
@@ -191,7 +191,7 @@
 },
 {
 "name": "Mustafo Sapayev",
-"age": "6-green",
+"age": "6 • Green",
 "club_id": "arton-fc",
 "id": "mustafo",
 "nationality": "Uzbek",
@@ -202,7 +202,7 @@
 },
 {
 "name": "Jaloliddin Abdullayev",
-"age": "7-blue",
+"age": "7 • Blue",
 "club_id": "falcons",
 "id": "jaloliddin",
 "nationality": "Uzbek",
@@ -213,7 +213,7 @@
 },
 {
 "name": "Hasanboy Sadikov",
-"age": "7-blue",
+"age": "7 • Blue",
 "club_id": "falcons",
 "id": "hasanboy",
 "nationality": "Uzbek",
@@ -224,7 +224,7 @@
 },
 {
 "name": "Abdulaziz Baxtiyorov",
-"age": "6-blue",
+"age": "6 • Blue",
 "club_id": "falcons",
 "id": "abdulaziz",
 "nationality": "Uzbek",
@@ -235,7 +235,7 @@
 },
 {
 "name": "Musobek Rajabboyev",
-"age": "6-green",
+"age": "6 • Green",
 "club_id": "falcons",
 "id": "musobek",
 "nationality": "Uzbek",
@@ -246,7 +246,7 @@
 },
 {
 "name": "Islom Jonibekov",
-"age": "5-green",
+"age": "5 • Green",
 "club_id": "falcons",
 "id": "islom",
 "nationality": "Uzbek",
@@ -257,7 +257,7 @@
 },
 {
 "name": "Musobek Bahramov",
-"age": "5-blue",
+"age": "5 • Blue",
 "club_id": "falcons",
 "id": "musobekb",
 "nationality": "Uzbek",
@@ -268,7 +268,7 @@
 },
 {
 "name": "Sobirjon Sobirov",
-"age": "7-green",
+"age": "7 • Green",
 "club_id": "casio-fc",
 "id": "sobirjon",
 "nationality": "Uzbek",
@@ -279,7 +279,7 @@
 },
 {
 "name": "Asilbek Ravshanov",
-"age": "7-blue",
+"age": "7 • Blue",
 "club_id": "casio-fc",
 "id": "asilbekr",
 "nationality": "Uzbek",
@@ -290,7 +290,7 @@
 },
 {
 "name": "Baxtiyor Jumaboyev",
-"age": "7-green",
+"age": "7 • Green",
 "club_id": "royals-fc",
 "id": "baxtiyorjumab",
 "nationality": "Uzbek",
@@ -301,7 +301,7 @@
 },
 {
 "name": "David Tuxtaboyev",
-"age": "5-blue",
+"age": "5 • Blue",
 "club_id": "casio-fc",
 "id": "david",
 "nationality": "Uzbek",
@@ -312,7 +312,7 @@
 },
 {
 "name": "Suxrobbek Xamdamov",
-"age": "6-green",
+"age": "6 • Green",
 "club_id": "casio-fc",
 "id": "suxrobbek",
 "nationality": "Uzbek",
@@ -323,7 +323,7 @@
 },
 {
 "name": "Akbar Ataxanov",
-"age": "6-blue",
+"age": "6 • Blue",
 "club_id": "casio-fc",
 "id": "akbara",
 "nationality": "Uzbek",
@@ -334,7 +334,7 @@
 },
 {
 "name": "Iskandar Ismoilov",
-"age": "5-green",
+"age": "5 • Green",
 "club_id": "casio-fc",
 "id": "iskandar",
 "nationality": "Uzbek",
@@ -345,7 +345,7 @@
 },
 {
 "name": "Mirjahon O'ktamboyev",
-"age": "7- blue",
+"age": "7 • Blue",
 "club_id": "blitz-fc",
 "id": "mirjahon",
 "nationality": "Uzbek",
@@ -356,7 +356,7 @@
 },
 {
 "name": "Nursulton Navruzov",
-"age": "6-green",
+"age": "6 • Green",
 "club_id": "blitz-fc",
 "id": "nursulton",
 "nationality": "Uzbek",
@@ -367,7 +367,7 @@
 },
 {
 "name": "Mirjalol Shomuratov",
-"age": "6-blue",
+"age": "6 • Blue",
 "club_id": "blitz-fc",
 "id": "mirjalol",
 "nationality": "Uzbek",
@@ -378,7 +378,7 @@
 },
 {
 "name": "Behruzbek Bahodirov",
-"age": "7-blue",
+"age": "7 • Blue",
 "club_id": "royals-fc",
 "id": "behruzbekb",
 "nationality": "Uzbek",
@@ -389,7 +389,7 @@
 },
 {
 "name": "Baxtiyor Jumaniyozov",
-"age": "7-green",
+"age": "7 • Green",
 "club_id": "royals-fc",
 "id": "baxtiyorjuman",
 "nationality": "Uzbek",
@@ -400,13 +400,91 @@
 },
 {
 "name": "Salohiddin Alimboyev",
-"age": "7-green",
+"age": "7 • Green",
 "club_id": "royals-fc",
 "id": "salohiddin",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,
 "position": "CM",
+"preferred_foot": "Right"
+},
+
+{
+"name": "Diyor Maqsudov",
+"age": "7 • blue",
+"club_id": "blitz-fc",
+"id": "diyor",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB/RB",
+"preferred_foot": "Right"
+},
+{
+"name": "Abror",
+"age": "5 • blue",
+"club_id": "blitz-fc",
+"id": "abror",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB/LB",
+"preferred_foot": "Right"
+},
+{
+"name": "Zafar Komilov",
+"age": "7 • blue",
+"club_id": "giallorossi-fc",
+"id": "zafar",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "ST",
+"preferred_foot": "Right"
+},
+{
+"name": "Musobek Otabekov",
+"age": "6 • blue",
+"club_id": "giallorossi-fc",
+"id": "musobeko",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CM",
+"preferred_foot" : "Right"
+},
+{
+"name": "Rizobek Rahimov",
+"age": "6 • green",
+"club_id": "giallorossi-fc",
+"id": "rizobek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "GK",
+"preferred_foot": "Right"
+},
+{
+"name": "Nurbek Matyusupov",
+"age": "6 • green",
+"club_id": "giallorossi-fc",
+"id": "nurbek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Axrorbek Xusinov",
+"age": "7 • blue",
+"club_id": "giallorossi-fc",
+"id": "axrorbek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
 "preferred_foot": "Right"
 }
   ],

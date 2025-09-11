@@ -41,13 +41,18 @@
       "id": "nushpiyoz-fc",
       "name": "Nushpiyoz FC",
       "crest": "/assets/nushpiyoz.png"
+    },
+      {
+      "id": "gamburg",
+      "name": "Gamburg",
+      "crest": "/assets/gamburg.png"
     }
   ],
 
   "players": [
     {
       "name": "Muhammad Maxsudbekov",
-      "age": "11-green",
+      "age": "11 • Green",
       "club_id": "gooners-fc",
       "position": "CF",
       "preferred_foot": "Right",
@@ -58,7 +63,7 @@
     },
         {
       "name": "Aslombek Fayzullayev",
-      "age": "11-blue",
+      "age": "11 • Blue",
       "club_id": "gooners-fc",
       "position": "CB",
       "preferred_foot": "Right",
@@ -69,7 +74,7 @@
     },
     {
       "name": "Alibek Norimatov",
-      "age": "11-blue",
+      "age": "11 • Blue",
       "id": "alibek",
       "nationality": "Uzbek",
       "image": "/assets/ali.jpg",
@@ -80,7 +85,7 @@
     },
     {
       "name": "Islombek Otaboyev",
-      "age": "9-blue",
+      "age": "9 • Blue",
       "id": "islombek",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -91,7 +96,7 @@
     },
     {
       "name": "Jasurbek Sadullayev",
-      "age": "10-blue",
+      "age": "10 • Blue",
       "id": "jasurbek",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -102,7 +107,7 @@
     },
     {
       "name": "Ulug'bek Dushamov",
-      "age": "8-green",
+      "age": "8 • Green",
       "id": "u'lugbek",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -113,7 +118,7 @@
     },
     {
       "name": "Munisbek Ozodov",
-      "age": "10-blue",
+      "age": "10 • Blue",
       "id": "munisbek",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -124,7 +129,7 @@
     },
     {
       "name": "Sanjar Azadov",
-      "age": "10-green",
+      "age": "10 • Green",
       "id": "sanjar",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -135,7 +140,7 @@
     },
     {
       "name": "Javohir Komilov",
-      "age": "10-green",
+      "age": "10 • Green",
       "id": "javohirko",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -146,7 +151,7 @@
     },
     {
       "name": "Olloshukur Karimboyev",
-      "age": "9-blue",
+      "age": "9 • Blue",
       "id": "olloshukur",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -157,7 +162,7 @@
     },
     {
       "name": "Bekzod Masharipov",
-      "age": "8-green",
+      "age": "8 • Green",
       "id": "bekzod",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -168,7 +173,7 @@
     },
     {
       "name": "Ne'matjon Rahimov",
-      "age": "8-blue",
+      "age": "8 • Blue",
       "id": "ne'matjon",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -179,7 +184,7 @@
     },
     {
       "name": "Isojon Sherjonov",
-      "age": "11-green",
+      "age": "11 • Green",
       "id": "isojon",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -190,7 +195,7 @@
     },
     {
       "name": "Samadjon Shukurlayev",
-      "age": "9-blue",
+      "age": "9 • Blue",
       "id": "samadjon",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -201,7 +206,7 @@
     },
     {
       "name": "Kamronbek Abdusharifov",
-      "age": "11-green",
+      "age": "11 • Green",
       "id": "kamronbek",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -212,7 +217,7 @@
     },
     {
       "name": "Abdulaziz Masharipov",
-      "age": "11-blue",
+      "age": "11 • Blue",
       "id": "abdulaziz",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -223,7 +228,7 @@
     },
     {
       "name": "Rasulbek Nazarov",
-      "age": "10-blue",
+      "age": "10 • Blue",
       "id": "rasulbek",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -234,7 +239,7 @@
     },
     {
       "name": "Muhammadamin Erkinov",
-      "age": "8-blue",
+      "age": "8 • Blue",
       "id": "muhammadamin",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -245,7 +250,7 @@
     },
     {
       "name": "Akbar Bekmuratov",
-      "age": "9-blue",
+      "age": "9 • Blue",
       "id": "akbar",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -256,7 +261,7 @@
     },
     {
       "name": "Murodbek Radjapboyev",
-      "age": "10-green",
+      "age": "10 • Green",
       "id": "murodbek",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -267,7 +272,7 @@
     },
     {
       "name": "Mirjalol O'razmatov",
-      "age": "10-blue",
+      "age": "10 • Blue",
       "id": "mirjalol",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -278,7 +283,7 @@
     },
     {
       "name": "Rustamov Nuraziz",
-      "age": "9-green",
+      "age": "9 • Green",
       "id": "nuraziz",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -289,7 +294,7 @@
     },
     {
       "name": "Mironshoh Ulug'bekov",
-      "age": "8-blue",
+      "age": "8 • Blue",
       "id": "mironshoh",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -300,7 +305,7 @@
     },
     {
       "name": "Shohruhbek Shamilov",
-      "age": "8-blue",
+      "age": "8 • Blue",
       "id": "shohruhbek",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
@@ -312,7 +317,7 @@
     
 {
 "name": "Diyorbek Rakhimberganov",
-"age": "11-green",
+"age": "11 • Green",
 "club_id": "fc-winchester",
 "id": "diyorbek",
 "nationality": "Uzbek",
@@ -323,7 +328,7 @@
 },
 {
 "name": "Xudoybergan Allabergonov",
-"age": "10-green",
+"age": "10 • Green",
 "club_id": "fc-winchester",
 "id": "xudoybergan",
 "nationality": "Uzbek",
@@ -334,7 +339,7 @@
 },
 {
 "name": "Hajiboy Hajiyev",
-"age": "10-blue",
+"age": "10 • Blue",
 "club_id": "fc-winchester",
 "id": "hajiboy",
 "nationality": "Uzbek",
@@ -345,7 +350,7 @@
 },
 {
 "name": "Javohir Kuryazov",
-"age": "8-green",
+"age": "8 • Green",
 "club_id": "fc-winchester",
 "id": "javohirku",
 "nationality": "Uzbek",
@@ -356,7 +361,7 @@
 },
 {
 "name": "Deniz Tuxtabayev",
-"age": "8-blue",
+"age": "8 • Blue",
 "club_id": "fc-winchester",
 "id": "deniz",
 "nationality": "Uzbek",
@@ -367,7 +372,7 @@
 },
 {
 "name": "Oybek Baxtiyorov", 
-"age": "9-green",
+"age": "9 • Green",
 "club_id": "fc-winchester",
 "id": "oybek",
 "nationality": "Uzbek",
@@ -375,7 +380,29 @@
 "isGoalkeeper": false,
 "position": "CF/CM/CB",
 "preferred_foot": "Right"
-}    
+},
+    {
+      "name": "Shohruh Nazarov",
+      "age": "11 • Green",
+      "id": "shohruh",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+      "club_id": "gamburg",
+      "position": "LW/RW",
+      "preferred_foot": "Right"
+    },
+    {
+      "name": "Amirxon Shoxnazarov",
+      "age": "11 • Green",
+      "id": "amir",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false,
+      "club_id": "gamburg",
+      "position": "CF/AMF",
+      "preferred_foot": "Left"
+    }
     
   ],
 

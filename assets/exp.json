@@ -1,31 +1,9 @@
 
 {
-"name": "Sardor Saporboyev",
-"age": "7 • Green",
+"name": "Abduakbar Ollaberganov",
+"age": "5 • Green",
 "club_id": "proton-fc",
-"id": "sardor",
-"nationality": "Uzbek",
-"image": "/assets/user.webp",
-"isGoalkeeper": false,
-"position": "CF",
-"preferred_foot": "Right"
-},
-{
-"name": "Umrbek Baxramov",
-"age": "7 • green",
-"club_id": "proton-fc",
-"id": "umrbek",
-"nationality": "Uzbek",
-"image": "/assets/user.webp",
-"isGoalkeeper": false,
-"position": "ST",
-"preferred_foot": "Right"
-},
-{
-"name": "Jonibek Yuldashov",
-"age": "6 • blue",
-"club_id": "proton-fc",
-"id": "jonibek",
+"id": "abduakbar",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,
@@ -33,13 +11,13 @@
 "preferred_foot": "Right"
 },
 {
-"name": "E'zozbek Jumanazarov",
-"age": "6 • green",
+"name": "Bobur Azimov",
+"age": "6 • Blue",
 "club_id": "proton-fc",
-"id": "ezozbek",
+"id": "bobur",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
-"isGoalkeeper": true,
-"position": "GK",
+"isGoalkeeper": false,
+"position": "CB",
 "preferred_foot": "Right"
-},
+}

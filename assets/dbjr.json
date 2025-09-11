@@ -401,7 +401,7 @@
 
 {
 "name": "Diyor Maqsudov",
-"age": "7 • blue",
+"age": "7 • Blue",
 "club_id": "blitz-fc",
 "id": "diyor",
 "nationality": "Uzbek",
@@ -412,7 +412,7 @@
 },
 {
 "name": "Abror",
-"age": "5 • blue",
+"age": "5 • Blue",
 "club_id": "blitz-fc",
 "id": "abror",
 "nationality": "Uzbek",
@@ -423,7 +423,7 @@
 },
 {
 "name": "Zafar Komilov",
-"age": "7 • blue",
+"age": "7 • Blue",
 "club_id": "giallorossi-fc",
 "id": "zafar",
 "nationality": "Uzbek",
@@ -434,7 +434,7 @@
 },
 {
 "name": "Musobek Otabekov",
-"age": "6 • blue",
+"age": "6 • Blue",
 "club_id": "giallorossi-fc",
 "id": "musobeko",
 "nationality": "Uzbek",
@@ -445,7 +445,7 @@
 },
 {
 "name": "Rizobek Rahimov",
-"age": "6 • green",
+"age": "6 • Green",
 "club_id": "giallorossi-fc",
 "id": "rizobek",
 "nationality": "Uzbek",
@@ -456,7 +456,7 @@
 },
 {
 "name": "Nurbek Matyusupov",
-"age": "6 • green",
+"age": "6 • Green",
 "club_id": "giallorossi-fc",
 "id": "nurbek",
 "nationality": "Uzbek",
@@ -467,7 +467,7 @@
 },
 {
 "name": "Axrorbek Xusinov",
-"age": "7 • blue",
+"age": "7 • Blue",
 "club_id": "giallorossi-fc",
 "id": "axrorbek",
 "nationality": "Uzbek",
@@ -490,7 +490,7 @@
 },
 {
 "name": "Umrbek Baxramov",
-"age": "7 • green",
+"age": "7 • Green",
 "club_id": "proton-fc",
 "id": "umrbek",
 "nationality": "Uzbek",
@@ -501,7 +501,7 @@
 },
 {
 "name": "Jonibek Yuldashov",
-"age": "6 • blue",
+"age": "6 • Blue",
 "club_id": "proton-fc",
 "id": "jonibek",
 "nationality": "Uzbek",
@@ -512,13 +512,36 @@
 },
 {
 "name": "E'zozbek Jumanazarov",
-"age": "6 • green",
+"age": "6 • Green",
 "club_id": "proton-fc",
 "id": "ezozbek",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": true,
 "position": "GK",
+"preferred_foot": "Right"
+},
+
+{
+"name": "Abduakbar Ollaberganov",
+"age": "5 • Green",
+"club_id": "proton-fc",
+"id": "abduakbar",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Bobur Azimov",
+"age": "6 • Blue",
+"club_id": "proton-fc",
+"id": "bobur",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
 "preferred_foot": "Right"
 }
   ],

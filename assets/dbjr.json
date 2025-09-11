@@ -278,17 +278,6 @@
 "preferred_foot": "Right"
 },
 {
-"name": "Baxtiyor Jumaboyev",
-"age": "7 • Green",
-"club_id": "royals-fc",
-"id": "baxtiyorjumab",
-"nationality": "Uzbek",
-"image": "/assets/user.webp",
-"isGoalkeeper": false,
-"position": "SB",
-"preferred_foot": "Right"
-},
-{
 "name": "David Tuxtaboyev",
 "age": "5 • Blue",
 "club_id": "casio-fc",

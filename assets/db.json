@@ -479,6 +479,28 @@
 "isGoalkeeper": false,
 "position": "CAM/CM",
 "preferred_foot": "Right"
+},
+{
+"name": "Javohir Matchanov",
+"age": "8 • Blue",
+"club_id": "gamburg",
+"id": "javohirm",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB/CDM",
+"preferred_foot": "Right"
+},
+{
+"name": "Abdulaziz Toxirjonov",
+"age": "9 • Green",
+"club_id": "vip-fc",
+"id": "abdulazizt",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CM",
+"preferred_foot": "Right"
 }
   ],
 

@@ -282,7 +282,7 @@
       "preferred_foot": "Right"
     },
     {
-      "name": "Rustamov Nuraziz",
+      "name": "Nuraziz Rustamov",
       "age": "9 • Green",
       "id": "nuraziz",
       "nationality": "Uzbek",
@@ -319,7 +319,7 @@
 "name": "Diyorbek Rakhimberganov",
 "age": "11 • Green",
 "club_id": "fc-winchester",
-"id": "diyorbek",
+"id": "diyorbekgreen",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,
@@ -402,8 +402,40 @@
       "club_id": "gamburg",
       "position": "CF/AMF",
       "preferred_foot": "Left"
-    }
-    
+    },
+{
+"name": "Ibrat Rajabboyev",
+"age": "8 • Green",
+"club_id": "vip-fc",
+"id": "ibrat",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CM",
+"preferred_foot": "Right"
+},
+{
+"name": "Diyorbek Raimberganov",
+"age": "11 • blue",
+"club_id": "vip-fc",
+"id": "diyorbekblue",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": true,
+"position": "GK",
+"preferred_foot": "Right"
+},
+{
+"name": "Kamron Sardorov",
+"age": "8 • Green",
+"club_id": "gamburg",
+"id": "kamron",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB/CDM/LW",
+"preferred_foot": "Right"
+}
   ],
 
   "matches": [

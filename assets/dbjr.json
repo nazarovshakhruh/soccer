@@ -68,7 +68,138 @@
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
       "isGoalkeeper": false
-    }
+    },
+    {
+"name": "Elyorbek Baxtiyorov",
+"age": "6-green",
+"club_id": "crimson-fc",
+"id": "elyorbek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "SS",
+"preferred_foot": "Right"
+},
+{
+"name": "Behruzbek Shonazarov",
+"age": "6-blue",
+"club_id": "crimson-fc",
+"id": "behruzbek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Nurali Jumaboyev",
+"age": "6-green",
+"club_id": "crimson-fc",
+"id": "nurali",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Madamin Odilbekov",
+"age": "7-green",
+"club_id": "crimson-fc",
+"id": "madamin",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": true,
+"position": "GK",
+"preferred_foot": "Right"
+},
+{
+"name": "Behruz Rustamov",
+"age": "7-blue",
+"club_id": "crimson-fc",
+"id": "behruz",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CF",
+"preferred_foot": "Right"
+},
+{
+"name": "Asilbek Qurbonboyev",
+"age": "5-blue",
+"club_id": "crimson-fc",
+"id": "asilbek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
+"preferred_foot": "Right"
+},
+{"name": "Feruzbek Xursandov",
+"age": "6-blue",
+"club_id": "arton-fc",
+"id": "feruzbek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "RW/GK",
+"preferred_foot": "Left"
+},
+{
+"name": "Azizbek Abdullayev",
+"age": "6-blue",
+"club_id": "arton-fc",
+"id": "azizbek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "GK/CB",
+"preferred_foot": "Right"
+},
+{
+"name" : "Akbar Sultannazarov",
+"age" : "7-blue",
+"club_id": "arton-fc",
+"id": "akbar",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Nodirbek Mirzakarimov",
+"age": "7-green",
+"club_id": "arton-fc",
+"id": "nodirbek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CDM",
+"preferred_foot": "Right"
+},
+{
+"name": "Dovudbek Umarjanov",
+"age": "5-blue",
+"club_id": "arton-fc",
+"id": "dovudbek",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Mustafo Sapayev",
+"age": "6-green",
+"club_id": "arton-fc",
+"id": "mustafo",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "ST",
+"preferred_foot": "Right"
+}
   ],
 
   "matches": [

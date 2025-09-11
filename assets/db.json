@@ -468,6 +468,17 @@
 "isGoalkeeper": false,
 "position": "CDM",
 "preferred_foot": "Right"
+},
+{
+"name": "Akmal Sultonboyev",
+"age": "8 • Blue",
+"club_id": "nushpiyoz-fc",
+"id": "akmal",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CAM/CM",
+"preferred_foot": "Right"
 }
   ],
 

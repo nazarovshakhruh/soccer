@@ -554,6 +554,40 @@
 "isGoalkeeper": false,
 "position": "CB",
 "preferred_foot": "Right"
+},
+
+{
+"name": "Hojiakbar Ravshanov",
+"age": "5 • green",
+"club_id": "royals-fc",
+"id": "hojiakbar",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CAM",
+"preferred_foot": "Right"
+},
+{
+"name": "Bunyod Abdullayev",
+"age": "5 • green",
+"club_id": "royals-fc",
+"id": "bunyod",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Rajabboy Axmedov",
+"age": "5 • green",
+"club_id": "giallorossi-fc",
+"id": "rajabboy",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CB",
+"preferred_foot": "Right"
 }
   ],
 

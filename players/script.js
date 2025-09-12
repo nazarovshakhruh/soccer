@@ -91,7 +91,7 @@ function calculateGoalsAssists(players, matches) {
         <img src="/assets/Flag.svg">
         <h1>${player.name}</h1>
         <div class="player-meta">
-          ${club ? `<img class="shit" src="${club.crest}" width="24"> ${club.name}` : ''} • ${player.position}
+          ${club ? `<img class="shit" src="${club.crest}" width="24">${club.name}` : ''} (Senior League) • ${player.position}
         </div>
       </div>
     </div>

@@ -432,13 +432,13 @@
 "id": "kamron",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
-"isGoalkeeper": false,
-"position": "CB/CDM/LW",
+"isGoalkeeper": true,
+"position": "GK",
 "preferred_foot": "Right"
 },
 {
 "name": "Behruzbek Gulmatov",
-"age": "9-green)",
+"age": "9 (green)",
 "id": "behruzbek",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",

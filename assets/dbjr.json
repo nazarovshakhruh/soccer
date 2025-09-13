@@ -603,8 +603,8 @@
         {
           "minute": 12,
           "type": "goal",
-          "player_id": "azizbek",
-          "assist_id": null,
+          "player_id": "azizbekn",
+          "assist_id": "nursulton",
           "club_id": "blitz-fc"
         }
       ]

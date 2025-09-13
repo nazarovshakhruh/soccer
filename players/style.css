@@ -109,8 +109,9 @@ body {
   /* border-radius: 12px; */
   /* text-align: center; */
 }
-.out img {
+.flag-icon {
   width: 50px;
+  vertical-align: middle;
 }
 
 .teammates {
@@ -172,4 +173,14 @@ a {
 }
 div strong {
   white-space: nowrap;
+}
+.out h1 {
+  white-space: nowrap;
+}
+.star-icon {
+  width: 26.1x;
+  height: 26.1px;
+  margin-left: 20px;
+  vertical-align: middle;
+  transform: scale(1.2) translateY(-1px);
 }

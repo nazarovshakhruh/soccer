@@ -87,13 +87,14 @@ function calculateGoalsAssists(players, matches) {
   <div class="hdrs">
     <div class="player-header fnm">
       <img class="shyt" src="${player.image || 'https://placehold.co/150x200?text=Player'}" alt="${player.name}">
-      <div class="out">
-        <img src="/assets/Flag.svg">
-        <h1>${player.name}</h1>
-        <div class="player-meta">
-          ${club ? `<img class="shit" src="${club.crest}" width="24">${club.name}` : ''} (Junior League) • ${player.position}
-        </div>
-      </div>
+<div class="out" id="player-out">
+  <img src="/assets/Flag.svg">
+  <h1>${player.name}</h1>
+  <div class="player-meta">
+    ${club ? `<img class="shit" src="${club.crest}" width="24">${club.name}` : ''} (Senior League) • ${player.position}
+  </div>
+</div>
+
     </div>
     <div class="player-header knd">
       <a href="/teamsjr/${club?.id}">

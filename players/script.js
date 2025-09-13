@@ -87,13 +87,16 @@ function calculateGoalsAssists(players, matches) {
   <div class="hdrs">
     <div class="player-header fnm">
       <img class="shyt" src="${player.image || 'https://placehold.co/150x200?text=Player'}" alt="${player.name}">
-      <div class="out">
-        <img src="/assets/Flag.svg">
-        <h1>${player.name}</h1>
-        <div class="player-meta">
-          ${club ? `<img class="shit" src="${club.crest}" width="24">${club.name}` : ''} (Senior League) • ${player.position}
-        </div>
-      </div>
+<div class="out" id="player-out">
+<div class="row">
+  <img src="/assets/Flag.svg" class="flag-icon">
+</div>
+  <h1>${player.name}</h1>
+  <div class="player-meta">
+    ${club ? `<img class="shit" src="${club.crest}" width="24">${club.name}` : ''} (Senior League) • ${player.position}
+  </div>
+</div>
+
     </div>
     <div class="player-header knd">
       <a href="/teams/${club?.id}">
@@ -127,4 +130,19 @@ function calculateGoalsAssists(players, matches) {
     </div>
   </div>
   `;
+// ⭐ Add star next to flag if player is in the star list
+const starPlayers = ["alibek-norimatov", "shohrux-nazarov"]; // slugs or ids of star players
+
+if (starPlayers.includes(slug) || starPlayers.includes(String(player.id))) {
+  const outDiv = document.getElementById("player-out");
+  const flagImg = outDiv.querySelector(".flag-icon");
+
+  if (flagImg) {
+    const starImg = document.createElement("img");
+    starImg.src = "/assets/star.png"; // replace with your star image path
+    starImg.alt = "Star Player";
+    starImg.classList.add("star-icon"); // optional styling
+    flagImg.insertAdjacentElement("afterend", starImg);
+  }
+}
 })();

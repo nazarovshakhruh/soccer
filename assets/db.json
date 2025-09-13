@@ -382,9 +382,9 @@
 "preferred_foot": "Right"
 },
     {
-      "name": "Shohruh Nazarov",
+      "name": "Shohrux Nazarov",
       "age": "11 (Green)",
-      "id": "shohruh",
+      "id": "shohrux",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
       "isGoalkeeper": false,
@@ -488,7 +488,7 @@
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,
-"position": "CB/CDM",
+"position": "CB",
 "preferred_foot": "Right"
 },
 {

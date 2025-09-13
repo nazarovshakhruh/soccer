@@ -167,3 +167,6 @@ a {
 .out h1 {
   white-space: nowrap;
 }
+div strong {
+  white-space: nowrap;
+}

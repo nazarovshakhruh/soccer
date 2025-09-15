@@ -509,19 +509,112 @@
     "id": "m1",
     "home_team": "gooners-fc",
     "away_team": "nushpiyoz-fc",
-    "home_goals": null,
-    "away_goals": null,
+    "home_goals": 6,
+    "away_goals": 3,
     "date": "2025-09-15T14:25:00Z",
-    "events": []
+    "events": [
+      {
+          "minute": 6,
+          "type": "goal",
+          "player_id": "muhammad",
+          "assist_id": "bekzod",
+          "club_id": "gooners-fc"
+        },
+        {
+          "minute": 19,
+          "type": "goal",
+          "player_id": "muhammad",
+          "assist_id": null,
+          "club_id": "gooners-fc"
+        },
+        {
+          "minute": 22,
+          "type": "goal",
+          "player_id": "muhammad",
+          "assist_id": null,
+          "club_id": "gooners-fc"
+        },
+        {
+          "minute": 31,
+          "type": "goal",
+          "player_id": "muhammad",
+          "assist_id": "olloshukur",
+          "club_id": "gooners-fc"
+        },{
+          "minute": 34,
+          "type": "goal",
+          "player_id": "muhammad",
+          "assist_id": "olloshukur",
+          "club_id": "gooners-fc"
+        },{
+          "minute": 38,
+          "type": "goal",
+          "player_id": "muhammad",
+          "assist_id": null,
+          "club_id": "gooners-fc"
+        },{
+          "minute": 28,
+          "type": "goal",
+          "player_id": "isojon",
+          "assist_id": "akmal",
+          "club_id": "nushpiyoz-fc"
+        },{
+          "minute": 36,
+          "type": "goal",
+          "player_id": "akmal",
+          "assist_id": null,
+          "club_id": "nushpiyoz-fc"
+        },{
+          "minute": 39,
+          "type": "goal",
+          "player_id": "abbos",
+          "assist_id": null,
+          "club_id": "nushpiyoz-fc"
+        }
+    ]
   },
   {
     "id": "m2",
     "home_team": "gamburg",
     "away_team": "fc-winchester",
-    "home_goals": null,
-    "away_goals": null,
+    "home_goals": 0,
+    "away_goals": 5,
     "date": "2025-09-15T15:15:00Z",
-    "events": []
+    "events": [
+      {
+          "minute": 5,
+          "type": "goal",
+          "player_id": "diyorbekgreen)",
+          "assist_id": "xudoybergan",
+          "club_id": "fc-winchester"
+        },
+        {
+          "minute": 16,
+          "type": "goal",
+          "player_id": "xudoybergan",
+          "assist_id": "diyorbekgreen)",
+          "club_id": "fc-winchester"
+        }, {
+          "minute": 31,
+          "type": "goal",
+          "player_id": "diyorbekgreen)",
+          "assist_id": null,
+          "club_id": "fc-winchester"
+        }, {
+          "minute": 31,
+          "type": "own_goal",
+          "player_id": "amir",
+          "assist_id": null,
+          "club_id": "gamburg"
+        }, {
+          "minute": 31,
+          "type": "own_goal",
+          "player_id": "shohrux",
+          "assist_id": null,
+          "club_id": "gamburg"
+        }
+    ]
+    
   },
   {
     "id": "m3",

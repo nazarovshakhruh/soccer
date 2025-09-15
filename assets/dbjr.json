@@ -640,10 +640,88 @@
       "id": "m2",
       "home_team": "arton-fc",
       "away_team": "casio-fc",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 7,
+      "away_goals": 4,
       "date": "2025-09-15T13:10:00Z",
-      "events": []
+      "events": [
+                        {
+          "minute": 5,
+          "type": "own_goal",
+          "player_id": "akbars",
+          "assist_id": null,
+          "club_id": "arton-fc"
+        },
+                        {
+          "minute": 18,
+          "type": "goal",
+          "player_id": "asilbekr",
+          "assist_id": null,
+          "club_id": "casio-fc"
+        },
+                        {
+          "minute": 26,
+          "type": "goal",
+          "player_id": "asilbekr",
+          "assist_id": null,
+          "club_id": "casio-fc"
+        },
+                        {
+          "minute": 28,
+          "type": "goal",
+          "player_id": "asilbekr",
+          "assist_id": "suxrobbek",
+          "club_id": "casio-fc"
+        },
+                        {
+          "minute": 2,
+          "type": "goal",
+          "player_id": "mustafo",
+          "assist_id": null,
+          "club_id": "arton-fc"
+        },
+                        {
+          "minute": 2,
+          "type": "goal",
+          "player_id": "feruzbek",
+          "assist_id": "mustafo",
+          "club_id": "arton-fc"
+        },
+                        {
+          "minute": 12,
+          "type": "goal",
+          "player_id": "nodirbek",
+          "assist_id": null,
+          "club_id": "arton-fc"
+        },
+                        {
+          "minute": 21,
+          "type": "goal",
+          "player_id": "feruzbek",
+          "assist_id": "nodirbek",
+          "club_id": "arton-fc"
+        },
+                        {
+          "minute": 27,
+          "type": "goal",
+          "player_id": "feruzbek",
+          "assist_id": "nodirbek",
+          "club_id": "arton-fc"
+        },
+                        {
+          "minute": 28,
+          "type": "goal",
+          "player_id": "mustafo",
+          "assist_id": null,
+          "club_id": "arton-fc"
+        },
+                        {
+          "minute": "30+1",
+          "type": "goal",
+          "player_id": "nodirbek",
+          "assist_id": null,
+          "club_id": "arton-fc"
+        }
+      ]
     },
 {
       "id": "m3",

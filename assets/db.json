@@ -433,7 +433,7 @@
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": true,
-"position": "GK",
+"position": "CB",
 "preferred_foot": "Right"
 },
 {
@@ -488,7 +488,7 @@
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,
-"position": "CB",
+"position": "GK",
 "preferred_foot": "Right"
 },
 {

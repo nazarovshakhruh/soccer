@@ -148,3 +148,17 @@ h1 {
     background-color: #000000b2;
     text-align: center;
 }
+@media (max-width: 640px) {
+  .part h4 {
+    display: none;
+  }
+  .yum {
+  padding: 20px 5%;
+}
+.note {
+  display: none;
+}
+h1 {
+  font-size: 25px;
+}
+}

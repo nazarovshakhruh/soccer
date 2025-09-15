@@ -161,3 +161,17 @@ h1 {
     font-size: 14px;
   }
 }
+@media (max-width: 640px) {
+  .part h4 {
+    display: none;
+  }
+  .yum {
+  padding: 20px 5%;
+}
+.note {
+  display: none;
+}
+h1 {
+  font-size: 25px;
+}
+}

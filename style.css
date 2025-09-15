@@ -521,14 +521,14 @@
 }
 .mg2 {
   
-  background: url(/assets/news.png) no-repeat;
+  background: url(/assets/news.png) no-repeat center center;
   background-size: cover;
-  background-position: top;
+  background-position: center;
 }
 .mg3 {
   background: url(/assets/news.png) no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center;
 }
 .club {
   width: 40px;
@@ -962,5 +962,41 @@
 @media (max-height: 910px) and (max-width: 840px){
   .feedback {
     height: 120vh;
+  }
+}
+@media (max-height: 900px) and (max-width: 1460px){
+  .innerbody {
+    flex-direction: row;
+  }
+  .half {
+    width: 50%;
+    height: 100%;
+  }
+  .fhalf {
+    flex-direction: column;
+  }
+  .matches h3 {
+    padding: 20px;
+  }
+  .mg1 {
+    width: 100%;
+    height: 70%;
+  }
+  .news {
+    flex-direction: column;
+  }
+  .new {
+    width: 100%;
+    height: 50%;
+  }
+  .new h5 {
+    padding: 15px;
+    display: none;
+  }
+  .mg2, .mg3 {
+    height: 60%;
+  }
+  .goon h1 {
+    font-size: 1.7em;
   }
 }

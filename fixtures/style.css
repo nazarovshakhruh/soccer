@@ -147,3 +147,17 @@ h1 {
     background-color: #000000b2;
     text-align: center;
 }
+@media (max-width: 980px) {
+  .time {
+    font-size: 15px;
+    padding: 20px;
+  }
+  .yum {
+      padding: 20px 10%;
+  }
+}
+@media (max-width: 730px) {
+  .time {
+    font-size: 14px;
+  }
+}

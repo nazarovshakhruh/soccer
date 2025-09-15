@@ -105,17 +105,30 @@ function computeStandings(db){
     };
   }
 
-  for(const m of (db.matches||[])){
-    const h = teams[m.home_team], a = teams[m.away_team];
-    if(!h || !a) continue;
-    h.played++; a.played++;
-    h.gf += m.home_goals; h.ga += m.away_goals;
-    a.gf += m.away_goals; a.ga += m.home_goals;
+for (const m of (db.matches || [])) {
+  const h = teams[m.home_team], a = teams[m.away_team];
+  if (!h || !a) continue;
 
-    if(m.home_goals > m.away_goals){ h.wins++; a.losses++; h.points+=3; }
-    else if(m.home_goals < m.away_goals){ a.wins++; h.losses++; a.points+=3; }
-    else { h.draws++; a.draws++; h.points++; a.points++; }
+  // 🔥 skip if match hasn't been played yet
+  if (m.home_goals === null || m.away_goals === null) {
+    continue;
   }
+
+  // only update stats for finished matches
+  h.played++; a.played++;
+  h.gf += m.home_goals; h.ga += m.away_goals;
+  a.gf += m.away_goals; a.ga += m.home_goals;
+
+  if (m.home_goals > m.away_goals) { 
+    h.wins++; a.losses++; h.points += 3; 
+  }
+  else if (m.home_goals < m.away_goals) { 
+    a.wins++; h.losses++; a.points += 3; 
+  }
+  else { 
+    h.draws++; a.draws++; h.points++; a.points++; 
+  }
+}
 
   for(const id in teams){ teams[id].gd = teams[id].gf - teams[id].ga; }
 

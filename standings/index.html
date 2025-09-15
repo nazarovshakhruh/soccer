@@ -1,253 +1,266 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>League Table</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-  <div class="page">
-    <div class="standings-wrap">
-      <div class="topbar">
-        <div>
-          <div class="title2">Khiva Presidential School Sports Senior League</div>
-          <div class="subtitle2">The data may be inaccurate or contain errors. Please contact the developers if you encounter any.</div>
+  <!doctype html>
+  <html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>League Table</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      
+    <div class="page">
+      <div class="standings-wrap">
+        <div class="topbar">
+          <div>
+            <div class="title2">Khiva Presidential School Sports Senior League</div>
+            <div class="subtitle2">The data may be inaccurate or contain errors. Please contact the developers if you encounter any.</div>
+          </div>
+          <div class="small-muted">Last updated: <span id="data-timestamp">—</span></div>
         </div>
-        <div class="small-muted">Last updated: <span id="data-timestamp">—</span></div>
-      </div>
-      <div class="goof">
-        <div class="title">Standings</div>
+        <div class="goof">
+          <div class="title">Standings</div>
 
-      </div>
-      <div class="main-grid">
-        <!-- LEFT: Standings -->
-        <section class="standings" aria-labelledby="standings-heading">
-          <div class="standings-head">
-            <div class="col-rank">No.</div>
-            <div class="col-club">Club</div>
-            <div class="col-n">GF</div>
-            <div class="col-n">GA</div>
-            <div class="col-n">GD</div>
-            <div class="col-p">Pts</div>
-          </div>
+        </div>
+        <div class="main-grid">
+          <!-- LEFT: Standings -->
+          <section class="standings" aria-labelledby="standings-heading">
+            <div class="standings-head">
+              <div class="col-rank">No.</div>
+              <div class="col-club">Club</div>
+              <div class="col-n">GF</div>
+              <div class="col-n">GA</div>
+              <div class="col-n">GD</div>
+              <div class="col-p">Pts</div>
+            </div>
 
-          <div class="standings-list" id="standings-list" role="list"></div>
-        </section>
+            <div class="standings-list" id="standings-list" role="list"></div>
+          </section>
+      </div>
     </div>
-  </div>
-  </div>
-  <div class="page2">
-        <aside class="leaders" aria-labelledby="leaders-heading">
-          <div class="leader-row">
-            <div class="leader" id="leader-goals">
-              <div class="head"><span>Goals</span><span class="small-muted">Goals</span></div>
-              <div class="leader-list" id="top-goals"></div>
+    </div>
+    <div class="page2">
+          <aside class="leaders" aria-labelledby="leaders-heading">
+            <div class="leader-row">
+              <div class="leader" id="leader-goals">
+                <div class="head"><span>Goals</span><span class="small-muted">Goals</span></div>
+                <div class="leader-list" id="top-goals"></div>
+              </div>
+
+              <div class="leader" id="leader-assists">
+                <div class="head"><span>Assists</span><span class="small-muted">Assists</span></div>
+                <div class="leader-list" id="top-assists"></div>
+              </div>
             </div>
 
-            <div class="leader" id="leader-assists">
-              <div class="head"><span>Assists</span><span class="small-muted">Assists</span></div>
-              <div class="leader-list" id="top-assists"></div>
-            </div>
-          </div>
+            <div class="leader-row">
+              <div class="leader" id="leader-longshots">
+                <div class="head"><span>Penalties</span><span class="small-muted">Long Shots</span></div>
+                <div class="leader-list" id="top-longshots"></div>
+              </div>
 
-          <div class="leader-row">
-            <div class="leader" id="leader-longshots">
-              <div class="head"><span>Penalties</span><span class="small-muted">Long Shots</span></div>
-              <div class="leader-list" id="top-longshots"></div>
-            </div>
-
-            <div class="leader" id="leader-split">
-              <div class="split">
-                <div class="half">
-                  <div class="head"><span>Clean Sheets (Goalkeepers)</span><span class="small-muted">CS</span></div>
-                  <div class="leader-list" id="top-cleansheets"></div>
-                </div>
-                <div class="half">
-                  <div class="head"><span>Own Goals</span><span class="small-muted">OG</span></div>
-                  <div class="leader-list" id="top-owngoals"></div>
+              <div class="leader" id="leader-split">
+                <div class="split">
+                  <div class="half">
+                    <div class="head"><span>Clean Sheets (Goalkeepers)</span><span class="small-muted">CS</span></div>
+                    <div class="leader-list" id="top-cleansheets"></div>
+                  </div>
+                  <div class="half">
+                    <div class="head"><span>Own Goals</span><span class="small-muted">OG</span></div>
+                    <div class="leader-list" id="top-owngoals"></div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </aside>
-      </div>
-      <div class="nbox">
-        <div class="note">© 2025 Khiva Presidential School Sports. All rights reserved.&nbsp; Page optimized for desktop viewing.</div>
-      </div>
-<script>
-async function loadDB(){
-  const resp = await fetch('/assets/db.json', {cache: "no-store"});
-  if(!resp.ok) throw new Error('Failed to load db.json');
-  return await resp.json();
-}
-
-function slugify(s){
-  return String(s).trim().toLowerCase().replace(/\s+/g,'-').replace(/[^\w\-]/g,'');
-}
-
-document.getElementById("data-timestamp").textContent = new Date().toLocaleString();
-
-function computeStandings(db){
-  const teams = {};
-  for(const c of db.clubs){
-    teams[c.id] = {
-      id: c.id,
-      name: c.name,
-      crest: c.crest,
-      played:0, wins:0, draws:0, losses:0,
-      gf:0, ga:0, gd:0, points:0
-    };
-  }
-
-  for(const m of (db.matches||[])){
-    const h = teams[m.home_team], a = teams[m.away_team];
-    if(!h || !a) continue;
-    h.played++; a.played++;
-    h.gf += m.home_goals; h.ga += m.away_goals;
-    a.gf += m.away_goals; a.ga += m.home_goals;
-
-    if(m.home_goals > m.away_goals){ h.wins++; a.losses++; h.points+=3; }
-    else if(m.home_goals < m.away_goals){ a.wins++; h.losses++; a.points+=3; }
-    else { h.draws++; a.draws++; h.points++; a.points++; }
-  }
-
-  for(const id in teams){ teams[id].gd = teams[id].gf - teams[id].ga; }
-
-  return Object.values(teams).sort((x,y)=>
-    y.points - x.points || y.gd - x.gd || y.gf - x.gf || x.name.localeCompare(y.name)
-  );
-}
-
-function renderStandings(list){
-  const container = document.getElementById('standings-list');
-  container.innerHTML = '';
-  list.forEach((t, idx) => {
-    const a = document.createElement('a');
-    a.className = 'team-row';
-    a.href = `/teams/${slugify(t.name)}`;
-    a.setAttribute('role','listitem');
-
-    a.innerHTML = `
-      <div class="team-left">
-        <div class="col-rank" style="width:36px;text-align:center;font-weight:700">${idx+1}</div>
-        <div class="crest"><img src="${t.crest}" alt="${t.name} crest" onerror="this.src='https://placehold.co/80x80?text=Club'"></div>
-        <div style="min-width:0">
-          <div class="team-name">${t.name}</div>
-          <div class="small-muted">P:${t.played} W:${t.wins} D:${t.draws} L:${t.losses}</div>
+          </aside>
         </div>
-      </div>
-      <div style="display:flex;gap:12px;align-items:center">
-        <div class="col-n" style="width:80px;text-align:right">${t.gf}</div>
-        <div class="col-n" style="width:80px;text-align:right">${t.ga}</div>
-        <div class="col-n" style="width:80px;text-align:right">${t.gd}</div>
-        <div class="col-p" style="width:60px;text-align:center;font-weight:700">${t.points}</div>
-      </div>
-    `;
-    container.appendChild(a);
-  });
-}
-
-function renderLeader(containerId, players, statField, labelFormatter, db){
-  const container = document.getElementById(containerId);
-  container.innerHTML = '';
-  players.forEach((p, i) => {
-    const club = db.clubs.find(c => c.id === p.club_id);
-    const a = document.createElement('a');
-    a.className = 'player-row';
-    a.href = `/players/${slugify(p.name)}`;
-    a.innerHTML = `
-      <div class="player-rank">${i+1}</div>
-      <img class="bang" src="${club ? club.crest : ''}" alt="${club ? club.name : ''} logo">
-      <div class="player-name">
-        <div style="font-weight:600">${p.name}</div>
-        <div class="player-meta">${club ? club.name : ''} — ${p.position || ''}</div>
-      </div>
-      <div style="min-width:40px;font-weight:700">
-        ${labelFormatter ? labelFormatter(p[statField]) : p[statField]}
-      </div>
-    `;
-    container.appendChild(a);
-  });
-}
-
-// 🔥 Build leaders from events instead of static fields
-function buildLeaders(db){
-  const playersById = {};
-  (db.players || []).forEach(p=>{
-    playersById[p.id] = {...p, goals:0, assists:0, penalties:0, clean_sheets:0, own_goals:0};
-  });
-
-  // --- Process match events
-  for(const m of (db.matches||[])){
-    for(const ev of (m.events||[])){
-      if(ev.type === "goal"){
-        if(playersById[ev.player_id]) playersById[ev.player_id].goals++;
-        if(ev.assist_id && playersById[ev.assist_id]) playersById[ev.assist_id].assists++;
-      }
-      if(ev.type === "penalty"){
-        if(playersById[ev.player_id]) {
-          playersById[ev.player_id].goals++;
-          playersById[ev.player_id].penalties++;
-        }
-        if(ev.assist_id && playersById[ev.assist_id]) playersById[ev.assist_id].assists++;
-      }
-      if(ev.type === "own_goal"){
-        if(playersById[ev.player_id]) playersById[ev.player_id].own_goals++;
-      }
-    }
-
-    // --- Clean sheets: if GK played full match & conceded 0
-    const homeGA = m.away_goals, awayGA = m.home_goals;
-    if(homeGA === 0){
-      (db.players||[]).forEach(p=>{
-        if(p.club_id===m.home_team && (p.position||"").toLowerCase().includes("gk")){
-          playersById[p.id].clean_sheets++;
-        }
-      });
-    }
-    if(awayGA === 0){
-      (db.players||[]).forEach(p=>{
-        if(p.club_id===m.away_team && (p.position||"").toLowerCase().includes("gk")){
-          playersById[p.id].clean_sheets++;
-        }
-      });
-    }
+        <div class="nbox">
+          <div class="note">© 2025 Khiva Presidential School Sports. All rights reserved.&nbsp; Page optimized for desktop viewing.</div>
+        </div>
+  <script>
+  async function loadDB(){
+    const resp = await fetch('/assets/db.json', {cache: "no-store"});
+    if(!resp.ok) throw new Error('Failed to load db.json');
+    return await resp.json();
   }
 
-  const players = Object.values(playersById);
+  function slugify(s){
+    return String(s).trim().toLowerCase().replace(/\s+/g,'-').replace(/[^\w\-]/g,'');
+  }
 
-  const topGoals = players.filter(p=>p.goals>0).sort((a,b)=>b.goals-a.goals || a.name.localeCompare(b.name)).slice(0,50);
-  const topAssists = players.filter(p=>p.assists>0).sort((a,b)=>b.assists-a.assists || a.name.localeCompare(b.name)).slice(0,50);
-  const topPenalties = players.filter(p=>p.penalties>0).sort((a,b)=>b.penalties-a.penalties || a.name.localeCompare(b.name)).slice(0,50);
-  const topCS = players.filter(p=>(p.position||"").toLowerCase().includes("gk") && p.clean_sheets>0)
-                        .sort((a,b)=>b.clean_sheets-a.clean_sheets || a.name.localeCompare(b.name)).slice(0,50);
-  const topOG = players.filter(p=>p.own_goals>0).sort((a,b)=>b.own_goals-a.own_goals || a.name.localeCompare(b.name)).slice(0,50);
+  document.getElementById("data-timestamp").textContent = new Date().toLocaleString();
 
-  renderLeader('top-goals', topGoals, 'goals', v=>v, db);
-  renderLeader('top-assists', topAssists, 'assists', v=>v, db);
-  renderLeader('top-longshots', topPenalties, 'penalties', v=>v, db); // replaced long shots with penalties
-  renderLeader('top-cleansheets', topCS, 'clean_sheets', v=>v, db);
-  renderLeader('top-owngoals', topOG, 'own_goals', v=>v, db);
+  function computeStandings(db){
+    const teams = {};
+    for(const c of db.clubs){
+      teams[c.id] = {
+        id: c.id,
+        name: c.name,
+        crest: c.crest,
+        played:0, wins:0, draws:0, losses:0,
+        gf:0, ga:0, gd:0, points:0
+      };
+    }
+
+for (const m of (db.matches || [])) {
+  const h = teams[m.home_team], a = teams[m.away_team];
+  if (!h || !a) continue;
+
+  // 🔥 skip if match hasn't been played yet
+  if (m.home_goals === null || m.away_goals === null) {
+    continue;
+  }
+
+  // only update stats for finished matches
+  h.played++; a.played++;
+  h.gf += m.home_goals; h.ga += m.away_goals;
+  a.gf += m.away_goals; a.ga += m.home_goals;
+
+  if (m.home_goals > m.away_goals) { 
+    h.wins++; a.losses++; h.points += 3; 
+  }
+  else if (m.home_goals < m.away_goals) { 
+    a.wins++; h.losses++; a.points += 3; 
+  }
+  else { 
+    h.draws++; a.draws++; h.points++; a.points++; 
+  }
 }
 
-(async function init(){
-  try{
-    const db = await loadDB();
-    const standings = computeStandings(db);
-    renderStandings(standings);
-    buildLeaders(db);
-  }catch(err){
-    console.error(err);
-    document.body.innerHTML = '<pre style="color:#ffb4b4">Error loading data.\\n'+err.message+'</pre>';
-  }
-})();
-</script>
+    for(const id in teams){ teams[id].gd = teams[id].gf - teams[id].ga; }
 
-</body>
-</html>
+    return Object.values(teams).sort((x,y)=>
+      y.points - x.points || y.gd - x.gd || y.gf - x.gf || x.name.localeCompare(y.name)
+    );
+  }
+
+  function renderStandings(list){
+    const container = document.getElementById('standings-list');
+    container.innerHTML = '';
+    list.forEach((t, idx) => {
+      const a = document.createElement('a');
+      a.className = 'team-row';
+      a.href = `/teams/${slugify(t.name)}`;
+      a.setAttribute('role','listitem');
+
+      a.innerHTML = `
+        <div class="team-left">
+          <div class="col-rank" style="width:36px;text-align:center;font-weight:700">${idx+1}</div>
+          <div class="crest"><img src="${t.crest}" alt="${t.name} crest" onerror="this.src='https://placehold.co/80x80?text=Club'"></div>
+          <div style="min-width:0">
+            <div class="team-name">${t.name}</div>
+            <div class="small-muted">P:${t.played} W:${t.wins} D:${t.draws} L:${t.losses}</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="col-n" style="width:80px;text-align:right">${t.gf}</div>
+          <div class="col-n" style="width:80px;text-align:right">${t.ga}</div>
+          <div class="col-n" style="width:80px;text-align:right">${t.gd}</div>
+          <div class="col-p" style="width:60px;text-align:center;font-weight:700">${t.points}</div>
+        </div>
+      `;
+      container.appendChild(a);
+    });
+  }
+
+  function renderLeader(containerId, players, statField, labelFormatter, db){
+    const container = document.getElementById(containerId);
+    container.innerHTML = '';
+    players.forEach((p, i) => {
+      const club = db.clubs.find(c => c.id === p.club_id);
+      const a = document.createElement('a');
+      a.className = 'player-row';
+      a.href = `/players/${slugify(p.name)}`;
+      a.innerHTML = `
+        <div class="player-rank">${i+1}</div>
+        <img class="bang" src="${club ? club.crest : ''}" alt="${club ? club.name : ''} logo">
+        <div class="player-name">
+          <div style="font-weight:600">${p.name}</div>
+          <div class="player-meta">${club ? club.name : ''} — ${p.position || ''}</div>
+        </div>
+        <div style="min-width:40px;font-weight:700">
+          ${labelFormatter ? labelFormatter(p[statField]) : p[statField]}
+        </div>
+      `;
+      container.appendChild(a);
+    });
+  }
+
+  // 🔥 Build leaders from events instead of static fields
+  function buildLeaders(db){
+    const playersById = {};
+    (db.players || []).forEach(p=>{
+      playersById[p.id] = {...p, goals:0, assists:0, penalties:0, clean_sheets:0, own_goals:0};
+    });
+
+    // --- Process match events
+    for(const m of (db.matches||[])){
+      for(const ev of (m.events||[])){
+        if(ev.type === "goal"){
+          if(playersById[ev.player_id]) playersById[ev.player_id].goals++;
+          if(ev.assist_id && playersById[ev.assist_id]) playersById[ev.assist_id].assists++;
+        }
+        if(ev.type === "penalty"){
+          if(playersById[ev.player_id]) {
+            playersById[ev.player_id].goals++;
+            playersById[ev.player_id].penalties++;
+          }
+          if(ev.assist_id && playersById[ev.assist_id]) playersById[ev.assist_id].assists++;
+        }
+        if(ev.type === "own_goal"){
+          if(playersById[ev.player_id]) playersById[ev.player_id].own_goals++;
+        }
+      }
+
+      // --- Clean sheets: if GK played full match & conceded 0
+      const homeGA = m.away_goals, awayGA = m.home_goals;
+      if(homeGA === 0){
+        (db.players||[]).forEach(p=>{
+          if(p.club_id===m.home_team && (p.position||"").toLowerCase().includes("gk")){
+            playersById[p.id].clean_sheets++;
+          }
+        });
+      }
+      if(awayGA === 0){
+        (db.players||[]).forEach(p=>{
+          if(p.club_id===m.away_team && (p.position||"").toLowerCase().includes("gk")){
+            playersById[p.id].clean_sheets++;
+          }
+        });
+      }
+    }
+
+    const players = Object.values(playersById);
+
+    const topGoals = players.filter(p=>p.goals>0).sort((a,b)=>b.goals-a.goals || a.name.localeCompare(b.name)).slice(0,50);
+    const topAssists = players.filter(p=>p.assists>0).sort((a,b)=>b.assists-a.assists || a.name.localeCompare(b.name)).slice(0,50);
+    const topPenalties = players.filter(p=>p.penalties>0).sort((a,b)=>b.penalties-a.penalties || a.name.localeCompare(b.name)).slice(0,50);
+    const topCS = players.filter(p=>(p.position||"").toLowerCase().includes("gk") && p.clean_sheets>0)
+                          .sort((a,b)=>b.clean_sheets-a.clean_sheets || a.name.localeCompare(b.name)).slice(0,50);
+    const topOG = players.filter(p=>p.own_goals>0).sort((a,b)=>b.own_goals-a.own_goals || a.name.localeCompare(b.name)).slice(0,50);
+
+    renderLeader('top-goals', topGoals, 'goals', v=>v, db);
+    renderLeader('top-assists', topAssists, 'assists', v=>v, db);
+    renderLeader('top-longshots', topPenalties, 'penalties', v=>v, db); // replaced long shots with penalties
+    renderLeader('top-cleansheets', topCS, 'clean_sheets', v=>v, db);
+    renderLeader('top-owngoals', topOG, 'own_goals', v=>v, db);
+  }
+
+  (async function init(){
+    try{
+      const db = await loadDB();
+      const standings = computeStandings(db);
+      renderStandings(standings);
+      buildLeaders(db);
+    }catch(err){
+      console.error(err);
+      document.body.innerHTML = '<pre style="color:#ffb4b4">Error loading data.\\n'+err.message+'</pre>';
+    }
+  })();
+  </script>
+
+  </body>
+  </html>

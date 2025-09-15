@@ -999,4 +999,10 @@
   .goon h1 {
     font-size: 1.7em;
   }
+  .feedback {
+    height: 60vh;
+  }
+  .part h4 {
+    font-size: 12px;
+  }
 }

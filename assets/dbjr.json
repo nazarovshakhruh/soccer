@@ -599,7 +599,42 @@
       "home_goals": null,
       "away_goals": null,
       "date": "2025-09-15T12:30:00Z",
-      "events": []
+      "events": [
+                {
+          "minute": 3,
+          "type": "penalty",
+          "player_id": "azizbekn",
+          "assist_id": null,
+          "club_id": "blitz-fc"
+        },
+                {
+          "minute": 5,
+          "type": "goal",
+          "player_id": "azizbekn",
+          "assist_id": "mirjalol",
+          "club_id": "blitz-fc"
+        },                {
+          "minute": 17,
+          "type": "goal",
+          "player_id": "diyor",
+          "assist_id": null,
+          "club_id": "blitz-fc"
+        },
+                        {
+          "minute": 25,
+          "type": "goal",
+          "player_id": "diyor",
+          "assist_id": null,
+          "club_id": "blitz-fc"
+        },
+                        {
+          "minute": 27,
+          "type": "penalty",
+          "player_id": "nursulton",
+          "assist_id": null,
+          "club_id": "blitz-fc"
+        }
+      ]
     },
 {
       "id": "m2",

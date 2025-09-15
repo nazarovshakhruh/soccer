@@ -100,7 +100,7 @@ async function loadMatch(matchId) {
         } else {
           goalText = `<strong><a href="/players/${scorer ? slugify(scorer.name) : ""}">
                         ${scorer ? scorer.name : "Unknown"}
-                      </a></strong> ${club ? `(${club.name})` : ""}`;
+                      </a></strong> ${club ? `${club.name}` : ""}`;
         }
 
         const assistText =
@@ -116,13 +116,15 @@ async function loadMatch(matchId) {
           iconSrc = "/assets/owngoal.png";
         }
 
-        div.innerHTML = `
-          <span>${ev.minute}'</span>
-          ${club ? `<img class="musr2" src="${iconSrc}" style="width:20px;height:20px"> <img src="${club.crest}" style="width:40px;height:40px">` : ""}
-          ${goalText}
-          ${assistText}
-          <br><small>${scorer ? scorer.position : ""}${scorer ? ", " + scorer.nationality : ""}</small>
-        `;
+div.innerHTML = `
+  <span>${ev.minute}'</span>
+  <img class="musr2" src="${iconSrc}" style="width:20px;height:20px">
+  ${scorer ? `<img src="${scorer.image}" alt="${scorer.name}" style="width:40px;height:40px;object-fit:cover">` : ""}
+  ${goalText}
+  ${assistText}
+  <br><small>${scorer ? scorer.position : ""}${scorer ? ", " + scorer.nationality : ""}</small>
+`;
+
 
         // 🏠 Home goals left | 🛫 Away goals right
         if (ev.type === "own_goal") {

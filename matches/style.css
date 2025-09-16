@@ -84,8 +84,8 @@ body {
 .event span {
   font-weight: lighter;
   color: #ffffff;
-  width: 40px;
-  text-align: right;
+  width: 30px;
+  text-align: center;
 }
 
 .event strong {
@@ -224,8 +224,10 @@ a {
     }
 
     .event span {
-      font-weight: bold;
-      margin-right: 5px;
+      font-weight: normal;
+      /* margin-right: 5px; */
+      width: 30px;
+      flex-shrink: 0;
     }
 /* Responsive */
 @media (max-width: 600px) {

@@ -371,14 +371,25 @@
 "preferred_foot": "Right"
 },
 {
-"name": "Abbos", 
-"age": "9 (Blue)",
+"name": "Oybek Baxtiyorov", 
+"age": "9 (Green)",
 "club_id": "fc-winchester",
-"id": "abbos",
+"id": "oybek",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,
 "position": "CB",
+"preferred_foot": "Right"
+},
+{
+"name": "Abbos Saitjonov", 
+"age": "9 (Blue)",
+"club_id": "nushpiyoz-fc",
+"id": "abbos",
+"nationality": "Uzbek",
+"image": "/assets/user.webp",
+"isGoalkeeper": false,
+"position": "CM",
 "preferred_foot": "Right"
 },
     {

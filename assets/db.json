@@ -634,7 +634,36 @@
     "home_goals": null,
     "away_goals": null,
     "date": "2025-09-16T14:25:00Z",
-    "events": []
+    "events": [
+             {
+          "minute": 6,
+          "type": "goal",
+          "player_id": "jasurbek",
+          "assist_id": "alibek",
+          "club_id": "cyclone-fc"
+        },
+        {
+          "minute": 37,
+          "type": "goal",
+          "player_id": "alibek",
+          "assist_id": "munisbek",
+          "club_id": "cyclone-fc"
+        },
+         {
+          "minute": 17,
+          "type": "goal",
+          "player_id": "akbar",
+          "assist_id": "rasulbek",
+          "club_id": "tiki-taka"
+        },
+         {
+          "minute": 20,
+          "type": "goal",
+          "player_id": "abdulaziz",
+          "assist_id": "akbar",
+          "club_id": "tiki-taka"
+        }
+    ]
   },
   {
     "id": "m4",
@@ -643,7 +672,91 @@
     "home_goals": null,
     "away_goals": null,
     "date": "2025-09-16T15:15:00Z",
-    "events": []
+    "events": [
+      {
+          "minute": 4,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": null,
+          "club_id": "apex-fc"
+        },
+         {
+          "minute": 9,
+          "type": "goal",
+          "player_id": "murod",
+          "assist_id": null,
+          "club_id": "apex-fc"
+        },
+         {
+          "minute": 12,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": null,
+          "club_id": "apex-fc"
+        },
+         {
+          "minute": 15,
+          "type": "goal",
+          "player_id": "murod",
+          "assist_id": "mirjalol",
+          "club_id": "apex-fc"
+        },
+         {
+          "minute": 31,
+          "type": "goal",
+          "player_id": "murod",
+          "assist_id": "mironshoh",
+          "club_id": "apex-fc"
+        }, {
+          "minute": 35,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": "murod",
+          "club_id": "apex-fc"
+        },
+         {
+          "minute": 37,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": null,
+          "club_id": "apex-fc"
+        },
+         {
+          "minute": 10,
+          "type": "goal",
+          "player_id": "sanjar",
+          "assist_id": "javohirko",
+          "club_id": "vip-fc"
+        },
+        {
+          "minute": 17,
+          "type": "goal",
+          "player_id": "ibrat",
+          "assist_id": null,
+          "club_id": "vip-fc"
+        },
+        {
+          "minute": 20,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+        {
+          "minute": 39,
+          "type": "goal",
+          "player_id": "sanjar",
+          "assist_id": null,
+          "club_id": "vip-fc"
+        },
+        {
+          "minute": 39,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        }
+      ]
   },
   {
     "id": "m5",

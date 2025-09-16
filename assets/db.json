@@ -355,7 +355,7 @@
 "id": "javohirku",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
-"isGoalkeeper": false,
+"isGoalkeeper": true,
 "position":  "GK",
 "preferred_foot": "Right"
 },
@@ -453,7 +453,7 @@
 "id": "behruzbek",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
-"isGoalkeeper": false,
+"isGoalkeeper": true,
 "club_id": "nushpiyoz-fc",
 "position": "GK",
 "preferred_foot": "Right"
@@ -499,7 +499,7 @@
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,
-"position": "GK",
+"position": "CB/GK",
 "preferred_foot": "Right"
 },
 {
@@ -512,7 +512,40 @@
 "isGoalkeeper": false,
 "position": "CM",
 "preferred_foot": "Right"
-}
+},
+    {
+      "name": "Husanboy Sa'dullayev",
+      "age": "9 (Blue)",
+      "club_id": "Cyclone",
+      "position": "CB",
+      "preferred_foot": "Right",
+      "id": "husanboy",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false
+    },
+    {
+      "name": "Hasanboy Sa'dullayev",
+      "age": "9 (Green)",
+      "club_id": "tiki-taka",
+      "position": "CB",
+      "preferred_foot": "Left",
+      "id": "hasanboy",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false
+    },
+    {
+      "name": "Bunyodbek Islomboyev",
+      "age": "9 (Green)",
+      "club_id": "vip-fc",
+      "position": "GK",
+      "preferred_foot": "Right",
+      "id": "bunyodbek",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": true
+    }
   ],
 
   "matches": [

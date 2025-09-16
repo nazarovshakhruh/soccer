@@ -631,8 +631,8 @@
     "id": "m3",
     "home_team": "cyclone-fc",
     "away_team": "tiki-taka",
-    "home_goals": null,
-    "away_goals": null,
+    "home_goals": 2,
+    "away_goals": 2,
     "date": "2025-09-16T14:25:00Z",
     "events": [
              {
@@ -669,8 +669,8 @@
     "id": "m4",
     "home_team": "vip-fc",
     "away_team": "apex-fc",
-    "home_goals": null,
-    "away_goals": null,
+    "home_goals": 7,
+    "away_goals": 5,
     "date": "2025-09-16T15:15:00Z",
     "events": [
       {
@@ -683,7 +683,7 @@
          {
           "minute": 9,
           "type": "goal",
-          "player_id": "murod",
+          "player_id": "murodbek",
           "assist_id": null,
           "club_id": "apex-fc"
         },
@@ -697,21 +697,21 @@
          {
           "minute": 15,
           "type": "goal",
-          "player_id": "murod",
+          "player_id": "murodbek",
           "assist_id": "mirjalol",
           "club_id": "apex-fc"
         },
          {
           "minute": 31,
           "type": "goal",
-          "player_id": "murod",
+          "player_id": "murodbek",
           "assist_id": "mironshoh",
           "club_id": "apex-fc"
         }, {
           "minute": 35,
           "type": "goal",
           "player_id": "mirjalol",
-          "assist_id": "murod",
+          "assist_id": "murodbek",
           "club_id": "apex-fc"
         },
          {

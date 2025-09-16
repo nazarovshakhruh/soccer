@@ -727,19 +727,84 @@
       "id": "m3",
       "home_team": "crimson-fc",
       "away_team": "falcons",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 1,
+      "away_goals": 1,
       "date": "2025-09-16T12:30:00Z",
-      "events": []
+      "events": [
+                {
+          "minute": 2,
+          "type": "goal",
+          "player_id": "musobekb",
+          "assist_id": "jaloliddin",
+          "club_id": "falcons"
+        },
+        {
+          "minute": 8,
+          "type": "penalty",
+          "player_id": "behruz",
+          "assist_id": null,
+          "club_id": "crimson-fc"
+        }
+      ]
     },
 {
       "id": "m4",
       "home_team": "giallorossi-fc",
       "away_team": "proton-fc",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 5,
+      "away_goals": 2,
       "date": "2025-09-16T13:10:00Z",
-      "events": []
+      "events": [
+        {
+          "minute": 4,
+          "type": "goal",
+          "player_id": "umrbek",
+          "assist_id": "sardor",
+          "club_id": "proton-fc"
+        },
+         {
+          "minute": 11,
+          "type": "goal",
+          "player_id": "sardor",
+          "assist_id": "umrbek",
+          "club_id": "proton-fc"
+        },
+        {
+          "minute": 5,
+          "type": "goal",
+          "player_id": "zafar",
+          "assist_id": null,
+          "club_id": "giallorossi-fc"
+        },
+        {
+          "minute": 14,
+          "type": "goal",
+          "player_id": "zafar",
+          "assist_id": null,
+          "club_id": "giallorossi-fc"
+        },
+        {
+          "minute": 22,
+          "type": "goal",
+          "player_id": "musobeko",
+          "assist_id": "zafar",
+          "club_id": "giallorossi-fc"
+        },
+        {
+          "minute": 28,
+          "type": "goal",
+          "player_id": "zafar",
+          "assist_id": null,
+          "club_id": "giallorossi-fc"
+        },
+        {
+          "minute": 30,
+          "type": "penalty",
+          "player_id": "zafar",
+          "assist_id": null,
+          "club_id": "giallorossi-fc"
+        }
+      ]
     },
 {
       "id": "m5",

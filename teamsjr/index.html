@@ -231,24 +231,37 @@ const clubRank = standings.findIndex(t => t.id === club.id) + 1;
   
 
   // process matches: expected fields: home_team (club id), away_team, home_goals, away_goals
-  for(const m of (db.matches||[])){
-    const h = teams[m.home_team];
-    const a = teams[m.away_team];
-    if(!h || !a) continue;
-    h.played++; a.played++;
-    h.gf += m.home_goals; h.ga += m.away_goals;
-    a.gf += m.away_goals; a.ga += m.home_goals;
-    if(m.home_goals > m.away_goals){
-      h.wins++; a.losses++;
-      h.points += 3;
-    } else if(m.home_goals < m.away_goals){
-      a.wins++; h.losses++;
-      a.points += 3;
-    } else {
-      h.draws++; a.draws++;
-      h.points += 1; a.points += 1;
-    }
+for (const m of (db.matches || [])) {
+  const h = teams[m.home_team];
+  const a = teams[m.away_team];
+  if (!h || !a) continue;
+
+  // 🚨 Skip upcoming matches
+  if (m.home_goals === null || m.away_goals === null) continue;
+
+  h.played++;
+  a.played++;
+  h.gf += m.home_goals;
+  h.ga += m.away_goals;
+  a.gf += m.away_goals;
+  a.ga += m.home_goals;
+
+  if (m.home_goals > m.away_goals) {
+    h.wins++;
+    a.losses++;
+    h.points += 3;
+  } else if (m.home_goals < m.away_goals) {
+    a.wins++;
+    h.losses++;
+    a.points += 3;
+  } else {
+    h.draws++;
+    a.draws++;
+    h.points += 1;
+    a.points += 1;
   }
+}
+
 
   // finalize gd
   for(const id in teams){

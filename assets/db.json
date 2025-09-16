@@ -319,7 +319,7 @@
 "name": "Diyorbek Rakhimberganov",
 "age": "11 (Green)",
 "club_id": "fc-winchester",
-"id": "diyorbekgreen)",
+"id": "diyorbekgreen",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,
@@ -356,7 +356,7 @@
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,
-"position":  "CDM/CB",
+"position":  "GK",
 "preferred_foot": "Right"
 },
 {
@@ -371,14 +371,14 @@
 "preferred_foot": "Right"
 },
 {
-"name": "Oybek Baxtiyorov", 
-"age": "9 (Green)",
+"name": "Abbos", 
+"age": "9 (Blue)",
 "club_id": "fc-winchester",
-"id": "oybek",
+"id": "abbos",
 "nationality": "Uzbek",
 "image": "/assets/user.webp",
 "isGoalkeeper": false,
-"position": "CF/CM/CB",
+"position": "CB",
 "preferred_foot": "Right"
 },
     {
@@ -584,7 +584,7 @@
       {
           "minute": 5,
           "type": "goal",
-          "player_id": "diyorbekgreen)",
+          "player_id": "diyorbekgreen",
           "assist_id": "xudoybergan",
           "club_id": "fc-winchester"
         },
@@ -592,12 +592,12 @@
           "minute": 16,
           "type": "goal",
           "player_id": "xudoybergan",
-          "assist_id": "diyorbekgreen)",
+          "assist_id": "diyorbekgreen",
           "club_id": "fc-winchester"
         }, {
           "minute": 31,
           "type": "goal",
-          "player_id": "diyorbekgreen)",
+          "player_id": "diyorbekgreen",
           "assist_id": null,
           "club_id": "fc-winchester"
         }, {

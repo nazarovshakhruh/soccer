@@ -266,9 +266,14 @@ html,body {
     width:80px;
     text-align:right;
 }
-
+/* .gf {
+  width: 80px;
+}
+.gd {
+  padding-right: 5px;
+} */
 .col-p {
-    width:60px;
+    width:70px;
     text-align:center;
 }
   

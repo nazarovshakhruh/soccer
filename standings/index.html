@@ -31,9 +31,10 @@
             <div class="standings-head">
               <div class="col-rank">No.</div>
               <div class="col-club">Club</div>
-              <div class="col-n">GF</div>
+              <div class="col-n">Mts</div>
+              <div class="col-n gf">GF</div>
               <div class="col-n">GA</div>
-              <div class="col-n">GD</div>
+              <div class="col-n gd">GD</div>
               <div class="col-p">Pts</div>
             </div>
 
@@ -156,6 +157,7 @@ for (const m of (db.matches || [])) {
           </div>
         </div>
         <div style="display:flex;gap:12px;align-items:center">
+          <div class="col-n" style="width:60px;text-align:right">${t.played}</div>
           <div class="col-n" style="width:80px;text-align:right">${t.gf}</div>
           <div class="col-n" style="width:80px;text-align:right">${t.ga}</div>
           <div class="col-n" style="width:80px;text-align:right">${t.gd}</div>

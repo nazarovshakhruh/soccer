@@ -45,6 +45,74 @@ body {
   margin: 0;
 }
 
+.motm {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  /* padding: 20px; */
+
+}
+.motm h2 {
+  text-align: left;
+  width: 100%;
+  /* flex-shrink: 0; */
+}
+.motm-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  /* border-radius: 1rem; */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-top: 1rem;
+  /* transition: transform 0.2s ease, box-shadow 0.2s ease; */
+  min-width: 300px;   /* enough for small screens */
+  max-width: 500px;
+  background: #0000003f;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
+  padding: 15px;
+}
+.flag-icon {
+  width: 40px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.star-icon {
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+  vertical-align: middle;
+  transform: scale(1.3) translateY(-1px);
+}
+.motm-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  /* border-radius: 50%; */
+  border: 3px solid #fff;
+}
+
+.motm-info h3 {
+  /* margin: 0 0 2px; */
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.motm-info .h3 {
+  margin-bottom: 10px;
+}
+h3 a:hover {
+  color: #ffffff93;
+}
+
+.motm-info p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
 
 /* Events section */
 #match-events {
@@ -84,8 +152,8 @@ body {
 .event span {
   font-weight: lighter;
   color: #ffffff;
-  width: 40px;
-  text-align: right;
+  width: 30px;
+  text-align: center;
 }
 
 .event strong {
@@ -224,8 +292,10 @@ a {
     }
 
     .event span {
-      font-weight: bold;
-      margin-right: 5px;
+      font-weight: normal;
+      /* margin-right: 5px; */
+      width: 30px;
+      flex-shrink: 0;
     }
 /* Responsive */
 @media (max-width: 600px) {
@@ -284,6 +354,9 @@ a {
   #match-info {
     transform: scale(0.8);
   }
+  .star-icon {
+    display: none;
+  }
 }
 @media (max-width: 400px) {
   #match-info {
@@ -317,6 +390,38 @@ a {
     transform: scale(0.5);
     transform-origin: left;
     margin-top: -10px;
+  }
+}
+@media (max-width: 470px) {
+  .motm-card {
+    max-width: 420px;
+  }
+  .motm-info {
+    overflow: scroll;
+  }
+  .motm-info h3 {
+    font-size: 20px;
+  }
+  .motm-info p {
+    font-size: 0.8rem;
+  }
+  .motm-info::-webkit-scrollbar {
+    display: none;
+  }
+    .flag-icon, .star-icon {
+    display: none;
+  }
+  .motm {
+    justify-content: center;
+    align-items: center;
+  }
+  .h3 {
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 460px) {
+  .motm-card {
+    max-width: 380px;
   }
 }
 a {

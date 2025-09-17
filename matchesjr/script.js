@@ -26,6 +26,7 @@ async function loadMatchFromUrl() {
   await loadMatch(slug);
 }
 
+
 async function loadMatch(matchId) {
   try {
     const res = await fetch("/assets/dbjr.json");
@@ -52,7 +53,7 @@ async function loadMatch(matchId) {
           </a>
           <img src="${home.crest}" alt="${home.name} crest" style="height:70px;vertical-align:middle">
         </div>
-        <span>${
+       <span>${
   match.home_goals === null || match.away_goals === null
     ? "?"
     : `${match.home_goals} - ${match.away_goals}`
@@ -152,6 +153,47 @@ div.innerHTML = `
     }
     if (awayEventCount === 0) {
       awayEventsDiv.innerHTML += "<p class='no-events'>No away events</p>";
+    }
+// ⭐ --- Render MOTM card ---
+    const motmContainer = document.getElementById("motm-card");
+    motmContainer.innerHTML = "";
+
+    if (match.motm) {
+      const player = playersById[match.motm];
+      if (player) {
+        // Count total MOTMs
+        let totalMotms = 0;
+        for (const m of db.matches || []) {
+          if (m.motm === match.motm) totalMotms++;
+        }
+
+        // Match-specific stats
+const motmId = match.motm;
+
+const goals = match.events.filter(e =>
+  (e.type === "goal" || e.type === "penalty") && e.player_id === motmId
+).length;
+
+const assists = match.events.filter(e =>
+  (e.type === "goal" || e.type === "penalty") && e.assist_id === motmId
+).length;
+
+        motmContainer.innerHTML = `
+          <div class="motm-card">
+            <a href="/playersjr/${slugify(player.name)}"><img src="${player.image || '/assets/default-player.png'}" alt="${player.name}" class="motm-img"></a>
+            <div class="motm-info">
+              <h3><a href="/playersjr/${slugify(player.name)}">${player.name}<img src="/assets/flag.svg" class="flag-icon"><img src="/assets/trophy.png" class="star-icon"></a></h3>
+              <p class="h3">${player.age}</p>
+              <p><i>Goals:</i> ${goals}</p>
+              <p><i>Assists:</i> ${assists}</p>
+              <p><i>MOTMs:</i> ${totalMotms}</p>
+            </div>
+          </div>
+        `;
+      }
+    } else {
+      motmContainer.textContent = "Awaiting MOTM selection.";
+      motmContainer.style.marginTop = "10px";
     }
 
   } catch (err) {

@@ -63,6 +63,25 @@ function calculateGoalsAssists(players, matches) {
 
   return players;
 }
+// 🟢 Calculate MOTM counts dynamically
+function calculateMotm(players, matches) {
+  const counts = {};
+  players.forEach(p => { counts[p.id] = 0; });
+
+  matches.forEach(m => {
+    if (m.home_goals !== null && m.away_goals !== null && m.motm) {
+      if (counts[m.motm] !== undefined) {
+        counts[m.motm]++;
+      }
+    }
+  });
+
+  players.forEach(p => {
+    p.motm = counts[p.id] || 0;
+  });
+
+  return players;
+}
 
 (async function () {
   const db = await loadDB();
@@ -70,6 +89,8 @@ function calculateGoalsAssists(players, matches) {
   // 🟢 recalc appearances, goals, and assists before using players
   calculateAppearances(db.players, db.matches);
   calculateGoalsAssists(db.players, db.matches);
+  calculateMotm(db.players, db.matches);
+
 
   const slug = getPlayerSlug();
   const player = db.players.find(p => slugify(p.name) === slug);
@@ -113,6 +134,7 @@ function calculateGoalsAssists(players, matches) {
     <div class="stat-card"><strong>Preferred Foot</strong><br>${player.preferred_foot || 'Unknown'}</div>
     <div class="stat-card"><strong>Goals</strong><br>${player.goals}</div>
     <div class="stat-card"><strong>Assists</strong><br>${player.assists}</div>
+    <div class="stat-card"><strong>MOTMs</strong><br>${player.motm}</div>
   </div>
 
   <div class="teammates">

@@ -63,6 +63,25 @@ function calculateGoalsAssists(players, matches) {
 
   return players;
 }
+// 🟢 Calculate MOTM counts dynamically
+function calculateMotm(players, matches) {
+  const counts = {};
+  players.forEach(p => { counts[p.id] = 0; });
+
+  matches.forEach(m => {
+    if (m.home_goals !== null && m.away_goals !== null && m.motm) {
+      if (counts[m.motm] !== undefined) {
+        counts[m.motm]++;
+      }
+    }
+  });
+
+  players.forEach(p => {
+    p.motm = counts[p.id] || 0;
+  });
+
+  return players;
+}
 
 (async function () {
   const db = await loadDB();
@@ -70,6 +89,8 @@ function calculateGoalsAssists(players, matches) {
   // 🟢 recalc appearances, goals, and assists before using players
   calculateAppearances(db.players, db.matches);
   calculateGoalsAssists(db.players, db.matches);
+  calculateMotm(db.players, db.matches);
+
 
   const slug = getPlayerSlug();
   const player = db.players.find(p => slugify(p.name) === slug);
@@ -88,7 +109,9 @@ function calculateGoalsAssists(players, matches) {
     <div class="player-header fnm">
       <img class="shyt" src="${player.image || 'https://placehold.co/150x200?text=Player'}" alt="${player.name}">
 <div class="out" id="player-out">
-  <img src="/assets/Flag.svg">
+<div class="row">
+  <img src="/assets/Flag.svg" class="flag-icon">
+</div>
   <h1>${player.name}</h1>
   <div class="player-meta">
     ${club ? `<img class="shit" src="${club.crest}" width="24">${club.name}` : ''} (Senior League) • ${player.position}
@@ -107,10 +130,11 @@ function calculateGoalsAssists(players, matches) {
   <div class="stats-grid">
     <div class="stat-card"><strong>Nationality</strong><br>${player.nationality || 'Unknown'}</div>
     <div class="stat-card"><strong>Grade</strong><br>${player.age || 'Unknown'}</div>
-    <div class="stat-card"><strong>Position</strong><br>${player.position}</div>
+    <div class="stat-card"><strong>Appearances</strong><br>${player.appearances}</div>
     <div class="stat-card"><strong>Preferred Foot</strong><br>${player.preferred_foot || 'Unknown'}</div>
     <div class="stat-card"><strong>Goals</strong><br>${player.goals}</div>
     <div class="stat-card"><strong>Assists</strong><br>${player.assists}</div>
+    <div class="stat-card"><strong>MOTMs</strong><br>${player.motm}</div>
   </div>
 
   <div class="teammates">
@@ -128,4 +152,19 @@ function calculateGoalsAssists(players, matches) {
     </div>
   </div>
   `;
+// ⭐ Add star next to flag if player is in the star list
+const starPlayers = ["alibek-norimatov", "shohrux-nazarov"]; // slugs or ids of star players
+
+if (starPlayers.includes(slug) || starPlayers.includes(String(player.id))) {
+  const outDiv = document.getElementById("player-out");
+  const flagImg = outDiv.querySelector(".flag-icon");
+
+  if (flagImg) {
+    const starImg = document.createElement("img");
+    starImg.src = "/assets/star.png"; // replace with your star image path
+    starImg.alt = "Star Player";
+    starImg.classList.add("star-icon"); // optional styling
+    flagImg.insertAdjacentElement("afterend", starImg);
+  }
+}
 })();

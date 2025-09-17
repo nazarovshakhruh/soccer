@@ -567,6 +567,7 @@
     "home_goals": 6,
     "away_goals": 3,
     "date": "2025-09-15T14:25:00Z",
+    "motm": null,
     "events": [
       {
           "minute": 6,
@@ -635,6 +636,7 @@
     "home_goals": 0,
     "away_goals": 5,
     "date": "2025-09-15T15:15:00Z",
+    "motm": null,
     "events": [
       {
           "minute": 5,
@@ -678,6 +680,7 @@
     "home_goals": 2,
     "away_goals": 2,
     "date": "2025-09-16T14:25:00Z",
+    "motm": null,
     "events": [
              {
           "minute": 6,
@@ -716,12 +719,13 @@
     "home_goals": 5,
     "away_goals": 7,
     "date": "2025-09-16T15:15:00Z",
+    "motm": null,
     "events": [
       {
           "minute": 4,
           "type": "goal",
           "player_id": "mirjalol",
-          "assist_id": null,
+          "assist_id": "null",
           "club_id": "apex-fc"
         },
          {
@@ -809,6 +813,7 @@
     "home_goals": 4,
     "away_goals": 4,
     "date": "2025-09-17T15:15:00Z",
+    "motm": null,
     "events": [{
           "minute": 4,
           "type": "goal",
@@ -874,6 +879,7 @@
     "home_goals": 6,
     "away_goals": 1,
     "date": "2025-09-17T14:25:00Z",
+    "motm": null,
     "events": [
       {
           "minute": 7,
@@ -933,6 +939,7 @@
     "home_goals": null,
     "away_goals": null,
     "date": "2025-09-18T14:25:00Z",
+    "motm": null,
     "events": []
   },
   {
@@ -942,6 +949,7 @@
     "home_goals": null,
     "away_goals": null,
     "date": "2025-09-18T15:15:00Z",
+    "motm": null,
     "events": []
   }
 

@@ -809,7 +809,63 @@
     "home_goals": null,
     "away_goals": null,
     "date": "2025-09-17T15:15:00Z",
-    "events": []
+    "events": [{
+          "minute": 4,
+          "type": "goal",
+          "player_id": "olloshukur",
+          "assist_id": "muhammad",
+          "club_id": "gooners-fc"
+        },
+        {
+          "minute": 16,
+          "type": "goal",
+          "player_id": "olloshukur",
+          "assist_id": "aslombek",
+          "club_id": "gooners-fc"
+        },
+        {
+          "minute": 23,
+          "type": "goal",
+          "player_id": "olloshukur",
+          "assist_id": null,
+          "club_id": "gooners-fc"
+        },
+        {
+          "minute": 4,
+          "type": "goal",
+          "player_id": "muhammad",
+          "assist_id": null,
+          "club_id": "gooners-fc"
+        },
+        {
+          "minute": 20,
+          "type": "goal",
+          "player_id": "hajiboy",
+          "assist_id": null,
+          "club_id": "fc-winchester"
+        },
+         {
+          "minute": 30,
+          "type": "goal",
+          "player_id": "xudoybergan",
+          "assist_id": "hajiboy",
+          "club_id": "fc-winchester"
+        },
+         {
+          "minute": 20,
+          "type": "goal",
+          "player_id": "diyorbekgreen)",
+          "assist_id": "hajiboy",
+          "club_id": "fc-winchester"
+        },
+         {
+          "minute": 20,
+          "type": "goal",
+          "player_id": "hajiboy",
+          "assist_id": "diyorbekgreen)",
+          "club_id": "fc-winchester"
+        }
+      ]
   },
   {
     "id": "m6",

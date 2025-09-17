@@ -862,10 +862,74 @@
       "id": "m6",
       "home_team": "falcons",
       "away_team": "arton-fc",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 2,
+      "away_goals": 7,
       "date": "2025-09-17T13:10:00Z",
-      "events": []
+      "events": [
+        {
+          "minute": 8,
+          "type": "goal",
+          "player_id": "nodirbek",
+          "assist_id": null,
+          "club_id": "arton-fc"
+        },
+         {
+          "minute": 9,
+          "type": "goal",
+          "player_id": "feruzbek",
+          "assist_id": "nodirbek",
+          "club_id": "arton-fc"
+        },
+         {
+          "minute": 12,
+          "type": "goal",
+          "player_id": "nodirbek",
+          "assist_id": "feruzbek",
+          "club_id": "arton-fc"
+        },
+         {
+          "minute": 15,
+          "type": "goal",
+          "player_id": "feruzbek",
+          "assist_id": null,
+          "club_id": "arton-fc"
+        },
+         {
+          "minute": 16,
+          "type": "goal",
+          "player_id": "nodirbek",
+          "assist_id": "azizbeka",
+          "club_id": "arton-fc"
+        },
+         {
+          "minute": 18,
+          "type": "goal",
+          "player_id": "feruzbek",
+          "assist_id": "mustafo",
+          "club_id": "arton-fc"
+        },
+         {
+          "minute": 8,
+          "type": "goal",
+          "player_id": "feruzbek",
+          "assist_id": "mustafo",
+          "club_id": "arton-fc"
+        },
+         {
+          "minute": 21,
+          "type": "goal",
+          "player_id": "hasanboy",
+          "assist_id": null,
+          "club_id": "falcons"
+        },
+         {
+          "minute": 21,
+          "type": "goal",
+          "player_id": "hasanboy",
+          "assist_id": "musobek",
+          "club_id": "falcons"
+        }
+      ]
     },
 {
       "id": "m7",

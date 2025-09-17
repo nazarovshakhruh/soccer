@@ -806,8 +806,8 @@
     "id": "m5",
     "home_team": "fc-winchester",
     "away_team": "gooners-fc",
-    "home_goals": null,
-    "away_goals": null,
+    "home_goals": 4,
+    "away_goals": 4,
     "date": "2025-09-17T15:15:00Z",
     "events": [{
           "minute": 4,
@@ -852,17 +852,17 @@
           "club_id": "fc-winchester"
         },
          {
-          "minute": 20,
+          "minute": 37,
           "type": "goal",
-          "player_id": "diyorbekgreen)",
+          "player_id": "diyorbekgreen",
           "assist_id": "hajiboy",
           "club_id": "fc-winchester"
         },
          {
-          "minute": 20,
+          "minute": 40,
           "type": "goal",
           "player_id": "hajiboy",
-          "assist_id": "diyorbekgreen)",
+          "assist_id": "diyorbekgreen",
           "club_id": "fc-winchester"
         }
       ]

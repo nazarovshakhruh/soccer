@@ -810,10 +810,53 @@
       "id": "m5",
       "home_team": "casio-fc",
       "away_team": "blitz-fc",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 1,
+      "away_goals": 5,
       "date": "2025-09-17T12:30:00Z",
-      "events": []
+      "events": [
+        {
+          "minute": 1,
+          "type": "goal",
+          "player_id": "azizbekn",
+          "assist_id": null,
+          "club_id": "blitz-fc"
+        },
+        {
+          "minute": 6,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": "azizbekn",
+          "club_id": "blitz-fc"
+        },
+        {
+          "minute": 10,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": null,
+          "club_id": "blitz-fc"
+        },
+        {
+          "minute": 23,
+          "type": "goal",
+          "player_id": "nursulton",
+          "assist_id": null,
+          "club_id": "blitz-fc"
+        },
+        {
+          "minute": 29,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": "mirjahon",
+          "club_id": "blitz-fc"
+        },
+        {
+          "minute": 1,
+          "type": "goal",
+          "player_id": "asilbekr",
+          "assist_id": "sobirjon",
+          "club_id": "casio-fc"
+        }
+      ]
     },
 {
       "id": "m6",

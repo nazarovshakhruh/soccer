@@ -406,7 +406,7 @@
   background-position: center;
 }
 .mg1 {
-  background: url(/assets/mg1.webp) no-repeat center center;
+  background: url(/assets/mg1.png) no-repeat center center;
   background-size: cover;
 }
 .fhalf h1{
@@ -520,12 +520,12 @@
 }
 .mg2 {
   
-  background: url(/assets/new2.png) no-repeat center center;
+  background: url(/assets/mg2.png) no-repeat center center;
   background-size: cover;
   background-position: center;
 }
 .mg3 {
-  background: url(/assets/new3.jpg) no-repeat;
+  background: url(/assets/mg3.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }

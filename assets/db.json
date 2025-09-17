@@ -404,6 +404,17 @@
       "preferred_foot": "Right"
     },
     {
+      "name": "Salayev Rasulbek",
+      "age": "8 (Blue)",
+      "club_id": "gooners-fc",
+      "position": "CB",
+      "preferred_foot": "Left",
+      "id": "rasulbek8",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false
+    },
+    {
       "name": "Amirxon Shoxnazarov",
       "age": "11 (Green)",
       "id": "amir",

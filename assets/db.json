@@ -556,6 +556,17 @@
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
       "isGoalkeeper": true
+    },
+    {
+      "name": "Boburbek Bog'ibekov",
+      "age": "11 (Green)",
+      "club_id": "nushpiyoz-fc",
+      "position": "GK",
+      "preferred_foot": "Right",
+      "id": "boburbek",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": true
     }
   ],
 

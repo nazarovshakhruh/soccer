@@ -459,17 +459,6 @@
 "preferred_foot": "Right"
 },
 {
-"name": "Behruzbek Gulmatov",
-"age": "9 (green)",
-"id": "behruzbek",
-"nationality": "Uzbek",
-"image": "/assets/user.webp",
-"isGoalkeeper": true,
-"club_id": "nushpiyoz-fc",
-"position": "GK",
-"preferred_foot": "Right"
-},
-{
 "name": "Bardiboy Davronbekov",
 "age": "9 (Green)",
 "club_id": "tiki-taka",
@@ -565,7 +554,7 @@
       "preferred_foot": "Right",
       "id": "boburbek",
       "nationality": "Uzbek",
-      "image": "/assets/boburbek.png",
+      "image": "/assets/boburbek.jpg",
       "isGoalkeeper": true
     }
   ],

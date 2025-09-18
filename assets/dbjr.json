@@ -599,6 +599,7 @@
       "home_goals": 0,
       "away_goals": 5,
       "date": "2025-09-15T12:30:00Z",
+      "motm": "azizbekn",
       "events": [
                 {
           "minute": 3,
@@ -643,6 +644,7 @@
       "home_goals": 7,
       "away_goals": 4,
       "date": "2025-09-15T13:10:00Z",
+      "motm": "feruzbek",
       "events": [
                         {
           "minute": 5,
@@ -730,6 +732,7 @@
       "home_goals": 1,
       "away_goals": 1,
       "date": "2025-09-16T12:30:00Z",
+      "motm": "musobekb",
       "events": [
                 {
           "minute": 2,
@@ -754,6 +757,7 @@
       "home_goals": 5,
       "away_goals": 2,
       "date": "2025-09-16T13:10:00Z",
+      "motm": "zafar",
       "events": [
         {
           "minute": 4,
@@ -813,6 +817,7 @@
       "home_goals": 1,
       "away_goals": 5,
       "date": "2025-09-17T12:30:00Z",
+      "motm": "mirjalol",
       "events": [
         {
           "minute": 1,
@@ -865,6 +870,7 @@
       "home_goals": 2,
       "away_goals": 7,
       "date": "2025-09-17T13:10:00Z",
+      "motm": "feruzbek",
       "events": [
         {
           "minute": 8,
@@ -938,6 +944,7 @@
       "home_goals": null,
       "away_goals": null,
       "date": "2025-09-18T12:30:00Z",
+      "motm": null,
       "events": []
     },
 {
@@ -947,6 +954,7 @@
       "home_goals": null,
       "away_goals": null,
       "date": "2025-09-18T13:10:00Z",
+      "motm": null,
       "events": []
     }
   ]

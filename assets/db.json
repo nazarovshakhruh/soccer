@@ -936,21 +936,170 @@
     "id": "m7",
     "home_team": "apex-fc",
     "away_team": "cyclone-fc",
-    "home_goals": null,
-    "away_goals": null,
+    "home_goals": 7,
+    "away_goals": 5,
     "date": "2025-09-18T14:25:00Z",
-    "motm": null,
-    "events": []
+    "motm": "mirjalol",
+    "events": [
+      {
+          "minute": 3,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": "akbar",
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 6,
+          "type": "goal",
+          "player_id": "murodbek",
+          "assist_id": "mirjalol",
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 9,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": "murodbek",
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 10,
+          "type": "own_goal",
+          "player_id": "munisbek",
+          "assist_id": null,
+          "club_id": "cyclone-fc"
+        },
+        {
+          "minute": 25,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": null,
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 30,
+          "type": "goal",
+          "player_id": "akbar",
+          "assist_id": "murodbek",
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 40,
+          "type": "goal",
+          "player_id": "murodbek",
+          "assist_id": null,
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 12,
+          "type": "goal",
+          "player_id": "jasurbek",
+          "assist_id": "alibek",
+          "club_id": "cyclone-fc"
+        },
+          {
+          "minute": 14,
+          "type": "goal",
+          "player_id": "alibek",
+          "assist_id": "islombek",
+          "club_id": "cyclone-fc"
+        },
+          {
+          "minute": 18,
+          "type": "goal",
+          "player_id": "jasurbek",
+          "assist_id": "alibek",
+          "club_id": "cyclone-fc"
+        },
+          {
+          "minute": 27,
+          "type": "goal",
+          "player_id": "munisbek",
+          "assist_id": "jasurbek",
+          "club_id": "cyclone-fc"
+        },
+          {
+          "minute": 34,
+          "type": "goal",
+          "player_id": "alibek",
+          "assist_id": null,
+          "club_id": "cyclone-fc"
+        }
+      ]
   },
   {
     "id": "m8",
     "home_team": "nushpiyoz-fc",
     "away_team": "vip-fc",
-    "home_goals": null,
-    "away_goals": null,
+    "home_goals": 4,
+    "away_goals": 5,
     "date": "2025-09-18T15:15:00Z",
-    "motm": null,
-    "events": []
+    "motm": "sanjar",
+    "events": [
+      {
+          "minute": 2,
+          "type": "goal",
+          "player_id": "shohrux",
+          "assist_id": "akmal",
+          "club_id": "nushpiyoz-fc"
+        },
+           {
+          "minute": 33,
+          "type": "goal",
+          "player_id": "shohrux",
+          "assist_id": "akmal",
+          "club_id": "nushpiyoz-fc"
+        },
+           {
+          "minute": 40,
+          "type": "goal",
+          "player_id": "akmal",
+          "assist_id": "isojon",
+          "club_id": "nushpiyoz-fc"
+        },
+           {
+          "minute": 40,
+          "type": "own_goal",
+          "player_id": "sanjar",
+          "assist_id": null,
+          "club_id": "vip-fc"
+        },
+           {
+          "minute": 26,
+          "type": "goal",
+          "player_id": "ibrat",
+          "assist_id": null,
+          "club_id": "vip-fc"
+        },
+          {
+          "minute": 29,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+          {
+          "minute": 33,
+          "type": "goal",
+          "player_id": "sanjar",
+          "assist_id": null,
+          "club_id": "vip-fc"
+        },
+          {
+          "minute": 34,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "ibrat",
+          "club_id": "vip-fc"
+        },
+          {
+          "minute": 38,
+          "type": "own_goal",
+          "player_id": "akmal",
+          "assist_id": null,
+          "club_id": "nushpiyoz-fc"
+        }
+    ]
   }
 
   ]

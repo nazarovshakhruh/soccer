@@ -941,21 +941,65 @@
       "id": "m7",
       "home_team": "proton-fc",
       "away_team": "crimson-fc",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 0,
+      "away_goals": 1,
       "date": "2025-09-18T12:30:00Z",
       "motm": null,
-      "events": []
+      "events": [
+        {
+          "minute": 7,
+          "type": "goal",
+          "player_id": "behruz",
+          "assist_id": "elyorbek",
+          "club_id": "crimson-fc"
+        }
+      ]
     },
 {
       "id": "m8",
       "home_team": "royals-fc",
       "away_team": "giallorossi-fc",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 0,
+      "away_goals": 5,
       "date": "2025-09-18T13:10:00Z",
       "motm": null,
-      "events": []
+      "events": [
+        {
+          "minute": 3,
+          "type": "goal",
+          "player_id": "zafar",
+          "assist_id": "axrorbek",
+          "club_id": "giallorossi-fc"
+        },
+           {
+          "minute": 19,
+          "type": "goal",
+          "player_id": "zafar",
+          "assist_id": "rizobek",
+          "club_id": "giallorossi-fc"
+        },
+           {
+          "minute": 20,
+          "type": "goal",
+          "player_id": "zafar",
+          "assist_id": null,
+          "club_id": "giallorossi-fc"
+        },
+           {
+          "minute": 27,
+          "type": "goal",
+          "player_id": "musobeko",
+          "assist_id": "zafar",
+          "club_id": "giallorossi-fc"
+        },
+           {
+          "minute": 29,
+          "type": "goal",
+          "player_id": "axrorbek",
+          "assist_id": "zafar",
+          "club_id": "giallorossi-fc"
+        }
+      ]
     }
   ]
 }

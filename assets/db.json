@@ -547,12 +547,12 @@
       "isGoalkeeper": true
     },
     {
-      "name": "Boburbek Bog'ibekov",
+      "name": "Bobur Bog'ibekov",
       "age": "11 (Green)",
       "club_id": "nushpiyoz-fc",
       "position": "GK",
       "preferred_foot": "Right",
-      "id": "boburbek",
+      "id": "bobur",
       "nationality": "Uzbek",
       "image": "/assets/boburbek.jpg",
       "isGoalkeeper": true
@@ -1047,7 +1047,7 @@
           "minute": 33,
           "type": "goal",
           "player_id": "shohrux",
-          "assist_id": "akmal",
+          "assist_id": "bobur",
           "club_id": "nushpiyoz-fc"
         },
            {

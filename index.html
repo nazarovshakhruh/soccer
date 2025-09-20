@@ -270,8 +270,9 @@ async function loadFixtures() {
     container.removeChild(container.lastChild);
   }
 
-  // sort matches by date
-  const matches = (db.matches || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+// sort matches by date (newest/upcoming first → finished later)
+const matches = (db.matches || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+
 
   let currentDate = "";
   matches.forEach(match => {

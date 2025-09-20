@@ -170,3 +170,30 @@ a {
 div strong {
   white-space: nowrap;
 }
+.nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: right;
+  z-index: 10000;
+}
+.hbtn {
+  width: 60px;
+  height: 30px;
+  background: #0000003e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s ease-out;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+    box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+
+}
+.hbtn img{
+  width: 20px;
+}
+.hbtn:hover {
+  transform: scale(1.1);
+}

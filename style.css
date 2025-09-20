@@ -470,7 +470,7 @@
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 .matches::-webkit-scrollbar {
   display: none;

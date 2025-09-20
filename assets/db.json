@@ -38,11 +38,6 @@
       "crest": "/assets/nushpiyoz.png"
     },
       {
-      "id": "nushpiyoz-fc",
-      "name": "Nushpiyoz FC",
-      "crest": "/assets/nushpiyoz.png"
-    },
-      {
       "id": "gamburg",
       "name": "Gamburg",
       "crest": "/assets/gamburg.png"
@@ -1100,7 +1095,87 @@
           "club_id": "nushpiyoz-fc"
         }
     ]
-  }
+  },
+  {
+  "id": "m8",
+  "home_team": "gooners-fc",
+  "away_team": "gamburg",
+  "home_goals": null,
+  "away_goals": null,
+  "date": "2025-09-22T14:25:00Z",
+  "motm": null,
+  "events": []
+},
+{
+  "id": "m9",
+  "home_team": "fc-winchester",
+  "away_team": "cyclone-fc",
+  "home_goals": null,
+  "away_goals": null,
+  "date": "2025-09-22T15:15:00Z",
+  "motm": null,
+  "events": []
+},
+{
+  "id": "m10",
+  "home_team": "tiki-taka",
+  "away_team": "vip-fc",
+  "home_goals": null,
+  "away_goals": null,
+  "date": "2025-09-23T14:25:00Z",
+  "motm": null,
+  "events": []
+},
+{
+  "id": "m11",
+  "home_team": "apex-fc",
+  "away_team": "nushpiyoz-fc",
+  "home_goals": null,
+  "away_goals": null,
+  "date": "2025-09-23T15:15:00Z",
+  "motm": null,
+  "events": []
+},
+{
+  "id": "m12",
+  "home_team": "cyclone-fc",
+  "away_team": "gooners-fc",
+  "home_goals": null,
+  "away_goals": null,
+  "date": "2025-09-24T14:25:00Z",
+  "motm": null,
+  "events": []
+},
+{
+  "id": "m13",
+  "home_team": "gamburg",
+  "away_team": "apex-fc",
+  "home_goals": null,
+  "away_goals": null,
+  "date": "2025-09-24T15:15:00Z",
+  "motm": null,
+  "events": []
+},
+{
+  "id": "m14",
+  "home_team": "vip-fc",
+  "away_team": "fc-winchester",
+  "home_goals": null,
+  "away_goals": null,
+  "date": "2025-09-25T14:25:00Z",
+  "motm": null,
+  "events": []
+},
+{
+  "id": "m15",
+  "home_team": "nushpiyoz-fc",
+  "away_team": "tiki-taka",
+  "home_goals": null,
+  "away_goals": null,
+  "date": "2025-09-25T15:15:00Z",
+  "motm": null,
+  "events": []
+}
 
   ]
 }

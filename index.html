@@ -347,7 +347,11 @@
   setTimeout(() => {
     fallback.classList.add("visible");
   }, 1500);
-  
+  video.style.display = "none";
+video.addEventListener("canplaythrough", () => {
+  fallback.classList.remove("visible"); // hide fallback
+  video.style.display = "block";        // show video only when fully buffered
+});
 if (lastShown && (now - lastShown < TWO_MIN)) {
   // Skip splash
   splash.style.display = "none";

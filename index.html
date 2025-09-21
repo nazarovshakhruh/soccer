@@ -343,32 +343,40 @@
   const fallback = document.querySelector(".fallback");
   const lastShown = localStorage.getItem("splashTimestamp");
   const now = Date.now();
-  const TWO_MIN = 1 * 1 * 1000; // 2 minutes
+  const TWO_MIN = 2 * 60 * 1000; // 2 minutes
   setTimeout(() => {
     fallback.classList.add("visible");
   }, 1500);
+  // Hide after 5s if video never gets ready
+let fallbackTimeout = setTimeout(hideSplash, 5000);
   video.style.display = "none";
 video.addEventListener("canplaythrough", () => {
-  fallback.classList.remove("visible"); // hide fallback
-  video.style.display = "block";        // show video only when fully buffered
-});
-if (lastShown && (now - lastShown < TWO_MIN)) {
-  // Skip splash
-  splash.style.display = "none";
-  document.body.classList.remove("noscroll"); // allow scroll
-} else {
-  // Show splash
-  document.body.classList.add("noscroll"); // lock scroll
+  clearTimeout(fallbackTimeout); // cancel 5s fallback
+  fallback.classList.remove("visible");
+  video.style.display = "block";
+    // Only hide when video finishes
   video.onended = () => hideSplash();
-  setTimeout(hideSplash, 5000); // fallback in case video doesn’t end
+});
+// Extra safety: if video errors or stalls
+video.onerror = () => hideSplash();
+video.onstalled = () => setTimeout(hideSplash, 3000);
+
+if (lastShown && (now - lastShown < TWO_MIN)) {
+  // Skip splash entirely
+  splash.style.display = "none";
+  document.body.classList.remove("noscroll");
+} else {
+  // Show splash and lock scroll
+  document.body.classList.add("noscroll");
 }
 
 function hideSplash() {
+  if (splash.classList.contains("hidden")) return; // prevent multiple calls
   splash.classList.add("hidden");
   setTimeout(() => {
     splash.style.display = "none";
-    document.body.classList.remove("noscroll"); // unlock scroll
-  }, 800); // matches CSS transition
+    document.body.classList.remove("noscroll");
+  }, 800);
   localStorage.setItem("splashTimestamp", Date.now());
 }
 

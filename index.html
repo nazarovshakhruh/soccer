@@ -17,6 +17,7 @@
       <video autoplay muted playsinline id="splashVideo">
         <source src="/assets/logo.mp4" type="video/mp4">
       </video>
+      <div class="fallback"></div>
       <p class="gp">nzrvv1222</p>
     </div>
 
@@ -337,13 +338,16 @@
   }
 
   loadFixtures();
-const splash = document.getElementById("splash");
-const video = document.getElementById("splashVideo");
-
-const lastShown = localStorage.getItem("splashTimestamp");
-const now = Date.now();
-const TWO_MIN = 2 * 60 * 1000; // 2 minutes
-
+  const splash = document.getElementById("splash");
+  const video = document.getElementById("splashVideo");
+  const fallback = document.querySelector(".fallback");
+  const lastShown = localStorage.getItem("splashTimestamp");
+  const now = Date.now();
+  const TWO_MIN = 1 * 1 * 1000; // 2 minutes
+  setTimeout(() => {
+    fallback.classList.add("visible");
+  }, 1500);
+  
 if (lastShown && (now - lastShown < TWO_MIN)) {
   // Skip splash
   splash.style.display = "none";

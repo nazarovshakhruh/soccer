@@ -1,5 +1,5 @@
 async function loadDB() {
-  const res = await fetch('/assets/dbjr.json', { cache: "no-store" });
+  const res = await fetch('/dbjr.json', { cache: "no-store" });
   return res.json();
 }
 

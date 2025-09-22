@@ -29,7 +29,7 @@ async function loadMatchFromUrl() {
 
 async function loadMatch(matchId) {
   try {
-    const res = await fetch("/assets/dbjr.json");
+    const res = await fetch("/dbjr.json");
     const db = await res.json();
 
     const match = db.matches.find(m => m.id === matchId);

@@ -87,7 +87,7 @@
       </div>
 <script>
 async function loadDB(){
-  const resp = await fetch('/assets/dbjr.json', {cache: "no-store"});
+  const resp = await fetch('/dbjr.json', {cache: "no-store"});
   if(!resp.ok) throw new Error('Failed to load dbjr.json');
   return await resp.json();
 }

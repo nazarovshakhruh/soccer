@@ -567,12 +567,12 @@
       "name": "Abdusharif Masharipov",
       "age": "Tarbiyachi",
       "club_id": "fc-winchester",
-      "position": "GK",
+      "position": "DV",
       "preferred_foot": "Right",
       "id": "abdusharif",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
-      "isGoalkeeper": true
+      "isGoalkeeper": false
     }
   ],
 

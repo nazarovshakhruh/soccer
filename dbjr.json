@@ -1005,21 +1005,79 @@
   "id": "m8",
   "home_team": "blitz-fc",
   "away_team": "arton-fc",
-  "home_goals": null,
-  "away_goals": null,
+  "home_goals": 2,
+  "away_goals": 2,
   "date": "2025-09-22T12:30:00Z",
   "motm": null,
-  "events": []
+  "events": [
+    {
+          "minute": 27,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": "azizbekn",
+          "club_id": "blitz-fc"
+        },
+        {
+          "minute": 15,
+          "type": "own_goal",
+          "player_id": "nodirbek",
+          "assist_id": null,
+          "club_id": "arton-fc"
+        },   
+  {
+          "minute": 18,
+          "type": "goal",
+          "player_id": "nodirbek",
+          "assist_id": "mustafo",
+          "club_id": "arton-fc"
+        },
+               {
+          "minute": 25,
+          "type": "goal",
+          "player_id": "mustafo",
+          "assist_id": "akbars",
+          "club_id": "arton-fc"
+        }
+  ]
 },
 {
   "id": "m9",
   "home_team": "casio-fc",
   "away_team": "crimson-fc",
-  "home_goals": null,
-  "away_goals": null,
+  "home_goals": 1,
+  "away_goals": 3,
   "date": "2025-09-22T13:10:00Z",
   "motm": null,
-  "events": []
+  "events": [
+    {
+          "minute": 28,
+          "type": "goal",
+          "player_id": "asilbekr",
+          "assist_id": null,
+          "club_id": "casio-fc"
+        },
+{
+          "minute": 2,
+          "type": "goal",
+          "player_id": "behruz",
+          "assist_id": "elyorbek",
+          "club_id": "crimson-fc"
+        },
+         {
+          "minute": 25,
+          "type": "goal",
+          "player_id": "madamin",
+          "assist_id": null,
+          "club_id": "crimson-fc"
+        },
+         {
+          "minute": 27,
+          "type": "goal",
+          "player_id": "elyorbek",
+          "assist_id": null,
+          "club_id": "crimson-fc"
+        }
+  ]
 },
 {
   "id": "m10",

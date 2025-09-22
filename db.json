@@ -1119,14 +1119,57 @@
     ]
     },
     {
-      "id": "m8",
+      "id": "m16",
       "home_team": "fc-winchester",
       "away_team": "cyclone-fc",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 2,
+      "away_goals": 4,
       "date": "2025-09-22T15:25:00Z",
       "motm": null,
-      "events": []
+      "events": [
+        {
+          "minute": 7,
+          "type": "goal",
+          "player_id": "jasurbek",
+          "assist_id": "alibek",
+          "club_id": "cyclone-fc"
+        },
+        {
+          "minute": 17,
+          "type": "goal",
+          "player_id": "jasurbek",
+          "assist_id": "alibek",
+          "club_id": "cyclone-fc"
+        },
+        {
+          "minute": 19,
+          "type": "goal",
+          "player_id": "jasurbek",
+          "assist_id": "munisbek",
+          "club_id": "cyclone-fc"
+        },
+        {
+          "minute": 37,
+          "type": "goal",
+          "player_id": "jasurbek",
+          "assist_id": "alibek",
+          "club_id": "cyclone-fc"
+        },
+        {
+          "minute": 6,
+          "type": "goal",
+          "player_id": "diyorbekgreen",
+          "assist_id": "hajiboy",
+          "club_id": "fc-winchester"
+        },
+         {
+          "minute": 40,
+          "type": "goal",
+          "player_id": "xudoybergan",
+          "assist_id": null,
+          "club_id": "fc-winchester"
+        }
+      ]
     },
   {
   "id": "m9",

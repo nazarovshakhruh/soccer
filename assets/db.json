@@ -551,6 +551,17 @@
       "nationality": "Uzbek",
       "image": "/assets/boburbek.jpg",
       "isGoalkeeper": true
+    },
+    {
+      "name": "Alisher Rahmanov",
+      "age": "11 (Green)",
+      "club_id": "cyclone-fc",
+      "position": "CB",
+      "preferred_foot": "Left",
+      "id": "alisher",
+      "nationality": "Uzbek",
+      "image": "/assets/user.webp",
+      "isGoalkeeper": false
     }
   ],
 

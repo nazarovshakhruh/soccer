@@ -1179,7 +1179,77 @@
   "away_goals": null,
   "date": "2025-09-23T15:25:00Z",
   "motm": null,
-  "events": []
+  "events": [{
+          "minute": 4,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": null,
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 8,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": null,
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 17,
+          "type": "goal",
+          "player_id": "murodbek",
+          "assist_id": null,
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 30,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": "murodbek",
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 31,
+          "type": "goal",
+          "player_id": "murodbek",
+          "assist_id": null,
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 38,
+          "type": "goal",
+          "player_id": "murodbek",
+          "assist_id": "mirjalol",
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 39,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": "murodbek",
+          "club_id": "apex-fc"
+        },
+        {
+          "minute": 9,
+          "type": "goal",
+          "player_id": "shohrux",
+          "assist_id": null,
+          "club_id": "nushpiyoz-fc"
+        },
+        {
+          "minute": 33,
+          "type": "goal",
+          "player_id": "shohrux",
+          "assist_id": "isojon",
+          "club_id": "nushpiyoz-fc"
+        },
+        {
+          "minute": 12,
+          "type": "goal",
+          "player_id": "isojon",
+          "assist_id": "boburbek",
+          "club_id": "nushpiyoz-fc"
+        }
+      ]
   },
     {
   "id": "m10",
@@ -1199,7 +1269,43 @@
   "away_goals": null,
   "date": "2025-09-23T16:15:00Z",
   "motm": null,
-  "events": []
+  "events": [
+    {
+          "minute": 9,
+          "type": "goal",
+          "player_id": "muhammad",
+          "assist_id": "aslombek",
+          "club_id": "gooners-fc"
+        },
+         {
+          "minute": 27,
+          "type": "goal",
+          "player_id": "olloshukur",
+          "assist_id": "aslombek",
+          "club_id": "gooners-fc"
+        },
+         {
+          "minute": 28,
+          "type": "goal",
+          "player_id": "bekzod",
+          "assist_id": null,
+          "club_id": "gooners-fc"
+        },
+         {
+          "minute": 29,
+          "type": "goal",
+          "player_id": "muhammad",
+          "assist_id": "aslombek",
+          "club_id": "gooners-fc"
+        },
+         {
+          "minute": 30,
+          "type": "goal",
+          "player_id": "olloshukur",
+          "assist_id": null,
+          "club_id": "gooners-fc"
+        }
+  ]
 },
 {
   "id": "m12",

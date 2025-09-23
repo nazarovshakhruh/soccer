@@ -1236,6 +1236,13 @@
           "club_id": "nushpiyoz-fc"
         },
         {
+          "minute": 12,
+          "type": "goal",
+          "player_id": "isojon",
+          "assist_id": "bobur",
+          "club_id": "nushpiyoz-fc"
+        },
+        {
           "minute": 33,
           "type": "goal",
           "player_id": "shohrux",

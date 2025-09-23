@@ -1175,8 +1175,8 @@
   "id": "m9",
   "home_team": "apex-fc",
   "away_team": "nushpiyoz-fc",
-  "home_goals": null,
-  "away_goals": null,
+  "home_goals": 7,
+  "away_goals": 3,
   "date": "2025-09-23T15:25:00Z",
   "motm": "mirjalol",
   "events": [{
@@ -1239,14 +1239,7 @@
           "minute": 33,
           "type": "goal",
           "player_id": "shohrux",
-          "assist_id": "isojon",
-          "club_id": "nushpiyoz-fc"
-        },
-        {
-          "minute": 12,
-          "type": "goal",
-          "player_id": "isojon",
-          "assist_id": "boburbek",
+          "assist_id": null,
           "club_id": "nushpiyoz-fc"
         }
       ]
@@ -1265,8 +1258,8 @@
   "id": "m11",
   "home_team": "gooners-fc",
   "away_team": "gamburg",
-  "home_goals": null,
-  "away_goals": null,
+  "home_goals": 5,
+  "away_goals": 0,
   "date": "2025-09-23T16:15:00Z",
   "motm": "muhammad",
   "events": [

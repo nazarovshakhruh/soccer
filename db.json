@@ -697,7 +697,7 @@
     "home_goals": 2,
     "away_goals": 2,
     "date": "2025-09-16T14:25:00Z",
-    "motm": "ali",
+    "motm": "alibek",
     "events": [
              {
           "minute": 6,
@@ -1255,11 +1255,117 @@
   "id": "m10",
   "home_team": "tiki-taka",
   "away_team": "vip-fc",
-  "home_goals": null,
-  "away_goals": null,
+  "home_goals": 7,
+  "away_goals": 8,
   "date": "2025-09-24T15:15:00Z",
-  "motm": null,
-  "events": []
+  "motm": "javohirko",
+  "events": [
+    {
+          "minute": 1,
+          "type": "goal",
+          "player_id": "rasulbek",
+          "assist_id": null,
+          "club_id": "tiki-taka"
+        },
+         {
+          "minute": 4,
+          "type": "goal",
+          "player_id": "nuraziz",
+          "assist_id": "rasulbek",
+          "club_id": "tiki-taka"
+        },
+         {
+          "minute": 8,
+          "type": "penalty",
+          "player_id": "nuraziz",
+          "assist_id": null,
+          "club_id": "tiki-taka"
+        },
+         {
+          "minute": 24,
+          "type": "goal",
+          "player_id": "nuraziz",
+          "assist_id": "hasanboy",
+          "club_id": "tiki-taka"
+        },
+         {
+          "minute": 26,
+          "type": "goal",
+          "player_id": "nuraziz",
+          "assist_id": "rasulbek",
+          "club_id": "tiki-taka"
+        },
+         {
+          "minute": 39,
+          "type": "penalty",
+          "player_id": "rasulbek",
+          "assist_id": null,
+          "club_id": "tiki-taka"
+        },
+         {
+          "minute": 39,
+          "type": "goal",
+          "player_id": "rasulbek",
+          "assist_id": "nuraziz",
+          "club_id": "tiki-taka"
+        },
+         {
+          "minute": 8,
+          "type": "goal",
+          "player_id": "sanjar",
+          "assist_id": null,
+          "club_id": "vip-fc"
+        },
+         {
+          "minute": 14,
+          "type": "goal",
+          "player_id": "sanjar",
+          "assist_id": "bunyodbek",
+          "club_id": "vip-fc"
+        },
+         {
+          "minute": 18,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+        {
+          "minute": 21,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+        {
+          "minute": 21,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+        {
+          "minute": 27,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": null,
+          "club_id": "vip-fc"
+        },
+        {
+          "minute": 27,
+          "type": "goal",
+          "player_id": "abdulazizt",
+          "assist_id": "javohirko",
+          "club_id": "vip-fc"
+        },
+        {
+          "minute": 34,
+          "type": "goal",
+          "player_id": "ibrat",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        }
+  ]
 },
   {
   "id": "m11",
@@ -1311,11 +1417,59 @@
   "id": "m12",
   "home_team": "cyclone-fc",
   "away_team": "gooners-fc",
-  "home_goals": null,
-  "away_goals": null,
+  "home_goals": 6,
+  "away_goals": 1,
   "date": "2025-09-24T14:25:00Z",
-  "motm": null,
-  "events": []
+  "motm": "alibek",
+  "events": [{
+          "minute": 1,
+          "type": "goal",
+          "player_id": "munisbek",
+          "assist_id": null,
+          "club_id": "cyclone-fc"
+        },
+         {
+          "minute": 3,
+          "type": "goal",
+          "player_id": "alibek",
+          "assist_id": null,
+          "club_id": "cyclone-fc"
+        },
+             {
+          "minute": 4,
+          "type": "goal",
+          "player_id": "alibek",
+          "assist_id": null,
+          "club_id": "cyclone-fc"
+        },
+             {
+          "minute": 35,
+          "type": "goal",
+          "player_id": "alibek",
+          "assist_id": "islombek",
+          "club_id": "cyclone-fc"
+        },
+             {
+          "minute": 38,
+          "type": "goal",
+          "player_id": "alibek",
+          "assist_id": "alisher",
+          "club_id": "cyclone-fc"
+        },
+             {
+          "minute": 42,
+          "type": "goal",
+          "player_id": "alisher",
+          "assist_id": null,
+          "club_id": "cyclone-fc"
+        },
+             {
+          "minute": 13,
+          "type": "goal",
+          "player_id": "olloshukur",
+          "assist_id": null,
+          "club_id": "gooners-fc"
+        }]
 },
 {
   "id": "m13",

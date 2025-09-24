@@ -1,0 +1,24 @@
+{
+  "teams": [
+    { "id": 1, "name": "Club A", "crest": "/assets/nushpiyoz.png" },
+    { "id": 2, "name": "Club B", "crest": "/assets/b.png" },
+    { "id": 3, "name": "Club C", "crest": "/assets/c.png" },
+    { "id": 4, "name": "Club D", "crest": "/assets/d.png" },
+    { "id": 5, "name": "Club E", "crest": "/assets/e.png" },
+    { "id": 6, "name": "Club F", "crest": "/assets/f.png" },
+    { "id": 7, "name": "Club G", "crest": "/assets/g.png" },
+    { "id": 8, "name": "Club H", "crest": "/assets/h.png" }
+  ],
+  "matches": [
+    { "id": 1, "round": "Quarterfinal", "home": 1, "away": 2, "date": "2025-10-01T18:00", "score": null },
+    { "id": 2, "round": "Quarterfinal", "home": 3, "away": 4, "date": "2025-10-01T21:00", "score": null },
+    { "id": 3, "round": "Quarterfinal", "home": 5, "away": 6, "date": "2025-10-02T18:00", "score": null },
+    { "id": 4, "round": "Quarterfinal", "home": 7, "away": 8, "date": "2025-10-02T21:00", "score": null },
+
+    { "id": 5, "round": "Semifinal", "home": null, "away": null, "date": "2025-10-05T18:00", "score": null },
+    { "id": 6, "round": "Semifinal", "home": null, "away": null, "date": "2025-10-05T21:00", "score": null },
+
+    { "id": 7, "round": "Final", "home": null, "away": null, "date": "2025-10-10T20:00", "score": null },
+    { "id": 8, "round": "Third Place", "home": null, "away": null, "date": "2025-10-09T20:00", "score": null }
+  ]
+}

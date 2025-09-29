@@ -1590,31 +1590,220 @@
       "id": "m17",
       "home_team": "cyclone-fc",
       "away_team": "nushpiyoz-fc",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 3,
+      "away_goals": 4,
       "date": "2025-09-29T14:25:00Z",
-      "motm": null,
-      "events": []
+      "motm": "isojon",
+      "events": [
+                {
+          "minute": 20,
+          "type": "goal",
+          "player_id": "alibek",
+          "assist_id": "jasurbek",
+          "club_id": "cyclone-fc"
+        },                {
+          "minute": 28,
+          "type": "own_goal",
+          "player_id": "bobur",
+          "assist_id": null,
+          "club_id": "nushpiyoz-fc"
+        },                {
+          "minute": "40+1",
+          "type": "goal",
+          "player_id": "jasurbek",
+          "assist_id": null,
+          "club_id": "cyclone-fc"
+        },
+        {
+          "minute": 5,
+          "type": "goal",
+          "player_id": "isojon",
+          "assist_id": "samadjon",
+          "club_id": "nushpiyoz-fc"
+        },
+                {
+          "minute": 12,
+          "type": "own_goal",
+          "player_id": "islombek",
+          "assist_id": null,
+          "club_id": "cyclone-fc"
+        },
+                {
+          "minute": 25,
+          "type": "goal",
+          "player_id": "shohrux",
+          "assist_id": "samadjon",
+          "club_id": "nushpiyoz-fc"
+        },
+        {
+          "minute": "40+2",
+          "type": "goal",
+          "player_id": "isojon",
+          "assist_id": null,
+          "club_id": "nushpiyoz-fc"
+        }
+      ]
     },
     {
       "id": "m18",
       "home_team": "gamburg",
       "away_team": "vip-fc",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 5,
+      "away_goals": 10,
       "date": "2025-09-29T15:15:00Z",
-      "motm": null,
-      "events": []
+      "motm": "sanjar",
+      "events": [
+                {
+          "minute": 13,
+          "type": "goal",
+          "player_id": "sanjar",
+          "assist_id": "abdulazizt",
+          "club_id": "vip-fc"
+        },
+                        {
+          "minute": 17,
+          "type": "goal",
+          "player_id": "sanjar",
+          "assist_id": "abdulazizt",
+          "club_id": "vip-fc"
+        },
+                        {
+          "minute": 30,
+          "type": "goal",
+          "player_id": "sanjar",
+          "assist_id": "abdulazizt",
+          "club_id": "vip-fc"
+        },                {
+          "minute": 33,
+          "type": "goal",
+          "player_id": "sanjar",
+          "assist_id": null,
+          "club_id": "vip-fc"
+        },
+                        {
+          "minute": 3,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+                                {
+          "minute": 8,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+                                {
+          "minute": 21,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+                                {
+          "minute": 40,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+                                        {
+          "minute": 6,
+          "type": "goal",
+          "player_id": "abdulazizt",
+          "assist_id": "javohirko",
+          "club_id": "vip-fc"
+        },
+                                                {
+          "minute": 29,
+          "type": "goal",
+          "player_id": "abdulazizt",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+                                                        {
+          "minute": 4,
+          "type": "goal",
+          "player_id": "kamronbek",
+          "assist_id": "amir",
+          "club_id": "gamburg"
+        },
+                                                                {
+          "minute": 15,
+          "type": "goal",
+          "player_id": "kamronbek",
+          "assist_id": null,
+          "club_id": "gamburg"
+        },
+                                                                {
+          "minute": 19,
+          "type": "goal",
+          "player_id": "kamronbek",
+          "assist_id": "amir",
+          "club_id": "gamburg"
+        },
+                                                                        {
+          "minute": 32,
+          "type": "goal",
+          "player_id": "amir",
+          "assist_id": null,
+          "club_id": "gamburg"
+        },
+                                                                                {
+          "minute": 37,
+          "type": "penalty",
+          "player_id": "amir",
+          "assist_id": null,
+          "club_id": "gamburg"
+        }
+      ]
     },
     {
       "id": "m19",
       "home_team": "apex-fc",
       "away_team": "fc-winchester",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 4,
+      "away_goals": 1,
       "date": "2025-09-29T16:00:00Z",
-      "motm": null,
-      "events": []
+      "motm": "mirjalol",
+      "events": [
+                        {
+          "minute": 30,
+          "type": "goal",
+          "player_id": "diyorbekgreen",
+          "assist_id": "abdusharif",
+          "club_id": "fc-winchester"
+        },
+                                {                 
+          "minute": 39,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": "murodbek",
+          "club_id": "apex-fc"
+        },
+                                        {
+          "minute": 15,
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": null,
+          "club_id": "apex-fc"
+        },
+                                        {
+          "minute": "40+2",
+          "type": "goal",
+          "player_id": "mirjalol",
+          "assist_id": "murodbek",
+          "club_id": "apex-fc"
+        },
+                                        {
+          "minute": 40,
+          "type": "goal",
+          "player_id": "murodbek",
+          "assist_id": "mirjalol",
+          "club_id": "apex-fc"
+        }
+      ]
     },
     {
       "id": "m20",

@@ -1653,6 +1653,27 @@
       "date": "2025-09-29T15:15:00Z",
       "motm": "sanjar",
       "events": [
+                                {
+          "minute": 3,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+                                                {
+          "minute": 6,
+          "type": "goal",
+          "player_id": "abdulazizt",
+          "assist_id": "javohirko",
+          "club_id": "vip-fc"
+        },
+                                {
+          "minute": 8,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
                 {
           "minute": 13,
           "type": "goal",
@@ -1665,6 +1686,20 @@
           "type": "goal",
           "player_id": "sanjar",
           "assist_id": "abdulazizt",
+          "club_id": "vip-fc"
+        },
+                                        {
+          "minute": 21,
+          "type": "goal",
+          "player_id": "javohirko",
+          "assist_id": "sanjar",
+          "club_id": "vip-fc"
+        },
+                                                        {
+          "minute": 29,
+          "type": "goal",
+          "player_id": "abdulazizt",
+          "assist_id": "sanjar",
           "club_id": "vip-fc"
         },
                         {
@@ -1680,27 +1715,8 @@
           "assist_id": null,
           "club_id": "vip-fc"
         },
-                        {
-          "minute": 3,
-          "type": "goal",
-          "player_id": "javohirko",
-          "assist_id": "sanjar",
-          "club_id": "vip-fc"
-        },
-                                {
-          "minute": 8,
-          "type": "goal",
-          "player_id": "javohirko",
-          "assist_id": "sanjar",
-          "club_id": "vip-fc"
-        },
-                                {
-          "minute": 21,
-          "type": "goal",
-          "player_id": "javohirko",
-          "assist_id": "sanjar",
-          "club_id": "vip-fc"
-        },
+
+
                                 {
           "minute": 40,
           "type": "goal",
@@ -1708,20 +1724,8 @@
           "assist_id": "sanjar",
           "club_id": "vip-fc"
         },
-                                        {
-          "minute": 6,
-          "type": "goal",
-          "player_id": "abdulazizt",
-          "assist_id": "javohirko",
-          "club_id": "vip-fc"
-        },
-                                                {
-          "minute": 29,
-          "type": "goal",
-          "player_id": "abdulazizt",
-          "assist_id": "sanjar",
-          "club_id": "vip-fc"
-        },
+
+
                                                         {
           "minute": 4,
           "type": "goal",
@@ -1775,6 +1779,13 @@
           "assist_id": "abdusharif",
           "club_id": "fc-winchester"
         },
+        {
+"minute": 15,
+"type": "goal",
+"player_id": "mirjalol",
+"assist_id": null,
+"club_id": "apex-fc"
+},
                                 {                 
           "minute": 39,
           "type": "goal",
@@ -1782,25 +1793,18 @@
           "assist_id": "murodbek",
           "club_id": "apex-fc"
         },
-                                        {
-          "minute": 15,
-          "type": "goal",
-          "player_id": "mirjalol",
-          "assist_id": null,
-          "club_id": "apex-fc"
-        },
+        {
+"minute": 40,
+"type": "goal",
+"player_id": "murodbek",
+"assist_id": "mirjalol",
+"club_id": "apex-fc"
+},
                                         {
           "minute": "40+2",
           "type": "goal",
           "player_id": "mirjalol",
           "assist_id": "murodbek",
-          "club_id": "apex-fc"
-        },
-                                        {
-          "minute": 40,
-          "type": "goal",
-          "player_id": "murodbek",
-          "assist_id": "mirjalol",
           "club_id": "apex-fc"
         }
       ]

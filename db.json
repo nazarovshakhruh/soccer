@@ -1485,8 +1485,8 @@
   "id": "m15",
   "home_team": "nushpiyoz-fc",
   "away_team": "tiki-taka",
-  "home_goals": null,
-  "away_goals": null,
+  "home_goals": 9,
+  "away_goals": 3,
   "date": "2025-09-25T13:00:00Z",
   "motm": null,
   "events": [

@@ -490,6 +490,9 @@
   padding: 7px;
   background: #0000005a;
   border-radius: 5px;
+  font-size: 1.15rem;
+  transform: scale(1.1);
+  z-index: -999;
 }
 .match {
   width: 100%;

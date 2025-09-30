@@ -293,9 +293,9 @@
       "id": "mironshoh",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
-      "isGoalkeeper": true,
+      "isGoalkeeper": false,
       "club_id": "apex-fc",
-      "position": "GK",
+      "position": "CB",
       "preferred_foot": "Right"
     },
     {

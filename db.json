@@ -304,9 +304,9 @@
       "id": "shohruhbek",
       "nationality": "Uzbek",
       "image": "/assets/user.webp",
-      "isGoalkeeper": false,
+      "isGoalkeeper": true,
       "club_id": "apex-fc",
-      "position": "CB",
+      "position": "GK",
       "preferred_foot": "Right"
     },
     

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Match Event Entry</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+    .hidden { display: none; }
+    .match { padding: 10px; background: #fff; border: 1px solid #ccc; margin: 10px 0; cursor: pointer; }
+    .form-section { margin: 20px 0; padding: 15px; background: #fff; border: 1px solid #ccc; }
+    select, input { margin: 5px; padding: 5px; }
+    pre { background: #222; color: rgb(238, 238, 238); padding: 10px; }
+  </style>
+</head>
+<body>
+
+<div id="loginScreen">
+  <h2>🔐 Login Required</h2>
+  <input type="text" id="username" placeholder="Username"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+  <button onclick="login()">Login</button>
+  <p id="loginError" style="color:red;"></p>
+</div>
+
+<div id="app" class="hidden">
+  <h2>⚽ Match Event Entry</h2>
+  <div id="matches"></div>
+
+  <div id="eventForm" class="form-section hidden">
+    <h3 id="matchTitle"></h3>
+    <label>Team:</label>
+    <select id="teamSelect"></select>
+    
+    <label>Player:</label>
+    <select id="playerSelect"></select>
+    
+    <label>Minute:</label>
+    <input type="text" id="minuteInput" placeholder="e.g. 22 or 40+1">
+    
+    <label>Type:</label>
+    <select id="typeSelect">
+      <option value="goal">Goal</option>
+      <option value="penalty">Penalty</option>
+      <option value="own_goal">Own Goal</option>
+    </select>
+    
+    <label>Assist:</label>
+    <select id="assistSelect"></select>
+    
+    <button onclick="addEvent()">➕ Add Event</button>
+    
+    <h4>Generated Events</h4>
+    <pre id="output"></pre>
+  </div>
+</div>
+
+<script>
+// ========== LOGIN SYSTEM ==========
+const USER_HASH = "5415cd2e72e025bc16560c82e530e13d54e7c2bd";
+const PASS_HASH = "71148077832098f0ea5bca0a0981250d8f4345cd";
+
+async function sha1(str) {
+  const buf = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function login() {
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  const userHash = await sha1(user);
+  const passHash = await sha1(pass);
+
+  if (userHash === USER_HASH && passHash === PASS_HASH) {
+    document.getElementById("loginScreen").classList.add("hidden");
+    document.getElementById("app").classList.remove("hidden");
+    initApp();
+  } else {
+    document.getElementById("loginError").innerText = "❌ Invalid username or password";
+  }
+}
+
+// ========== MAIN APP ==========
+let db = null;
+let selectedMatch = null;
+let events = [];
+
+function initApp() {
+  fetch("db.json")
+    .then(r => r.json())
+    .then(data => {
+      db = data;
+      renderMatches();
+    });
+}
+
+function renderMatches() {
+  const container = document.getElementById("matches");
+  container.innerHTML = "";
+  db.matches.forEach(m => {
+    if (m.home_goals === null && m.away_goals === null) {
+      const home = db.clubs.find(c => c.id === m.home_team)?.name || m.home_team;
+      const away = db.clubs.find(c => c.id === m.away_team)?.name || m.away_team;
+      const div = document.createElement("div");
+      div.className = "match";
+      const formattedDate = formatUzbekDate(m.date);
+      div.innerText = `${home} vs ${away} (${formattedDate})`;
+      div.onclick = () => selectMatch(m);
+      container.appendChild(div);
+    }
+  });
+}
+
+function selectMatch(m) {
+  selectedMatch = m;
+  events = [];
+  document.getElementById("eventForm").classList.remove("hidden");
+  document.getElementById("matchTitle").innerText = `Match ID: ${m.id}`;
+  
+  const teamSelect = document.getElementById("teamSelect");
+  teamSelect.innerHTML = "";
+  [m.home_team, m.away_team].forEach(t => {
+    const club = db.clubs.find(c => c.id === t);
+    let opt = document.createElement("option");
+    opt.value = t;
+    opt.text = club ? club.name : t;
+    teamSelect.appendChild(opt);
+  });
+  
+  updatePlayerDropdown();
+  teamSelect.onchange = updatePlayerDropdown;
+}
+
+function updatePlayerDropdown() {
+  const teamId = document.getElementById("teamSelect").value;
+  const players = db.players.filter(p => p.club_id === teamId);
+  const playerSelect = document.getElementById("playerSelect");
+  const assistSelect = document.getElementById("assistSelect");
+  playerSelect.innerHTML = "";
+  assistSelect.innerHTML = "";
+  
+  players.forEach(p => {
+    let opt1 = document.createElement("option");
+    opt1.value = p.id;
+    opt1.text = p.name;
+    playerSelect.appendChild(opt1);
+    
+    let opt2 = document.createElement("option");
+    opt2.value = p.id;
+    opt2.text = p.name;
+    assistSelect.appendChild(opt2);
+  });
+  
+  let noneOpt = document.createElement("option");
+  noneOpt.value = "null";
+  noneOpt.text = "None";
+  assistSelect.appendChild(noneOpt);
+}
+
+function addEvent() {
+  const teamId = document.getElementById("teamSelect").value;
+  const playerId = document.getElementById("playerSelect").value;
+  const minute = document.getElementById("minuteInput").value;
+  const type = document.getElementById("typeSelect").value;
+  const assistId = document.getElementById("assistSelect").value;
+  
+  const ev = {
+    minute: isNaN(minute) ? minute : Number(minute),
+    type: type,
+    player_id: playerId,
+    assist_id: assistId === "null" ? null : assistId,
+    club_id: teamId
+  };
+  events.push(ev);
+  document.getElementById("output").innerText = JSON.stringify(events, null, 2);
+}
+
+// ========== DATE FORMATTER ==========
+function formatUzbekDate(utcString) {
+  const now = new Date();
+  const matchDate = new Date(utcString);
+  const local = new Date(matchDate.toLocaleString("en-US", { timeZone: "Asia/Tashkent" }));
+
+  const diffDays = Math.floor((local - now) / (1000 * 60 * 60 * 24));
+  let hours = local.getHours();
+  let minutes = local.getMinutes().toString().padStart(2, "0");
+  const isPM = hours >= 12;
+  hours = hours % 12 || 12;
+  const suffix = isPM ? "gechki" : "azonqi";
+  const timeStr = `${hours}:${minutes} ${suffix}`;
+
+  const nums = ["bir", "ikki", "uch", "to'rt", "besh", "olti", "yetti", "sakkiz", "to'qqiz", "o'n"];
+  const weekdays = ["Birinchi gun", "Ikkinchi gun", "Uchinchi gun", "Do'rtichi gun", "Beshinchi gun", "Oltinchi gun", "Bozor gun"];
+
+  if (diffDays === 1) return `Ertang ${timeStr}`;
+  if (diffDays === 2) return `Ertangni ertangi ${timeStr}`;
+
+  const weeksDiff = Math.floor(diffDays / 7);
+  const weekday = weekdays[local.getDay() === 0 ? 6 : local.getDay() - 1];
+
+  if (weeksDiff === 0) return `${weekday} ${timeStr}`;
+  if (weeksDiff === 1) return `Keyingi hafta ${weekday} ${timeStr}`;
+  if (weeksDiff > 1) return `${nums[weeksDiff - 1]} haftadan keyin ${weekday} ${timeStr}`;
+
+  return `${weekday} ${timeStr}`;
+}
+</script>
+</body>
+</html>

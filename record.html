@@ -55,34 +55,61 @@
 </div>
 
 <script>
-// ========== LOGIN SYSTEM ==========
-const USERS = [
-  { userHash: "5415cd2e72e025bc16560c82e530e13d54e7c2bd", passHash: "49396a0763aaf19bdd5203bdea1c0ad68f5073fc" },
-  { userHash: "ea81475812d6f11e7e6455f7f706183f03d19b3e", passHash: "49396a0763aaf19bdd5203bdea1c0ad68f5073fc" }
-];
-
 async function sha1(str) {
   const buf = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(str));
   return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
 }
+const USERS = [
+  { userHash: "5415cd2e72e025bc16560c82e530e13d54e7c2bd", passHash: "71148077832098f0ea5bca0a0981250d8f4345cd" },
+  { userHash: "ea81475812d6f11e7e6455f7f706183f03d19b3e", passHash: "71148077832098f0ea5bca0a0981250d8f4345cd" }
+];
+async function login(event) {
+  // if the button is a form submit, prevent reload
+  if (event && event.preventDefault) event.preventDefault();
 
-async function login() {
-  const user = document.getElementById("username").value;
-  const pass = document.getElementById("password").value;
+  const userEl = document.getElementById("username");
+  const passEl = document.getElementById("password");
+  if (!userEl || !passEl) {
+    console.error("Missing input elements with ids 'username' or 'password'");
+    document.getElementById("loginError").innerText = "Login form inputs not found (check IDs)";
+    return;
+  }
+
+  const userRaw = userEl.value;
+  const passRaw = passEl.value;
+  console.log("RAW input:", { userRaw, passRaw });
+
+  const user = userRaw.trim();
+  const pass = passRaw.trim();
+  console.log("Trimmed (lengths):", user.length, pass.length);
+  console.log("User char codes:", Array.from(user).map(c => c.charCodeAt(0)));
+  console.log("Pass char codes:", Array.from(pass).map(c => c.charCodeAt(0)));
 
   const userHash = await sha1(user);
   const passHash = await sha1(pass);
+  console.log("Computed hashes:", { userHash, passHash });
 
-  // Check if any stored user matches
-  const valid = USERS.some(u => u.userHash === userHash && u.passHash === passHash);
+  console.log("Stored USERS:");
+  USERS.forEach((u, i) => console.log(i, u.userHash, u.passHash));
 
-  if (valid) {
-    document.getElementById("loginScreen").classList.add("hidden");
-    document.getElementById("app").classList.remove("hidden");
-    initApp();
-  } else {
-    document.getElementById("loginError").innerText = "❌ Invalid username or password";
+  const matchedIndex = USERS.findIndex(u => u.userHash === userHash);
+  if (matchedIndex === -1) {
+    console.warn("No stored user hash matches the username hash.");
+    document.getElementById("loginError").innerText = "❌ Username not found";
+    return;
   }
+  if (USERS[matchedIndex].passHash !== passHash) {
+    console.warn("Username matched but password hash does NOT match for index", matchedIndex);
+    document.getElementById("loginError").innerText = "❌ Wrong password for that username";
+    return;
+  }
+
+  // If we get here, both matched
+  console.log("Login successful for user index", matchedIndex);
+  document.getElementById("loginError").innerText = "";
+  document.getElementById("loginScreen").classList.add("hidden");
+  document.getElementById("app").classList.remove("hidden");
+  initApp();
 }
 
 // ========== MAIN APP ==========

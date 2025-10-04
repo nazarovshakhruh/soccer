@@ -1,0 +1,77 @@
+{
+  "teams": [
+    { "id": 1, "name": "Team 1", "crest": "images/team1.png" },
+    { "id": 2, "name": "Team 2", "crest": "images/team2.png" },
+    { "id": 3, "name": "Team 3", "crest": "images/team3.png" },
+    { "id": 4, "name": "Team 4", "crest": "images/team4.png" },
+    { "id": 5, "name": "Team 5", "crest": "images/team5.png" },
+    { "id": 6, "name": "Team 6", "crest": "images/team6.png" },
+    { "id": 7, "name": "Team 7", "crest": "images/team7.png" },
+    { "id": 8, "name": "Team 8", "crest": "images/team8.png" }
+  ],
+  "matches": [
+    {
+      "id": "QF1",
+      "round": "Quarterfinal",
+      "teamA": 1,
+      "teamB": 2,
+      "date": "2025-10-10",
+      "scoreA": 2,
+      "scoreB": 1
+    },
+    {
+      "id": "QF2",
+      "round": "Quarterfinal",
+      "teamA": 3,
+      "teamB": 4,
+      "date": "2025-10-11",
+      "scoreA": 3,
+      "scoreB": 4
+    },
+    {
+      "id": "QF3",
+      "round": "Quarterfinal",
+      "teamA": 5,
+      "teamB": 6,
+      "date": "2025-10-12",
+      "scoreA": null,
+      "scoreB": null
+    },
+    {
+      "id": "QF4",
+      "round": "Quarterfinal",
+      "teamA": 7,
+      "teamB": 8,
+      "date": "2025-10-13",
+      "scoreA": null,
+      "scoreB": null
+    },
+    {
+      "id": "SF1",
+      "round": "Semifinal",
+      "teamA": "Winner QF1",
+      "teamB": "Winner QF2",
+      "date": "2025-10-17",
+      "scoreA": null,
+      "scoreB": null
+    },
+    {
+      "id": "SF2",
+      "round": "Semifinal",
+      "teamA": "Winner QF3",
+      "teamB": "Winner QF4",
+      "date": "2025-10-18",
+      "scoreA": null,
+      "scoreB": null
+    },
+    {
+      "id": "F1",
+      "round": "Final",
+      "teamA": "Winner SF1",
+      "teamB": "Winner SF2",
+      "date": "2025-10-22",
+      "scoreA": null,
+      "scoreB": null
+    }
+  ]
+}

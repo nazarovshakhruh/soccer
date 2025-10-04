@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tournament Bracket</title>
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <h1>Tournament Bracket</h1>
+  <div class="bracket">
+    
+    <!-- Quarterfinals -->
+    <div class="round">
+      <div class="match">
+        
+        <div class="team">
+  <img src="images/team1.png" class="crest">
+  <span class="name">Team 1</span>
+  <span class="score">2</span>
+</div>
+
+      
+        <div class="team">Team 2</div>
+    
+    </div>
+      <div class="match ml">
+        
+        <div class="team">Team 3</div>
+      
+        <div class="team">Team 4</div>
+    
+    </div>
+      <div class="match ml">
+        
+        <div class="team">Team 5</div>
+      
+        <div class="team">Team 6</div>
+    
+    </div>
+      <div class="match">
+        
+        <div class="team">Team 7</div>
+      
+        <div class="team">Team 8</div>
+    
+    </div>
+      <div class="connector qf" style="top: 40px;"></div>
+      <!-- <div class="connector qf" style="top: 160px;"></div> -->
+      <div class="connector qf" style="top: 280px;"></div>
+    </div>
+
+    <!-- Semifinals -->
+    <div class="round">
+      <div class="match">
+        
+  <img src="images/team1.png" class="crest">
+        <div class="team">Winner QF1</div>
+      
+        <div class="team">Winner QF2</div>
+    
+    </div>
+      <div class="match">
+        
+        <div class="team">Winner QF3</div>
+      
+        <div class="team">Winner QF4</div>
+    
+    </div>
+      
+      <!-- Connectors for QFs → SFs -->
+      <div class="connector sf" style="top: 160px;"></div>
+    </div>
+
+    <!-- Final -->
+    <div class="round">
+      <div class="match ml1">
+        
+        <div class="team">Winner SF1</div>
+      
+        <div class="team">Winner SF2</div>
+    
+    </div>
+
+      <!-- Connector for SFs → Final -->
+    </div>
+
+    <!-- Champion -->
+    <div class="round">
+      <div class="match">
+        
+        <div class="team">🏆 Champion</div>
+    
+    </div>
+    </div>
+
+  </div>
+  <script>
+  // Example: load JSON inline (you can also fetch from a file)
+  const tournamentData = {
+    "teams": [
+      { "id": 1, "name": "Team 1", "crest": "images/team1.png" },
+      { "id": 2, "name": "Team 2", "crest": "images/team2.png" },
+      { "id": 3, "name": "Team 3", "crest": "images/team3.png" },
+      { "id": 4, "name": "Team 4", "crest": "images/team4.png" },
+      { "id": 5, "name": "Team 5", "crest": "images/team5.png" },
+      { "id": 6, "name": "Team 6", "crest": "images/team6.png" },
+      { "id": 7, "name": "Team 7", "crest": "images/team7.png" },
+      { "id": 8, "name": "Team 8", "crest": "images/team8.png" }
+    ],
+    "matches": [
+      { "id": "QF1", "round": "Quarterfinal", "teamA": 1, "teamB": 2, "date": "2025-10-10", "scoreA": 2, "scoreB": 1 },
+      { "id": "QF2", "round": "Quarterfinal", "teamA": 3, "teamB": 4, "date": "2025-10-11", "scoreA": null, "scoreB": null },
+      { "id": "QF3", "round": "Quarterfinal", "teamA": 5, "teamB": 6, "date": "2025-10-12", "scoreA": null, "scoreB": null },
+      { "id": "QF4", "round": "Quarterfinal", "teamA": 7, "teamB": 8, "date": "2025-10-13", "scoreA": null, "scoreB": null },
+      { "id": "SF1", "round": "Semifinal", "teamA": "Winner QF1", "teamB": "Winner QF2", "date": "2025-10-17", "scoreA": null, "scoreB": null },
+      { "id": "SF2", "round": "Semifinal", "teamA": "Winner QF3", "teamB": "Winner QF4", "date": "2025-10-18", "scoreA": null, "scoreB": null },
+      { "id": "F1", "round": "Final", "teamA": "Winner SF1", "teamB": "Winner SF2", "date": "2025-10-22", "scoreA": null, "scoreB": null }
+    ]
+  };
+
+  // helper: get team object by ID
+  function getTeam(id) {
+    return tournamentData.teams.find(t => t.id === id);
+  }
+
+  // render the bracket
+  function renderBracket() {
+    const matches = document.querySelectorAll(".match");
+
+    tournamentData.matches.forEach((match, i) => {
+      const matchDiv = matches[i];
+      const teams = matchDiv.querySelectorAll(".team");
+
+      [ {id: match.teamA, score: match.scoreA}, {id: match.teamB, score: match.scoreB} ].forEach((entry, idx) => {
+        const teamDiv = teams[idx];
+        teamDiv.innerHTML = ""; // clear old text
+
+        if (typeof entry.id === "number") {
+          const team = getTeam(entry.id);
+
+          const crest = document.createElement("img");
+          crest.src = team.crest;
+          crest.classList.add("crest");
+
+          const name = document.createElement("span");
+          name.classList.add("name");
+          name.textContent = team.name;
+
+          teamDiv.appendChild(crest);
+          teamDiv.appendChild(name);
+
+          if (entry.score !== null) {
+            const score = document.createElement("span");
+            score.classList.add("score");
+            score.textContent = entry.score;
+            teamDiv.appendChild(score);
+          }
+        } else {
+          // placeholder like "Winner QF1"
+          teamDiv.textContent = entry.id;
+        }
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", renderBracket);
+</script>
+
+</body>
+</html>

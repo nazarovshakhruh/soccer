@@ -1,0 +1,142 @@
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.team img.crest {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+  background-color: black;
+}
+.team .name {
+  flex: 1;
+  text-align: left;
+  font-size: 13px;
+}
+.team .score {
+  font-weight: bold;
+}
+
+    .bracket {
+        margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      overflow-x: auto;
+      transform: scale(1.1);
+    }
+
+    .round {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      position: relative;
+    }
+
+    .match {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      padding: 8px;
+      width: 140px;
+      text-align: center;
+      position: relative;
+    }
+
+    .team {
+      padding: 0px;
+      margin: 2px 0;
+      border-radius: 4px;
+      background: #e9ecef;
+      font-size: 14px;
+    }
+
+    /* Horizontal line from match to connector */
+    .match::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      width: 30px;
+      height: 2px;
+      background: black;
+    }
+    .ml::after {
+      right: -60px;
+      width: 60px;
+
+    }
+        .ml1::after {
+      right: -60px;
+      width: 60px;
+
+    }
+    .ml1::before {
+              content: "";
+      position: absolute;
+      right: 156px;
+      top: 50%;
+      width: 30px;
+      height: 2px;
+      background: black;
+    }
+
+    /* Vertical connectors */
+    .connector {
+      position: absolute;
+      right: -30px;
+      width: 30px;
+      border-right: 2px solid black;
+    }
+
+    /* Semifinal connector (joins 2 quarterfinal matches) */
+    .connector.qf {
+      height: 120px;
+      top: calc(50% - 41px);
+    }
+
+    /* Final connector (joins 2 semifinal matches) */
+    .connector.sf {
+      height: 120px;
+      top: calc(50% - 81px);
+    }
+
+    /* Don’t draw lines on the last column (champion) */
+    .round:last-child .match::after {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .bracket {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      transform: scale(1);
+
+      }
+      .round {
+        flex-direction: row;
+        gap: 15px;
+      }
+      .match {
+        width: 120px;
+      }
+      .match::after, .match::before, .connector {
+        display: none; /* Hide lines on mobile for clarity */
+      }
+    }

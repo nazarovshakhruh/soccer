@@ -1584,7 +1584,64 @@
       "away_goals": null,
       "date": "2025-10-02T16:00:00Z",
       "motm": null,
-      "events": []
+      "events": [
+        {
+    "minute": 16,
+    "type": "goal",
+    "player_id": "sanjar",
+    "assist_id": "abdulazizt",
+    "club_id": "vip-fc"
+  },
+  {
+    "minute": 18,
+    "type": "goal",
+    "player_id": "javohirko",
+    "assist_id": "sanjar",
+    "club_id": "vip-fc"
+  },
+  {
+    "minute": 38,
+    "type": "goal",
+    "player_id": "sanjar",
+    "assist_id": null,
+    "club_id": "vip-fc"
+  },
+  {
+    "minute": 9,
+    "type": "goal",
+    "player_id": "diyorbekgreen",
+    "assist_id": "hajiboy",
+    "club_id": "fc-winchester"
+  },
+  {
+    "minute": 19,
+    "type": "goal",
+    "player_id": "hajiboy",
+    "assist_id": null,
+    "club_id": "fc-winchester"
+  },
+  {
+    "minute": 23,
+    "type": "goal",
+    "player_id": "oybek",
+    "assist_id": null,
+    "club_id": "fc-winchester"
+  },
+  {
+    "minute": 25,
+    "type": "goal",
+    "player_id": "xudoybergan",
+    "assist_id": "hajiboy",
+    "club_id": "fc-winchester"
+  },
+  {
+    "minute": 34,
+    "type": "goal",
+    "player_id": "hajiboy",
+    "assist_id": "xudoybergan",
+    "club_id": "fc-winchester"
+  }
+      ]
     },
     {
       "id": "m17",
@@ -1817,7 +1874,99 @@
       "away_goals": null,
       "date": "2025-10-02T14:25:00Z",
       "motm": null,
-      "events": []
+      "events": [
+        {
+    "minute": 2,
+    "type": "goal",
+    "player_id": "olloshukur",
+    "assist_id": null,
+    "club_id": "gooners-fc"
+  },
+  {
+    "minute": 6,
+    "type": "goal",
+    "player_id": "muhammad",
+    "assist_id": null,
+    "club_id": "gooners-fc"
+  },
+  {
+    "minute": 22,
+    "type": "goal",
+    "player_id": "muhammad",
+    "assist_id": null,
+    "club_id": "gooners-fc"
+  },
+  {
+    "minute": 24,
+    "type": "goal",
+    "player_id": "aslombek",
+    "assist_id": null,
+    "club_id": "gooners-fc"
+  },
+  {
+    "minute": 31,
+    "type": "goal",
+    "player_id": "olloshukur",
+    "assist_id": "muhammad",
+    "club_id": "gooners-fc"
+  },
+  {
+    "minute": 15,
+    "type": "goal",
+    "player_id": "nuraziz",
+    "assist_id": "hasanboy",
+    "club_id": "tiki-taka"
+  },
+  {
+    "minute": 19,
+    "type": "goal",
+    "player_id": "nuraziz",
+    "assist_id": "abdulaziz",
+    "club_id": "tiki-taka"
+  },
+  {
+    "minute": 23,
+    "type": "goal",
+    "player_id": "nuraziz",
+    "assist_id": null,
+    "club_id": "tiki-taka"
+  },
+  {
+    "minute": 26,
+    "type": "goal",
+    "player_id": "abdulaziz",
+    "assist_id": null,
+    "club_id": "tiki-taka"
+  },
+  {
+    "minute": 27,
+    "type": "goal",
+    "player_id": "nuraziz",
+    "assist_id": null,
+    "club_id": "tiki-taka"
+  },
+  {
+    "minute": 33,
+    "type": "goal",
+    "player_id": "rasulbek",
+    "assist_id": "nuraziz",
+    "club_id": "tiki-taka"
+  },
+  {
+    "minute": 38,
+    "type": "goal",
+    "player_id": "rasulbek",
+    "assist_id": "hasanboy",
+    "club_id": "tiki-taka"
+  },
+  {
+    "minute": 39,
+    "type": "goal",
+    "player_id": "nuraziz",
+    "assist_id": "rasulbek",
+    "club_id": "tiki-taka"
+  }
+      ]
     },
     {
       "id": "m21",
@@ -1827,37 +1976,71 @@
       "away_goals": null,
       "date": "2025-10-02T15:15:00Z",
       "motm": null,
-      "events": []
-    },
-    {
-      "id": "m22",
-      "home_team": "tiki-taka",
-      "away_team": "apex-fc",
-      "home_goals": null,
-      "away_goals": null,
-      "date": "2025-10-05T14:25:00Z",
-      "motm": null,
-      "events": []
-    },
-    {
-      "id": "m23",
-      "home_team": "vip-fc",
-      "away_team": "gooners-fc",
-      "home_goals": null,
-      "away_goals": null,
-      "date": "2025-10-05T15:15:00Z",
-      "motm": null,
-      "events": []
-    },
-    {
-      "id": "m24",
-      "home_team": "fc-winchester",
-      "away_team": "nushpiyoz-fc",
-      "home_goals": null,
-      "away_goals": null,
-      "date": "2025-10-05T16:00:00Z",
-      "motm": null,
-      "events": []
+      "events": [
+        {
+    "minute": 18,
+    "type": "goal",
+    "player_id": "amir",
+    "assist_id": "kamronbek",
+    "club_id": "gamburg"
+  },
+  {
+    "minute": 25,
+    "type": "goal",
+    "player_id": "amir",
+    "assist_id": "javohirm",
+    "club_id": "gamburg"
+  },
+  {
+    "minute": 29,
+    "type": "goal",
+    "player_id": "javohirm",
+    "assist_id": "amir",
+    "club_id": "gamburg"
+  },
+  {
+    "minute": 33,
+    "type": "goal",
+    "player_id": "amir",
+    "assist_id": "kamronbek",
+    "club_id": "gamburg"
+  },
+  {
+    "minute": 34,
+    "type": "goal",
+    "player_id": "amir",
+    "assist_id": "javohirm",
+    "club_id": "gamburg"
+  },
+  {
+    "minute": 7,
+    "type": "goal",
+    "player_id": "alibek",
+    "assist_id": "islombek",
+    "club_id": "cyclone-fc"
+  },
+  {
+    "minute": 14,
+    "type": "goal",
+    "player_id": "jasurbek",
+    "assist_id": "alibek",
+    "club_id": "cyclone-fc"
+  },
+  {
+    "minute": 17,
+    "type": "goal",
+    "player_id": "alibek",
+    "assist_id": "islombek",
+    "club_id": "cyclone-fc"
+  },
+  {
+    "minute": 40,
+    "type": "goal",
+    "player_id": "jasurbek",
+    "assist_id": "islombek",
+    "club_id": "cyclone-fc"
+  }
+      ]
     }
 
   ]

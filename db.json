@@ -1870,8 +1870,8 @@
       "id": "m20",
       "home_team": "gooners-fc",
       "away_team": "tiki-taka",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 5,
+      "away_goals": 8,
       "date": "2025-10-02T14:25:00Z",
       "motm": null,
       "events": [
@@ -1972,8 +1972,8 @@
       "id": "m21",
       "home_team": "gamburg",
       "away_team": "cyclone-fc",
-      "home_goals": null,
-      "away_goals": null,
+      "home_goals": 5,
+      "away_goals": 4,
       "date": "2025-10-02T15:15:00Z",
       "motm": null,
       "events": [
